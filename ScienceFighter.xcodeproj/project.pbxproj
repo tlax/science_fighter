@@ -45,6 +45,7 @@
 		DA27981B1E3292E7008B98C1 /* MetalSpatialCharTuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */; };
 		DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981D1E32951D008B98C1 /* MetalVertex.swift */; };
 		DA2798201E32970A008B98C1 /* MetalVertexTextured.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981F1E32970A008B98C1 /* MetalVertexTextured.swift */; };
+		DA2798221E32A0C5008B98C1 /* MetalVertexFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798211E32A0C5008B98C1 /* MetalVertexFace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTuring.swift; sourceTree = "<group>"; };
 		DA27981D1E32951D008B98C1 /* MetalVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVertex.swift; sourceTree = "<group>"; };
 		DA27981F1E32970A008B98C1 /* MetalVertexTextured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVertexTextured.swift; sourceTree = "<group>"; };
+		DA2798211E32A0C5008B98C1 /* MetalVertexFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVertexFace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +345,7 @@
 			children = (
 				DA27981D1E32951D008B98C1 /* MetalVertex.swift */,
 				DA27981F1E32970A008B98C1 /* MetalVertexTextured.swift */,
+				DA2798211E32A0C5008B98C1 /* MetalVertexFace.swift */,
 			);
 			path = Vertex;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */,
 				DA2797EB1E3263C6008B98C1 /* CAppDelegate.swift in Sources */,
 				DA2797FB1E3263C6008B98C1 /* MSession.swift in Sources */,
+				DA2798221E32A0C5008B98C1 /* MetalVertexFace.swift in Sources */,
 				DA2798141E329116008B98C1 /* MetalSpatialBase.swift in Sources */,
 				DA2798051E3263C6008B98C1 /* VView.swift in Sources */,
 				DA2798031E3263C6008B98C1 /* VCollection.swift in Sources */,
