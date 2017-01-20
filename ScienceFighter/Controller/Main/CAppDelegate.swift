@@ -20,7 +20,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate
     }
     
     func applicationWillEnterForeground(_ application:UIApplication)
-    {
+    {/*
         guard
         
             let settings:DSettings = MSession.sharedInstance.settings
@@ -31,6 +31,6 @@ class AppDelegate:UIResponder, UIApplicationDelegate
         }
         
         settings.ttl += kTtlDelta
-        DManager.sharedInstance.save()
+        DManager.sharedInstance.save()*/
     }
 }

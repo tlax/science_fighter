@@ -2,28 +2,17 @@ import Foundation
 
 class MSession
 {
-    enum State
-    {
-        case standBy
-        case rendering
-        case frame
-        case playing
-    }
-    
     static let sharedInstance:MSession = MSession()
     static let kFroobMaxRecords:Int = 3
-    private(set) var settings:DSettings?
-    var camera:MCamera?
-    var state:State
+    //private(set) var settings:DSettings?
     private let kTtlDelta:Int16 = 1
     
     private init()
     {
-        state = State.standBy
     }
     
     //MARK: private
-    
+    /*
     private func asyncLoadSettings()
     {
         DManager.sharedInstance.fetchManagedObjects(
@@ -74,7 +63,7 @@ class MSession
     private func settingsReady(settings:DSettings)
     {
         self.settings = settings
-    }
+    }*/
     
     //MARK: public
     
@@ -82,10 +71,10 @@ class MSession
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         {
-            if self.settings == nil
-            {
-                self.asyncLoadSettings()
-            }
+//            if self.settings == nil
+//            {
+//                self.asyncLoadSettings()
+//            }
         }
     }
 }
