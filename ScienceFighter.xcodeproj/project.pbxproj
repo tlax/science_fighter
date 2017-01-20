@@ -39,6 +39,10 @@
 		DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27980A1E326B3A008B98C1 /* VFight.swift */; };
 		DA27980D1E326F13008B98C1 /* char.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA27980C1E326F13008B98C1 /* char.xcassets */; };
 		DA27980F1E327224008B98C1 /* VFightMetal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27980E1E327224008B98C1 /* VFightMetal.swift */; };
+		DA2798141E329116008B98C1 /* MetalSpatialBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798131E329116008B98C1 /* MetalSpatialBase.swift */; };
+		DA2798161E32912F008B98C1 /* MetalSpatialBaseTextured.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798151E32912F008B98C1 /* MetalSpatialBaseTextured.swift */; };
+		DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798181E3292D8008B98C1 /* MetalSpatialChar.swift */; };
+		DA27981B1E3292E7008B98C1 /* MetalSpatialCharTuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		DA27980A1E326B3A008B98C1 /* VFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFight.swift; sourceTree = "<group>"; };
 		DA27980C1E326F13008B98C1 /* char.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = char.xcassets; sourceTree = "<group>"; };
 		DA27980E1E327224008B98C1 /* VFightMetal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightMetal.swift; sourceTree = "<group>"; };
+		DA2798131E329116008B98C1 /* MetalSpatialBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBase.swift; sourceTree = "<group>"; };
+		DA2798151E32912F008B98C1 /* MetalSpatialBaseTextured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTextured.swift; sourceTree = "<group>"; };
+		DA2798181E3292D8008B98C1 /* MetalSpatialChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialChar.swift; sourceTree = "<group>"; };
+		DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTuring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,7 @@
 		DA2797D01E3263C6008B98C1 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				DA2798101E3290FE008B98C1 /* Spatial */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -297,6 +306,33 @@
 			path = Fight;
 			sourceTree = "<group>";
 		};
+		DA2798101E3290FE008B98C1 /* Spatial */ = {
+			isa = PBXGroup;
+			children = (
+				DA2798111E3290FE008B98C1 /* Base */,
+				DA2798171E3292BE008B98C1 /* Char */,
+			);
+			path = Spatial;
+			sourceTree = "<group>";
+		};
+		DA2798111E3290FE008B98C1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DA2798131E329116008B98C1 /* MetalSpatialBase.swift */,
+				DA2798151E32912F008B98C1 /* MetalSpatialBaseTextured.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DA2798171E3292BE008B98C1 /* Char */ = {
+			isa = PBXGroup;
+			children = (
+				DA2798181E3292D8008B98C1 /* MetalSpatialChar.swift */,
+				DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */,
+			);
+			path = Char;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -369,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2798161E32912F008B98C1 /* MetalSpatialBaseTextured.swift in Sources */,
 				DA2797FF1E3263C6008B98C1 /* VParent.swift in Sources */,
 				DA2797EE1E3263C6008B98C1 /* DManager.swift in Sources */,
 				DA2797FE1E3263C6008B98C1 /* VHelpCell.swift in Sources */,
@@ -384,12 +421,15 @@
 				DA2797F61E3263C6008B98C1 /* ExtensionUIFont.swift in Sources */,
 				DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */,
 				DA2797F01E3263C6008B98C1 /* ExtensionMTLTexture.swift in Sources */,
+				DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */,
 				DA2797EB1E3263C6008B98C1 /* CAppDelegate.swift in Sources */,
 				DA2797FB1E3263C6008B98C1 /* MSession.swift in Sources */,
+				DA2798141E329116008B98C1 /* MetalSpatialBase.swift in Sources */,
 				DA2798051E3263C6008B98C1 /* VView.swift in Sources */,
 				DA2798031E3263C6008B98C1 /* VCollection.swift in Sources */,
 				DA2797F51E3263C6008B98C1 /* ExtensionUIColor.swift in Sources */,
 				DA2797F41E3263C6008B98C1 /* ExtensionUICollectionReusableView.swift in Sources */,
+				DA27981B1E3292E7008B98C1 /* MetalSpatialCharTuring.swift in Sources */,
 				DA2797ED1E3263C6008B98C1 /* CParent.swift in Sources */,
 				DA2797EA1E3263C6008B98C1 /* CHelp.swift in Sources */,
 				DA2797EC1E3263C6008B98C1 /* CController.swift in Sources */,

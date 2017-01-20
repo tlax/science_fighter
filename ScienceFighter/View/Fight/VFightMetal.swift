@@ -46,6 +46,10 @@ class VFightMetal:MTKView
             return
         }
         
+        let commandBuffer:MTLCommandBuffer = commandQueue.makeCommandBuffer()
+        let renderEncoder:MTLRenderCommandEncoder = commandBuffer.makeRenderCommandEncoder(
+            descriptor:passDescriptor)
+        renderEncoder.setCullMode(MTLCullMode.front)
     }
 }
 /*
