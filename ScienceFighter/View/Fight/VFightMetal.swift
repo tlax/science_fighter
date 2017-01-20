@@ -3,15 +3,27 @@ import MetalKit
 class VFightMetal:MTKView
 {
     private weak var controller:CFight!
+    var turing:MetalSpatialCharTuring?
     private let commandQueue:MTLCommandQueue
     private let pipelineState:MTLRenderPipelineState
-    var turing:MetalSpatialCharTuring?
+    private let kPixelFormat:MTLPixelFormat = MTLPixelFormat.bgra8Unorm
+    private let kRgbBlendOperation:MTLBlendOperation = MTLBlendOperation.add
+    private let kAlphaBlendOperation:MTLBlendOperation = MTLBlendOperation.add
+    private let kSourceRgbBlendFactor:MTLBlendFactor = MTLBlendFactor.one
+    private let kSourceAlphaBlendFactor:MTLBlendFactor = MTLBlendFactor.one
+    private let kDestinationRgbBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
+    private let kDestinationAlphaBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
+    private let kVertexFunction:String = "vertex_textured"
+    private let kBlendingEnabled:Bool = true
+    private let kColorAttachmentIndex:Int = 0
     
     init?(controller:CFight)
     {
         guard
             
-            let device:MTLDevice = MTLCreateSystemDefaultDevice()
+            let device:MTLDevice = MTLCreateSystemDefaultDevice(),
+            let library:MTLLibrary = device.newDefaultLibrary(),
+            let vertexFunction:MTLFunction = library.makeFunction(name:kVertexFunction)
         
         else
         {
@@ -21,6 +33,17 @@ class VFightMetal:MTKView
         commandQueue = device.makeCommandQueue()
         
         let pipelineDescriptor:MTLRenderPipelineDescriptor = MTLRenderPipelineDescriptor()
+        pipelineDescriptor.vertexFunction = vertexFunction
+        
+        let colorAttachment:MTLRenderPipelineColorAttachmentDescriptor = pipelineDescriptor.colorAttachments[kColorAttachmentIndex]
+        colorAttachment.pixelFormat = kPixelFormat
+        colorAttachment.isBlendingEnabled = kBlendingEnabled
+        colorAttachment.rgbBlendOperation = kRgbBlendOperation
+        colorAttachment.alphaBlendOperation = kAlphaBlendOperation
+        colorAttachment.sourceRGBBlendFactor = kSourceRgbBlendFactor
+        colorAttachment.sourceAlphaBlendFactor = kSourceAlphaBlendFactor
+        colorAttachment.destinationRGBBlendFactor = kDestinationRgbBlendFactor
+        colorAttachment.destinationAlphaBlendFactor = kDestinationAlphaBlendFactor
         
         do
         {
@@ -30,7 +53,6 @@ class VFightMetal:MTKView
         {
             return nil
         }
-        
         
         super.init(
             frame:CGRect.zero,
