@@ -8,7 +8,6 @@ class MetalVertexTextured:MetalVertex
     init(
         positionX:Float,
         positionY:Float,
-        positionZ:Float,
         horizontal:Float,
         vertical:Float)
     {
@@ -17,8 +16,7 @@ class MetalVertexTextured:MetalVertex
         
         super.init(
             positionX:positionX,
-            positionY:positionY,
-            positionZ:positionZ)
+            positionY:positionY)
     }
     
     override func asBuffer() -> [Float]

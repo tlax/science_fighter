@@ -4,6 +4,7 @@ class VFightMetal:MTKView
 {
     private weak var controller:CFight!
     private let commandQueue:MTLCommandQueue
+    var turing:MetalSpatialCharTuring?
     
     init?(controller:CFight)
     {
@@ -25,6 +26,34 @@ class VFightMetal:MTKView
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.clear
+        
+        let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
+            positionX:-1,
+            positionY:-1,
+            horizontal:0,
+            vertical:0)
+        let vertexTopRight:MetalVertexTextured = MetalVertexTextured(
+            positionX:-1,
+            positionY:1,
+            horizontal:1,
+            vertical:0)
+        let vertexBottomLeft:MetalVertexTextured = MetalVertexTextured(
+            positionX:-1,
+            positionY:1,
+            horizontal:0,
+            vertical:1)
+        let vertexBottomRight:MetalVertexTextured = MetalVertexTextured(
+            positionX:1,
+            positionY:1,
+            horizontal:1,
+            vertical:1)
+        
+        let turingFace:MetalVertexFace = MetalVertexFace(
+            topLeft:vertexTopLeft,
+            topRight:vertexTopRight,
+            bottomLeft:vertexBottomLeft,
+            bottomRight:vertexBottomRight)
+        turing = MetalSpatialCharTuring(vertexFace:turingFace)
     }
     
     required init(coder:NSCoder)

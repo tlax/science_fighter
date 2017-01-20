@@ -4,16 +4,14 @@ class MetalVertex
 {
     private let positionX:Float
     private let positionY:Float
-    private let positionZ:Float
+    private let kPositionZ:Float = 0
     
     init(
         positionX:Float,
-        positionY:Float,
-        positionZ:Float)
+        positionY:Float)
     {
         self.positionX = positionX
         self.positionY = positionY
-        self.positionZ = positionZ
     }
     
     //MARK: public
@@ -23,7 +21,7 @@ class MetalVertex
         let buffer:[Float] = [
             positionX,
             positionY,
-            positionZ
+            kPositionZ
         ]
         
         return buffer
