@@ -35,6 +35,7 @@
 		DA2798031E3263C6008B98C1 /* VCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797E61E3263C6008B98C1 /* VCollection.swift */; };
 		DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797E71E3263C6008B98C1 /* VSpinner.swift */; };
 		DA2798051E3263C6008B98C1 /* VView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797E81E3263C6008B98C1 /* VView.swift */; };
+		DA2798081E326AF0008B98C1 /* CFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798071E326AF0008B98C1 /* CFight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		DA2797E61E3263C6008B98C1 /* VCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCollection.swift; sourceTree = "<group>"; };
 		DA2797E71E3263C6008B98C1 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA2797E81E3263C6008B98C1 /* VView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VView.swift; sourceTree = "<group>"; };
+		DA2798071E326AF0008B98C1 /* CFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		DA2797BC1E3263C6008B98C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA2798061E326AE5008B98C1 /* Fight */,
 				DA2797BD1E3263C6008B98C1 /* Help */,
 				DA2797BF1E3263C6008B98C1 /* Main */,
 			);
@@ -269,6 +272,14 @@
 			path = Subclasses;
 			sourceTree = "<group>";
 		};
+		DA2798061E326AE5008B98C1 /* Fight */ = {
+			isa = PBXGroup;
+			children = (
+				DA2798071E326AF0008B98C1 /* CFight.swift */,
+			);
+			path = Fight;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +358,7 @@
 				DA2797EF1E3263C6008B98C1 /* ExtensionFileManager.swift in Sources */,
 				DA2797FD1E3263C6008B98C1 /* VHelp.swift in Sources */,
 				DA2797F21E3263C6008B98C1 /* ExtensionNSLayoutConstraint.swift in Sources */,
+				DA2798081E326AF0008B98C1 /* CFight.swift in Sources */,
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
 				DA2797F31E3263C6008B98C1 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2797F11E3263C6008B98C1 /* ExtensionNotification.swift in Sources */,
