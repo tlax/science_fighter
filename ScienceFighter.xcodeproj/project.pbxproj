@@ -47,6 +47,7 @@
 		DA2798201E32970A008B98C1 /* MetalVertexTextured.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981F1E32970A008B98C1 /* MetalVertexTextured.swift */; };
 		DA2798221E32A0C5008B98C1 /* MetalVertexFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798211E32A0C5008B98C1 /* MetalVertexFace.swift */; };
 		DA2798261E32B431008B98C1 /* MetalShaderVertexTextured.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA2798251E32B430008B98C1 /* MetalShaderVertexTextured.metal */; };
+		DA2798281E32D349008B98C1 /* MetalShaderFragmentSimple.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		DA27981F1E32970A008B98C1 /* MetalVertexTextured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVertexTextured.swift; sourceTree = "<group>"; };
 		DA2798211E32A0C5008B98C1 /* MetalVertexFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVertexFace.swift; sourceTree = "<group>"; };
 		DA2798251E32B430008B98C1 /* MetalShaderVertexTextured.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalShaderVertexTextured.metal; sourceTree = "<group>"; };
+		DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalShaderFragmentSimple.metal; sourceTree = "<group>"; };
+		DA2798291E32D694008B98C1 /* MetalShaderStructs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalShaderStructs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				DA2798251E32B430008B98C1 /* MetalShaderVertexTextured.metal */,
+				DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */,
+				DA2798291E32D694008B98C1 /* MetalShaderStructs.h */,
 			);
 			path = Shader;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				DA2797F01E3263C6008B98C1 /* ExtensionMTLTexture.swift in Sources */,
 				DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */,
 				DA2797EB1E3263C6008B98C1 /* CAppDelegate.swift in Sources */,
+				DA2798281E32D349008B98C1 /* MetalShaderFragmentSimple.metal in Sources */,
 				DA2797FB1E3263C6008B98C1 /* MSession.swift in Sources */,
 				DA2798221E32A0C5008B98C1 /* MetalVertexFace.swift in Sources */,
 				DA2798141E329116008B98C1 /* MetalSpatialBase.swift in Sources */,

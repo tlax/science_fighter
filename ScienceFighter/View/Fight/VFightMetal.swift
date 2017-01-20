@@ -4,6 +4,8 @@ class VFightMetal:MTKView
 {
     private weak var controller:CFight!
     var turing:MetalSpatialCharTuring?
+    var turingBuffer:MTLBuffer?
+    var texture:MTLTexture?
     private let commandQueue:MTLCommandQueue
     private let pipelineState:MTLRenderPipelineState
     private let kPixelFormat:MTLPixelFormat = MTLPixelFormat.bgra8Unorm
@@ -16,6 +18,8 @@ class VFightMetal:MTKView
     private let kVertexFunction:String = "vertex_textured"
     private let kBlendingEnabled:Bool = true
     private let kColorAttachmentIndex:Int = 0
+    
+    var vertexLength:Int = 0
     
     init?(controller:CFight)
     {
@@ -89,6 +93,43 @@ class VFightMetal:MTKView
             bottomLeft:vertexBottomLeft,
             bottomRight:vertexBottomRight)
         turing = MetalSpatialCharTuring(vertexFace:turingFace)
+        let turingData:[Float] = turing!.vertexFace.asBuffer()
+        let turingDataLength:Int = turingData.count
+        vertexLength = turingDataLength
+        let turingDataSize:Int = turingDataLength * turing!.vertexFace.sizeOfItem()
+        
+        turingBuffer = device.makeBuffer(
+            bytes:turingData,
+            length:turingDataSize,
+            options:MTLResourceOptions())
+        
+        let textureLoader:MTKTextureLoader = MTKTextureLoader(device:device)
+        let imageTexture:UIImage = #imageLiteral(resourceName: "assetCharTuringStand1")
+        
+        guard
+            
+            let cgImage:CGImage = imageTexture.cgImage
+            
+        else
+        {
+            return nil
+        }
+        
+        do
+        {
+            texture = try textureLoader.newTexture(
+                with:cgImage,
+                options:[
+                    MTKTextureLoaderOptionTextureUsage:
+                        MTLTextureUsage.shaderRead.rawValue as NSObject,
+                    MTKTextureLoaderOptionSRGB:
+                        true as NSObject
+                ])
+        }
+        catch
+        {
+            texture = nil
+        }
     }
     
     required init(coder:NSCoder)
@@ -115,6 +156,9 @@ class VFightMetal:MTKView
             descriptor:passDescriptor)
         renderEncoder.setCullMode(MTLCullMode.front)
         renderEncoder.setRenderPipelineState(pipelineState)
+        renderEncoder.setVertexBuffer(turingBuffer, offset:0, at:0)
+        renderEncoder.setFragmentTexture(texture, at:0)
+        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:vertexLength)
         renderEncoder.endEncoding()
         
         commandBuffer.present(drawable)

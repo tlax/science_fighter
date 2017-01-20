@@ -2,7 +2,7 @@ import Foundation
 
 class MetalSpatialBase
 {
-    private let vertexFace:MetalVertexFace
+    let vertexFace:MetalVertexFace
     
     init(vertexFace:MetalVertexFace)
     {
