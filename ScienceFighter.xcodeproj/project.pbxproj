@@ -37,6 +37,7 @@
 		DA2798051E3263C6008B98C1 /* VView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797E81E3263C6008B98C1 /* VView.swift */; };
 		DA2798081E326AF0008B98C1 /* CFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798071E326AF0008B98C1 /* CFight.swift */; };
 		DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27980A1E326B3A008B98C1 /* VFight.swift */; };
+		DA27980D1E326F13008B98C1 /* char.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA27980C1E326F13008B98C1 /* char.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		DA2797E81E3263C6008B98C1 /* VView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VView.swift; sourceTree = "<group>"; };
 		DA2798071E326AF0008B98C1 /* CFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFight.swift; sourceTree = "<group>"; };
 		DA27980A1E326B3A008B98C1 /* VFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFight.swift; sourceTree = "<group>"; };
+		DA27980C1E326F13008B98C1 /* char.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = char.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2797BB1E3263C6008B98C1 /* LaunchScreen.storyboard */,
+				DA27980C1E326F13008B98C1 /* char.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2797FC1E3263C6008B98C1 /* Localizable.strings in Resources */,
+				DA27980D1E326F13008B98C1 /* char.xcassets in Resources */,
 				DA2797E91E3263C6008B98C1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
