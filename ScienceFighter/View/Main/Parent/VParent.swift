@@ -2,7 +2,6 @@ import UIKit
 
 class VParent:UIView
 {
-    weak var viewBar:VParentBar!
     private weak var controller:CParent!
     private weak var layoutBarTop:NSLayoutConstraint!
     private let kAnimationDuration:TimeInterval = 0.4
@@ -14,22 +13,6 @@ class VParent:UIView
         clipsToBounds = true
         backgroundColor = UIColor.white
         self.controller = controller
-        
-        let viewBar:VParentBar = VParentBar(controller:controller)
-        self.viewBar = viewBar
-        
-        addSubview(viewBar)
-        
-        NSLayoutConstraint.equalsHorizontal(
-            view:viewBar,
-            toView:self)
-        
-        layoutBarTop = NSLayoutConstraint.topToTop(
-            view:viewBar,
-            toView:self)
-        NSLayoutConstraint.height(
-            view:viewBar,
-            constant:kBarHeight)
     }
     
     //MARK: public
@@ -52,7 +35,7 @@ class VParent:UIView
     
     func mainView(view:VView)
     {
-        insertSubview(view, belowSubview:viewBar)
+        addSubview(view)
         
         view.layoutTop = NSLayoutConstraint.topToTop(
             view:view,
@@ -74,7 +57,7 @@ class VParent:UIView
         left:CGFloat,
         completion:@escaping(() -> ()))
     {
-        insertSubview(newView, belowSubview:viewBar)
+        addSubview(newView)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newView,

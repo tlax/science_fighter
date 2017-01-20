@@ -22,7 +22,6 @@
 		DA2797F51E3263C6008B98C1 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797CC1E3263C6008B98C1 /* ExtensionUIColor.swift */; };
 		DA2797F61E3263C6008B98C1 /* ExtensionUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797CD1E3263C6008B98C1 /* ExtensionUIFont.swift */; };
 		DA2797F71E3263C6008B98C1 /* ExtensionURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797CE1E3263C6008B98C1 /* ExtensionURL.swift */; };
-		DA2797F81E3263C6008B98C1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2797CF1E3263C6008B98C1 /* Info.plist */; };
 		DA2797F91E3263C6008B98C1 /* MHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797D41E3263C6008B98C1 /* MHelp.swift */; };
 		DA2797FA1E3263C6008B98C1 /* MHelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797D51E3263C6008B98C1 /* MHelpItem.swift */; };
 		DA2797FB1E3263C6008B98C1 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797D71E3263C6008B98C1 /* MSession.swift */; };
@@ -329,7 +328,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2797F81E3263C6008B98C1 /* Info.plist in Resources */,
 				DA2797FC1E3263C6008B98C1 /* Localizable.strings in Resources */,
 				DA2797E91E3263C6008B98C1 /* LaunchScreen.storyboard in Resources */,
 			);
