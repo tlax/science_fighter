@@ -36,6 +36,7 @@
 		DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797E71E3263C6008B98C1 /* VSpinner.swift */; };
 		DA2798051E3263C6008B98C1 /* VView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2797E81E3263C6008B98C1 /* VView.swift */; };
 		DA2798081E326AF0008B98C1 /* CFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798071E326AF0008B98C1 /* CFight.swift */; };
+		DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27980A1E326B3A008B98C1 /* VFight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		DA2797E71E3263C6008B98C1 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA2797E81E3263C6008B98C1 /* VView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VView.swift; sourceTree = "<group>"; };
 		DA2798071E326AF0008B98C1 /* CFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFight.swift; sourceTree = "<group>"; };
+		DA27980A1E326B3A008B98C1 /* VFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 		DA2797DB1E3263C6008B98C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA2798091E326B31008B98C1 /* Fight */,
 				DA2797DC1E3263C6008B98C1 /* Help */,
 				DA2797DF1E3263C6008B98C1 /* Main */,
 			);
@@ -276,6 +279,14 @@
 			isa = PBXGroup;
 			children = (
 				DA2798071E326AF0008B98C1 /* CFight.swift */,
+			);
+			path = Fight;
+			sourceTree = "<group>";
+		};
+		DA2798091E326B31008B98C1 /* Fight */ = {
+			isa = PBXGroup;
+			children = (
+				DA27980A1E326B3A008B98C1 /* VFight.swift */,
 			);
 			path = Fight;
 			sourceTree = "<group>";
@@ -362,6 +373,7 @@
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
 				DA2797F31E3263C6008B98C1 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2797F11E3263C6008B98C1 /* ExtensionNotification.swift in Sources */,
+				DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */,
 				DA2797F61E3263C6008B98C1 /* ExtensionUIFont.swift in Sources */,
 				DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */,
 				DA2797F01E3263C6008B98C1 /* ExtensionMTLTexture.swift in Sources */,

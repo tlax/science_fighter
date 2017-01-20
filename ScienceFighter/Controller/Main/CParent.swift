@@ -34,8 +34,8 @@ class CParent:UIViewController
     {
         super.viewDidLoad()
         
-//        let loops:CLoops = CLoops()
-//        mainController(controller:loops)
+        let controllerFight:CFight = CFight()
+        mainController(controller:controllerFight)
         
         MSession.sharedInstance.loadSettings()
     }
