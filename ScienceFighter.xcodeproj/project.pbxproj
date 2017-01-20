@@ -43,6 +43,7 @@
 		DA2798161E32912F008B98C1 /* MetalSpatialBaseTextured.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798151E32912F008B98C1 /* MetalSpatialBaseTextured.swift */; };
 		DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798181E3292D8008B98C1 /* MetalSpatialChar.swift */; };
 		DA27981B1E3292E7008B98C1 /* MetalSpatialCharTuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */; };
+		DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27981D1E32951D008B98C1 /* MetalVertex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		DA2798151E32912F008B98C1 /* MetalSpatialBaseTextured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTextured.swift; sourceTree = "<group>"; };
 		DA2798181E3292D8008B98C1 /* MetalSpatialChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialChar.swift; sourceTree = "<group>"; };
 		DA27981A1E3292E7008B98C1 /* MetalSpatialCharTuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTuring.swift; sourceTree = "<group>"; };
+		DA27981D1E32951D008B98C1 /* MetalVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVertex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 		DA2797D01E3263C6008B98C1 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				DA27981C1E329511008B98C1 /* Vertex */,
 				DA2798101E3290FE008B98C1 /* Spatial */,
 			);
 			path = Metal;
@@ -333,6 +336,14 @@
 			path = Char;
 			sourceTree = "<group>";
 		};
+		DA27981C1E329511008B98C1 /* Vertex */ = {
+			isa = PBXGroup;
+			children = (
+				DA27981D1E32951D008B98C1 /* MetalVertex.swift */,
+			);
+			path = Vertex;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +425,7 @@
 				DA2797FD1E3263C6008B98C1 /* VHelp.swift in Sources */,
 				DA2797F21E3263C6008B98C1 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA2798081E326AF0008B98C1 /* CFight.swift in Sources */,
+				DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */,
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
 				DA2797F31E3263C6008B98C1 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2797F11E3263C6008B98C1 /* ExtensionNotification.swift in Sources */,
