@@ -17,13 +17,11 @@ class CParent:UIViewController
     }
     
     weak var viewParent:VParent!
-    private var statusBarStyle:UIStatusBarStyle
-    private var barHidden:Bool
+    private let kStatusBarStyle:UIStatusBarStyle = UIStatusBarStyle.default
+    private let kBarHidden:Bool = true
     
     init()
     {
-        statusBarStyle = UIStatusBarStyle.default
-        barHidden = false
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -36,8 +34,8 @@ class CParent:UIViewController
     {
         super.viewDidLoad()
         
-        let loops:CLoops = CLoops()
-        mainController(controller:loops)
+//        let loops:CLoops = CLoops()
+//        mainController(controller:loops)
         
         MSession.sharedInstance.loadSettings()
     }
@@ -51,12 +49,12 @@ class CParent:UIViewController
     
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
-        return statusBarStyle
+        return kStatusBarStyle
     }
     
     override var prefersStatusBarHidden:Bool
     {
-        return barHidden
+        return kBarHidden
     }
     
     //MARK: private
@@ -91,12 +89,6 @@ class CParent:UIViewController
     
     //MARK: public
     
-    func changeBar(barHidden:Bool)
-    {
-        self.barHidden = barHidden
-        setNeedsStatusBarAppearanceUpdate()
-    }
-    
     func mainController(controller:CController)
     {
         addChildViewController(controller)
@@ -113,40 +105,6 @@ class CParent:UIViewController
             
         viewParent.mainView(view:newView)
         controller.endAppearanceTransition()
-    }
-    
-    func moveToCamera()
-    {
-        let left:CGFloat = -viewParent.bounds.maxX
-        let controller:CCamera = CCamera()
-        
-        slide(controller:controller, left:left)
-    }
-    
-    func moveToStore()
-    {
-        let left:CGFloat = viewParent.bounds.maxX
-        let controller:CStore = CStore()
-        
-        slide(controller:controller, left:left)
-    }
-    
-    func moveToLoops()
-    {
-        let left:CGFloat
-        
-        if let _:CStore = childViewControllers.last as? CStore
-        {
-            left = -viewParent.bounds.maxX
-        }
-        else
-        {
-            left = viewParent.bounds.maxX
-        }
-        
-        let controller:CLoops = CLoops()
-        
-        slide(controller:controller, left:left)
     }
     
     func push(
