@@ -38,6 +38,7 @@
 		DA2798081E326AF0008B98C1 /* CFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798071E326AF0008B98C1 /* CFight.swift */; };
 		DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27980A1E326B3A008B98C1 /* VFight.swift */; };
 		DA27980D1E326F13008B98C1 /* char.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA27980C1E326F13008B98C1 /* char.xcassets */; };
+		DA27980F1E327224008B98C1 /* VFightMetal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27980E1E327224008B98C1 /* VFightMetal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		DA2798071E326AF0008B98C1 /* CFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFight.swift; sourceTree = "<group>"; };
 		DA27980A1E326B3A008B98C1 /* VFight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFight.swift; sourceTree = "<group>"; };
 		DA27980C1E326F13008B98C1 /* char.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = char.xcassets; sourceTree = "<group>"; };
+		DA27980E1E327224008B98C1 /* VFightMetal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightMetal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				DA27980A1E326B3A008B98C1 /* VFight.swift */,
+				DA27980E1E327224008B98C1 /* VFightMetal.swift */,
 			);
 			path = Fight;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				DA2797EA1E3263C6008B98C1 /* CHelp.swift in Sources */,
 				DA2797EC1E3263C6008B98C1 /* CController.swift in Sources */,
 				DA2797F71E3263C6008B98C1 /* ExtensionURL.swift in Sources */,
+				DA27980F1E327224008B98C1 /* VFightMetal.swift in Sources */,
 				DA2797FA1E3263C6008B98C1 /* MHelpItem.swift in Sources */,
 				DA2798021E3263C6008B98C1 /* VBorder.swift in Sources */,
 				DA2798011E3263C6008B98C1 /* VBlur.swift in Sources */,
