@@ -1,7 +1,7 @@
 import UIKit
 import MetalKit
 
-class MFightRound
+class MFightRound:MetalRenderableProtocol
 {
     let fighterUser:MFightFighter
     let fighterNPC:MFightFighter
@@ -26,10 +26,11 @@ class MFightRound
             facing:facingNegative)
     }
     
-    //MARK: public
+    //MARK: renderableProtocol
     
     func render(renderEncoder:MTLRenderCommandEncoder)
     {
-        
+        fighterNPC.render(renderEncoder:renderEncoder)
+        fighterUser.render(renderEncoder:renderEncoder)
     }
 }

@@ -62,6 +62,7 @@
 		DA4BB0551E34138500997DE0 /* MetalSpatialCharTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0541E34138500997DE0 /* MetalSpatialCharTextures.swift */; };
 		DA4BB0571E341C5E00997DE0 /* MFightRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0561E341C5E00997DE0 /* MFightRound.swift */; };
 		DA4BB0591E341F4800997DE0 /* MetalRenderableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0581E341F4800997DE0 /* MetalRenderableProtocol.swift */; };
+		DA4BB05B1E34200C00997DE0 /* MetalProjectionMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB05A1E34200C00997DE0 /* MetalProjectionMatrix.swift */; };
 		DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816701E3302F5002574B6 /* MetalProjection.swift */; };
 		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		DA4BB0541E34138500997DE0 /* MetalSpatialCharTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTextures.swift; sourceTree = "<group>"; };
 		DA4BB0561E341C5E00997DE0 /* MFightRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightRound.swift; sourceTree = "<group>"; };
 		DA4BB0581E341F4800997DE0 /* MetalRenderableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalRenderableProtocol.swift; sourceTree = "<group>"; };
+		DA4BB05A1E34200C00997DE0 /* MetalProjectionMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjectionMatrix.swift; sourceTree = "<group>"; };
 		DAE816701E3302F5002574B6 /* MetalProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjection.swift; sourceTree = "<group>"; };
 		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -458,6 +460,7 @@
 				DA4BB0581E341F4800997DE0 /* MetalRenderableProtocol.swift */,
 				DA4BB0371E33CEEC00997DE0 /* MetalBufferableData.swift */,
 				DAE816701E3302F5002574B6 /* MetalProjection.swift */,
+				DA4BB05A1E34200C00997DE0 /* MetalProjectionMatrix.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				DA2797F01E3263C6008B98C1 /* ExtensionMTLTexture.swift in Sources */,
 				DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */,
 				DA2797EB1E3263C6008B98C1 /* CAppDelegate.swift in Sources */,
+				DA4BB05B1E34200C00997DE0 /* MetalProjectionMatrix.swift in Sources */,
 				DA2798281E32D349008B98C1 /* MetalShaderFragmentSimple.metal in Sources */,
 				DA2797FB1E3263C6008B98C1 /* MSession.swift in Sources */,
 				DA2798221E32A0C5008B98C1 /* MetalVertexFace.swift in Sources */,

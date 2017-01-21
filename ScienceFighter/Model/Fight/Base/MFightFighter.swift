@@ -1,7 +1,7 @@
 import Foundation
 import MetalKit
 
-class MFightFighter
+class MFightFighter:MetalRenderableProtocol
 {
     let spatialChar:MetalSpatialChar
     let position:MFightPosition
@@ -21,5 +21,11 @@ class MFightFighter
         position = facing.initialPosition()
         self.spatialChar = spatialChar
         self.facing = facing
+    }
+    
+    //MARK: renderableProtocol
+    
+    func render(renderEncoder:MTLRenderCommandEncoder)
+    {
     }
 }
