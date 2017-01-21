@@ -57,6 +57,8 @@
 		DA4BB0471E33F59300997DE0 /* MFightFighterGauss.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0461E33F59300997DE0 /* MFightFighterGauss.swift */; };
 		DA4BB04B1E33F93B00997DE0 /* MFightPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB04A1E33F93B00997DE0 /* MFightPosition.swift */; };
 		DA4BB04D1E33F94F00997DE0 /* MFightFacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB04C1E33F94F00997DE0 /* MFightFacing.swift */; };
+		DA4BB04F1E33FA7F00997DE0 /* MFightFacingPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB04E1E33FA7F00997DE0 /* MFightFacingPositive.swift */; };
+		DA4BB0511E33FA8900997DE0 /* MFightFacingNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0501E33FA8900997DE0 /* MFightFacingNegative.swift */; };
 		DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816701E3302F5002574B6 /* MetalProjection.swift */; };
 		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +117,8 @@
 		DA4BB0461E33F59300997DE0 /* MFightFighterGauss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFighterGauss.swift; sourceTree = "<group>"; };
 		DA4BB04A1E33F93B00997DE0 /* MFightPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightPosition.swift; sourceTree = "<group>"; };
 		DA4BB04C1E33F94F00997DE0 /* MFightFacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFacing.swift; sourceTree = "<group>"; };
+		DA4BB04E1E33FA7F00997DE0 /* MFightFacingPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFacingPositive.swift; sourceTree = "<group>"; };
+		DA4BB0501E33FA8900997DE0 /* MFightFacingNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFacingNegative.swift; sourceTree = "<group>"; };
 		DAE816701E3302F5002574B6 /* MetalProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjection.swift; sourceTree = "<group>"; };
 		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -424,6 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				DA4BB04C1E33F94F00997DE0 /* MFightFacing.swift */,
+				DA4BB04E1E33FA7F00997DE0 /* MFightFacingPositive.swift */,
+				DA4BB0501E33FA8900997DE0 /* MFightFacingNegative.swift */,
 			);
 			path = Facing;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				DA2797FF1E3263C6008B98C1 /* VParent.swift in Sources */,
 				DA2797EE1E3263C6008B98C1 /* DManager.swift in Sources */,
 				DA2797FE1E3263C6008B98C1 /* VHelpCell.swift in Sources */,
+				DA4BB0511E33FA8900997DE0 /* MFightFacingNegative.swift in Sources */,
 				DA2797F91E3263C6008B98C1 /* MHelp.swift in Sources */,
 				DA4BB0471E33F59300997DE0 /* MFightFighterGauss.swift in Sources */,
 				DA2797EF1E3263C6008B98C1 /* ExtensionFileManager.swift in Sources */,
@@ -540,6 +547,7 @@
 				DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */,
 				DA2797F61E3263C6008B98C1 /* ExtensionUIFont.swift in Sources */,
 				DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */,
+				DA4BB04F1E33FA7F00997DE0 /* MFightFacingPositive.swift in Sources */,
 				DA2797F01E3263C6008B98C1 /* ExtensionMTLTexture.swift in Sources */,
 				DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */,
 				DA2797EB1E3263C6008B98C1 /* CAppDelegate.swift in Sources */,
