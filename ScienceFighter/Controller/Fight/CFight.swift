@@ -49,6 +49,12 @@ class CFight:CController
                 self?.model.load(
                     device:device,
                     size:size)
+                
+                DispatchQueue.main.async
+                { [weak self] in
+                    
+                    self?.viewFight.loadFinished()
+                }
             }
         }
     }
