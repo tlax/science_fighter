@@ -16,6 +16,7 @@ class MFightFighterTuring:MFightFighter
             frontImages:frontImages)
         
         let spatialChar:MetalSpatialChar = MetalSpatialChar(
+            device:device,
             textures:charTextures)
         
         super.init(

@@ -14,6 +14,7 @@ class MetalSpatialChar:MetalSpatialBaseTextured
         self.textures = textures
         
         super.init(
+            device:device,
             width:kWidth,
             height:kHeight)
         currentTexture = textures.frontTextures.first
