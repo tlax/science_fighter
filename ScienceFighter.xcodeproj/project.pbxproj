@@ -60,6 +60,7 @@
 		DA4BB0511E33FA8900997DE0 /* MFightFacingNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0501E33FA8900997DE0 /* MFightFacingNegative.swift */; };
 		DA4BB0531E340DA700997DE0 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4BB0521E340DA700997DE0 /* spinner.xcassets */; };
 		DA4BB0551E34138500997DE0 /* MetalSpatialCharTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0541E34138500997DE0 /* MetalSpatialCharTextures.swift */; };
+		DA4BB0571E341C5E00997DE0 /* MFightRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0561E341C5E00997DE0 /* MFightRound.swift */; };
 		DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816701E3302F5002574B6 /* MetalProjection.swift */; };
 		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -121,6 +122,7 @@
 		DA4BB0501E33FA8900997DE0 /* MFightFacingNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFacingNegative.swift; sourceTree = "<group>"; };
 		DA4BB0521E340DA700997DE0 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 		DA4BB0541E34138500997DE0 /* MetalSpatialCharTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTextures.swift; sourceTree = "<group>"; };
+		DA4BB0561E341C5E00997DE0 /* MFightRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightRound.swift; sourceTree = "<group>"; };
 		DAE816701E3302F5002574B6 /* MetalProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjection.swift; sourceTree = "<group>"; };
 		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -413,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4BB03F1E33F55B00997DE0 /* MFight.swift */,
+				DA4BB0561E341C5E00997DE0 /* MFightRound.swift */,
 				DA4BB0401E33F55B00997DE0 /* MFightFighter.swift */,
 			);
 			path = Base;
@@ -540,6 +543,7 @@
 				DA2797FD1E3263C6008B98C1 /* VHelp.swift in Sources */,
 				DA2797F21E3263C6008B98C1 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA2798081E326AF0008B98C1 /* CFight.swift in Sources */,
+				DA4BB0571E341C5E00997DE0 /* MFightRound.swift in Sources */,
 				DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */,
 				DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */,
 				DA4BB0361E33CC3E00997DE0 /* MetalConstants.swift in Sources */,

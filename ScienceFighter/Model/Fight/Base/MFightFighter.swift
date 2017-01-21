@@ -18,7 +18,7 @@ class MFightFighter
         spatialChar:MetalSpatialChar,
         facing:MFightFacing)
     {
-        position = MFightPosition()
+        position = facing.initialPosition()
         self.spatialChar = spatialChar
         self.facing = facing
     }

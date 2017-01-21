@@ -1,4 +1,5 @@
 import Foundation
+import MetalKit
 
 class MetalSpatialChar:MetalSpatialBaseTextured
 {
@@ -6,7 +7,9 @@ class MetalSpatialChar:MetalSpatialBaseTextured
     private let kWidth:Float = 100
     private let kHeight:Float = 100
     
-    init(textures:MetalSpatialCharTextures)
+    init(
+        device:MTLDevice,
+        textures:MetalSpatialCharTextures)
     {
         self.textures = textures
         

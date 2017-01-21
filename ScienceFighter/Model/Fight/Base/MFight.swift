@@ -3,14 +3,10 @@ import MetalKit
 
 class MFight
 {
-    var projection:MetalProjection?
-    var fighterUser:MFightFighter?
-    var fighterNPC:MFightFighter?
-    private(set) var loaded:Bool
+    private(set) var round:MFightRound?
     
     init()
     {
-        loaded = false
     }
     
     //MARK: public
@@ -19,24 +15,6 @@ class MFight
         device:MTLDevice,
         size:CGSize)
     {
-        if !loaded
-        {
-            loaded = true
-         
-            projection = MetalProjection(size:size)
-            
-            let facingPositive:MFightFacingPositive = MFightFacingPositive()
-            let facingNegative:MFightFacingNegative = MFightFacingNegative()
-            
-            fighterUser = MFightFighterTuring(
-                facing:facingPositive)
-            fighterNPC = MFightFighterGauss(
-                facing:facingNegative)
-        }
-    }
-    
-    func render(renderEncoder:MTLRenderCommandEncoder)
-    {
-        
+        round = MFightRound(device:device, size:size)
     }
 }

@@ -27,7 +27,7 @@ class CFight:CController
     {
         super.viewDidAppear(animated)
         
-        if !model.loaded
+        if model.round == nil
         {
             let size:CGSize = viewFight.bounds.size
             viewFight.loadMetal()

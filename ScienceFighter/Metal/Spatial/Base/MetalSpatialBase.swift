@@ -1,8 +1,9 @@
 import Foundation
+import MetalKit
 
 class MetalSpatialBase
 {
-    let vertexFace:MetalVertexFace
+    let vertexBuffer:MetalBufferableData
     private let kHalf:Float = 2.0
     private let kTextureTop:Float = 0
     private let kTextureBottom:Float = 1
@@ -10,15 +11,16 @@ class MetalSpatialBase
     private let kTextureRight:Float = 1
     
     init(
+        device:MTLDevice,
         width:Float,
         height:Float)
     {
         let width_2:Float = width / kHalf
         let height_2:Float = height / kHalf
         let top:Float = -height_2
-        let bottom:Float = +height_2
+        let bottom:Float = height_2
         let left:Float = -width_2
-        let right:Float = +width_2
+        let right:Float = width_2
         
         let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
             positionX:left,
@@ -41,10 +43,12 @@ class MetalSpatialBase
             horizontal:kTextureRight,
             vertical:kTextureBottom)
         
-        vertexFace = MetalVertexFace(
+        let vertexFace:MetalVertexFace = MetalVertexFace(
             topLeft:vertexTopLeft,
             topRight:vertexTopRight,
             bottomLeft:vertexBottomLeft,
             bottomRight:vertexBottomRight)
+        
+        vertexBuffer = device.generateBuffer(bufferable:vertexFace)
     }
 }

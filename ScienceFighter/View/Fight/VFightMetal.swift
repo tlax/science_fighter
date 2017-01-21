@@ -3,13 +3,6 @@ import MetalKit
 class VFightMetal:MTKView
 {
     private weak var controller:CFight!
-    var turing:MetalSpatialCharTuring?
-    var turingBuffer:MetalBufferableData?
-    var gauss:MetalSpatialCharTuring?
-    var gaussBuffer:MetalBufferableData?
-    var projection:MetalProjection?
-    var projectionBuffer:MetalBufferableData?
-    var texture:MTLTexture
     private let samplerState:MTLSamplerState
     private let commandQueue:MTLCommandQueue
     private let pipelineState:MTLRenderPipelineState
@@ -80,12 +73,6 @@ class VFightMetal:MTKView
         autoResizeDrawable = false
         isHidden = true
         isPaused = true
-        
-        turing = MetalSpatialCharTuring()
-        turingBuffer = device.generateBuffer(bufferable:turing!.vertexFace)
-        
-        gauss = MetalSpatialCharTuring()
-        gaussBuffer = device.generateBuffer(bufferable:gauss!.vertexFace)
     }
     
     required init(coder:NSCoder)
@@ -119,12 +106,12 @@ class VFightMetal:MTKView
         renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:turingBuffer!.length)
         
         renderEncoder.setVertexBuffer(gaussBuffer!.buffer, offset:0, at:0)
-//        renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
+        //        renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
         renderEncoder.setFragmentTexture(texture, at:0)
-//        renderEncoder.setFragmentSamplerState(samplerState, at:0)
+        //        renderEncoder.setFragmentSamplerState(samplerState, at:0)
         renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:gaussBuffer!.length)
         
-        controller.model.render(renderEncoder:renderEncoder)
+        controller.model.round?.render(renderEncoder:renderEncoder)
         
         renderEncoder.endEncoding()
         commandBuffer.present(drawable)
