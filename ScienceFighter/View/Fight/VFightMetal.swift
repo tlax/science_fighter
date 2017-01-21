@@ -185,7 +185,7 @@ class VFightMetal:MTKView
         renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
         renderEncoder.setFragmentTexture(texture, at:0)
         renderEncoder.setFragmentSamplerState(samplerState, at:0)
-        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:turingBuffer!.size)
+        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:turingBuffer!.length)
         renderEncoder.endEncoding()
         
         commandBuffer.present(drawable)

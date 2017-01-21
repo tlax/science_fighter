@@ -4,9 +4,10 @@ using namespace metal;
 #include "MetalShaderStructs.h"
 
 vertex vertex_destination vertex_textured(const device vertex_source* vertex_array [[buffer(0)]],
-                                           unsigned int vid [[vertex_id]])
+                                          const device float* projection [[buffer(1)]],
+                                          unsigned int vid [[vertex_id]])
 {
-    float3 asd = float3(0.1,0.2,1);
+    float3 asd = float3(projection[0], projection[1], projection[2]);
     
     vertex_source source = vertex_array[vid];
     vertex_destination destination;

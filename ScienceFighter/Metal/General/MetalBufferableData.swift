@@ -3,11 +3,11 @@ import MetalKit
 class MetalBufferableData
 {
     let buffer:MTLBuffer
-    let size:Int
+    let length:Int
     
-    init(buffer:MTLBuffer, size:Int)
+    init(buffer:MTLBuffer, length:Int)
     {
         self.buffer = buffer
-        self.size = size
+        self.length = length
     }
 }

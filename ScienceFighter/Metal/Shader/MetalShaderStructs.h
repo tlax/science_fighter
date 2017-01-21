@@ -13,4 +13,9 @@ struct vertex_destination
     float2 texture;
 };
 
+struct projection_matrix
+{
+    float3 matrix;
+};
+
 #endif

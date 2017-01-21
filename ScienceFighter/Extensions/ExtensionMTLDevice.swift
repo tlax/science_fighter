@@ -13,7 +13,7 @@ extension MTLDevice
             options:MTLResourceOptions())
         let bufferableData:MetalBufferableData = MetalBufferableData(
             buffer:buffer,
-            size:dataSize)
+            length:dataLength)
         
         return bufferableData
     }
