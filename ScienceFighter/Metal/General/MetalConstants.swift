@@ -2,6 +2,8 @@ import MetalKit
 
 class MetalConstants
 {
+    static let kVertexFunction:String = "vertex_textured"
+    static let kFragmentFunction:String = "fragment_simple"
     static let kPixelFormat:MTLPixelFormat = MTLPixelFormat.bgra8Unorm
     static let kRgbBlendOperation:MTLBlendOperation = MTLBlendOperation.add
     static let kAlphaBlendOperation:MTLBlendOperation = MTLBlendOperation.add
@@ -16,10 +18,8 @@ class MetalConstants
     static let kSamplerTAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kSamplerRAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kPrimitiveType:MTLPrimitiveType = MTLPrimitiveType.triangle
-    static let kTextureUsage:NSObject = MTLTextureUsage.renderTarget.rawValue as NSObject
+    static let kTextureUsage:NSObject = MTLTextureUsage.shaderRead.rawValue as NSObject
     static let kTextureSrgb:NSObject = true as NSObject
-    static let kVertexFunction:String = "vertex_textured"
-    static let kFragmentFunction:String = "fragment_simple"
     static let kSamplerLodMaxClamp:Float = FLT_MAX
     static let kSamplerLodMinClamp:Float = 0
     static let kSamplerMaxAnisotropy:Int = 1

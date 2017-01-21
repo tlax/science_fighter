@@ -74,6 +74,7 @@ class VFightMetal:MTKView
         autoResizeDrawable = false
         isHidden = true
         isPaused = true
+        self.controller = controller
     }
     
     required init(coder:NSCoder)
