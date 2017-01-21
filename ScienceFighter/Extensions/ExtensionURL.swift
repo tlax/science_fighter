@@ -2,7 +2,7 @@ import Foundation
 
 extension URL
 {
-    class func excludeFromBackup(original:URL) -> URL
+    static func excludeFromBackup(original:URL) -> URL
     {
         var url:URL = original
         var resourceValues:URLResourceValues = URLResourceValues()
