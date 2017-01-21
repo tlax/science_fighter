@@ -10,8 +10,12 @@ class MetalProjection:MetalBufferableProtocol
     {
         let floatWidth:Float = Float(size.width)
         let floatHeight:Float = Float(size.height)
-        ratioX = floatWidth / floatHeight
-        ratioY = floatHeight / floatWidth
+        let minSize:Float = min(floatWidth, floatHeight)
+        let deltaScale:Float = 1 / minSize
+        let proportionX:Float = floatHeight / minSize
+        let proportionY:Float = floatWidth / minSize
+        ratioX = proportionX * deltaScale
+        ratioY = proportionY * deltaScale
     }
     
     //MARK: bufferableProtocol

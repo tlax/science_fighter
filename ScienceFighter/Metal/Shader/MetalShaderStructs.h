@@ -15,7 +15,7 @@ struct vertex_destination
 
 struct projection_matrix
 {
-    float3 matrix;
+    packed_float3 matrix;
 };
 
 #endif

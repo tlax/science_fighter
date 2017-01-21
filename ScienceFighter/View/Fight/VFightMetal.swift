@@ -42,9 +42,9 @@ class VFightMetal:MTKView
         let pSamplerDescriptor:MTLSamplerDescriptor? = MTLSamplerDescriptor();
         
         if let sampler = pSamplerDescriptor {
-            sampler.minFilter             = MTLSamplerMinMagFilter.nearest
-            sampler.magFilter             = MTLSamplerMinMagFilter.nearest
-            sampler.mipFilter             = MTLSamplerMipFilter.nearest
+            sampler.minFilter             = MTLSamplerMinMagFilter.linear
+            sampler.magFilter             = MTLSamplerMinMagFilter.linear
+            sampler.mipFilter             = MTLSamplerMipFilter.linear
             sampler.maxAnisotropy         = 1
             sampler.sAddressMode          = MTLSamplerAddressMode.clampToEdge
             sampler.tAddressMode          = MTLSamplerAddressMode.clampToEdge
@@ -119,23 +119,23 @@ class VFightMetal:MTKView
         autoResizeDrawable = false
         
         let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
-            positionX:-1,
-            positionY:-1,
+            positionX:-50,
+            positionY:-50,
             horizontal:0,
             vertical:0)
         let vertexTopRight:MetalVertexTextured = MetalVertexTextured(
-            positionX:1,
-            positionY:-1,
+            positionX:50,
+            positionY:-50,
             horizontal:1,
             vertical:0)
         let vertexBottomLeft:MetalVertexTextured = MetalVertexTextured(
-            positionX:-1,
-            positionY:1,
+            positionX:-50,
+            positionY:50,
             horizontal:0,
             vertical:1)
         let vertexBottomRight:MetalVertexTextured = MetalVertexTextured(
-            positionX:1,
-            positionY:1,
+            positionX:50,
+            positionY:50,
             horizontal:1,
             vertical:1)
         

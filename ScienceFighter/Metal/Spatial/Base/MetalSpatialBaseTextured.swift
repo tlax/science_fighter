@@ -3,5 +3,5 @@ import MetalKit
 
 class MetalSpatialBaseTextured:MetalSpatialBase
 {
-    var currentTexture:MTLTexture?
+    weak var currentTexture:MTLTexture?
 }
