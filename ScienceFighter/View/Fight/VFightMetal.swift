@@ -41,7 +41,6 @@ class VFightMetal:MTKView
         
         commandQueue = device.makeCommandQueue()
         
-        MTLSamplerDescriptor()
         let pSamplerDescriptor:MTLSamplerDescriptor? = MTLSamplerDescriptor();
         
         if let sampler = pSamplerDescriptor {
@@ -120,6 +119,8 @@ class VFightMetal:MTKView
         backgroundColor = UIColor.clear
         contentMode = UIViewContentMode.center
         autoResizeDrawable = false
+        isHidden = true
+        isPaused = true
         
         turing = MetalSpatialCharTuring()
         turingBuffer = device.generateBuffer(bufferable:turing!.vertexFace)

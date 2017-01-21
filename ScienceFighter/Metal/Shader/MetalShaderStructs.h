@@ -21,7 +21,8 @@ struct projection_matrix
 
 struct position_matrix
 {
-    packed_float2 matrix;
+    float move_x;
+    float move_y;
 };
 
 #endif

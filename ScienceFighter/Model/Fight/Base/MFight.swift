@@ -1,18 +1,37 @@
-import Foundation
+import UIKit
+import MetalKit
 
 class MFight
 {
-    let fighterUser:MFightFighter
-    let fighterNPC:MFightFighter
+    var projection:MetalProjection?
+    var fighterUser:MFightFighter?
+    var fighterNPC:MFightFighter?
+    private(set) var loaded:Bool
     
     init()
     {
-        let facingPositive:MFightFacingPositive = MFightFacingPositive()
-        let facingNegative:MFightFacingNegative = MFightFacingNegative()
-        
-        fighterUser = MFightFighterTuring(
-            facing:facingPositive)
-        fighterNPC = MFightFighterGauss(
-            facing:facingNegative)
+        loaded = false
+    }
+    
+    //MARK: public
+    
+    func load(
+        device:MTLDevice,
+        size:CGSize)
+    {
+        if !loaded
+        {
+            loaded = true
+         
+            projection = MetalProjection(size:size)
+            
+            let facingPositive:MFightFacingPositive = MFightFacingPositive()
+            let facingNegative:MFightFacingNegative = MFightFacingNegative()
+            
+            fighterUser = MFightFighterTuring(
+                facing:facingPositive)
+            fighterNPC = MFightFighterGauss(
+                facing:facingNegative)
+        }
     }
 }

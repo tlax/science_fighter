@@ -8,7 +8,6 @@ class MetalProjection:MetalBufferableProtocol
     let maxX:Float
     private let ratioX:Float
     private let ratioY:Float
-    private let kRatioZ:Float = 0
     private let kHalf:Float = 2.0
     
     init(size:CGSize)
@@ -35,8 +34,7 @@ class MetalProjection:MetalBufferableProtocol
     {
         let bufferArray:[Float] = [
             ratioX,
-            ratioY,
-            kRatioZ
+            ratioY
         ]
         
         return bufferArray
