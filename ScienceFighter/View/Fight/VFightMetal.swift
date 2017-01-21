@@ -69,35 +69,6 @@ class VFightMetal:MTKView
             return nil
         }
         
-        let textureLoader:MTKTextureLoader = MTKTextureLoader(device:device)
-        let imageTexture:UIImage = #imageLiteral(resourceName: "assetCharTuringStand1")
-        
-        guard
-            
-            let cgImage:CGImage = imageTexture.cgImage
-            
-        else
-        {
-            return nil
-        }
-        
-        do
-        {
-            texture = try textureLoader.newTexture(
-                with:cgImage,
-                options:[
-                    MTKTextureLoaderOptionTextureUsage:
-                        MTLTextureUsage.shaderRead.rawValue as NSObject,
-                    MTKTextureLoaderOptionSRGB:
-                        true as NSObject
-                ])
-        }
-        catch
-        {
-            return nil
-        }
-        
-        
         super.init(
             frame:CGRect.zero,
             device:device)

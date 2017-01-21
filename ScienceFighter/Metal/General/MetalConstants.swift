@@ -15,6 +15,8 @@ class MetalConstants
     static let kSamplerSAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kSamplerTAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kSamplerRAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
+    static let kTextureUsage:NSObject = MTLTextureUsage.renderTarget.rawValue as NSObject
+    static let kTextureSrgb:NSObject = true as NSObject
     static let kVertexFunction:String = "vertex_textured"
     static let kFragmentFunction:String = "fragment_simple"
     static let kSamplerLodMaxClamp:Float = FLT_MAX
