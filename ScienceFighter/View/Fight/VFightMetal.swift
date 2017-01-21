@@ -5,7 +5,8 @@ class VFightMetal:MTKView
     private weak var controller:CFight!
     var turing:MetalSpatialCharTuring?
     var turingBuffer:MTLBuffer?
-    var texture:MTLTexture?
+    var texture:MTLTexture
+    let samplerState:MTLSamplerState
     private let commandQueue:MTLCommandQueue
     private let pipelineState:MTLRenderPipelineState
     private let kPixelFormat:MTLPixelFormat = MTLPixelFormat.bgra8Unorm
@@ -16,6 +17,7 @@ class VFightMetal:MTKView
     private let kDestinationRgbBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
     private let kDestinationAlphaBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
     private let kVertexFunction:String = "vertex_textured"
+    private let kFragmentFunction:String = "fragment_simple"
     private let kBlendingEnabled:Bool = true
     private let kColorAttachmentIndex:Int = 0
     
@@ -27,7 +29,8 @@ class VFightMetal:MTKView
             
             let device:MTLDevice = MTLCreateSystemDefaultDevice(),
             let library:MTLLibrary = device.newDefaultLibrary(),
-            let vertexFunction:MTLFunction = library.makeFunction(name:kVertexFunction)
+            let vertexFunction:MTLFunction = library.makeFunction(name:kVertexFunction),
+            let fragmentFunction:MTLFunction = library.makeFunction(name:kFragmentFunction)
         
         else
         {
@@ -36,8 +39,26 @@ class VFightMetal:MTKView
         
         commandQueue = device.makeCommandQueue()
         
+        let pSamplerDescriptor:MTLSamplerDescriptor? = MTLSamplerDescriptor();
+        
+        if let sampler = pSamplerDescriptor {
+            sampler.minFilter             = MTLSamplerMinMagFilter.nearest
+            sampler.magFilter             = MTLSamplerMinMagFilter.nearest
+            sampler.mipFilter             = MTLSamplerMipFilter.nearest
+            sampler.maxAnisotropy         = 1
+            sampler.sAddressMode          = MTLSamplerAddressMode.clampToEdge
+            sampler.tAddressMode          = MTLSamplerAddressMode.clampToEdge
+            sampler.rAddressMode          = MTLSamplerAddressMode.clampToEdge
+            sampler.normalizedCoordinates = true
+            sampler.lodMinClamp           = 0
+            sampler.lodMaxClamp           = FLT_MAX
+        }
+        
+        samplerState = device.makeSamplerState(descriptor: pSamplerDescriptor!)
+        
         let pipelineDescriptor:MTLRenderPipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunction
+        pipelineDescriptor.fragmentFunction = fragmentFunction
         
         let colorAttachment:MTLRenderPipelineColorAttachmentDescriptor = pipelineDescriptor.colorAttachments[kColorAttachmentIndex]
         colorAttachment.pixelFormat = kPixelFormat
@@ -57,6 +78,35 @@ class VFightMetal:MTKView
         {
             return nil
         }
+        
+        let textureLoader:MTKTextureLoader = MTKTextureLoader(device:device)
+        let imageTexture:UIImage = #imageLiteral(resourceName: "assetCharTuringStand1")
+        
+        guard
+            
+            let cgImage:CGImage = imageTexture.cgImage
+            
+        else
+        {
+            return nil
+        }
+        
+        do
+        {
+            texture = try textureLoader.newTexture(
+                with:cgImage,
+                options:[
+                    MTKTextureLoaderOptionTextureUsage:
+                        MTLTextureUsage.shaderRead.rawValue as NSObject,
+                    MTKTextureLoaderOptionSRGB:
+                        true as NSObject
+                ])
+        }
+        catch
+        {
+            return nil
+        }
+        
         
         super.init(
             frame:CGRect.zero,
@@ -102,34 +152,6 @@ class VFightMetal:MTKView
             bytes:turingData,
             length:turingDataSize,
             options:MTLResourceOptions())
-        
-        let textureLoader:MTKTextureLoader = MTKTextureLoader(device:device)
-        let imageTexture:UIImage = #imageLiteral(resourceName: "assetCharTuringStand1")
-        
-        guard
-            
-            let cgImage:CGImage = imageTexture.cgImage
-            
-        else
-        {
-            return nil
-        }
-        
-        do
-        {
-            texture = try textureLoader.newTexture(
-                with:cgImage,
-                options:[
-                    MTKTextureLoaderOptionTextureUsage:
-                        MTLTextureUsage.shaderRead.rawValue as NSObject,
-                    MTKTextureLoaderOptionSRGB:
-                        true as NSObject
-                ])
-        }
-        catch
-        {
-            texture = nil
-        }
     }
     
     required init(coder:NSCoder)
@@ -151,6 +173,11 @@ class VFightMetal:MTKView
             return
         }
         
+        
+        passDescriptor.colorAttachments[0].texture = drawable.texture
+        passDescriptor.colorAttachments[0].loadAction = MTLLoadAction.clear
+        passDescriptor.colorAttachments[0].storeAction = MTLStoreAction.store
+        
         let commandBuffer:MTLCommandBuffer = commandQueue.makeCommandBuffer()
         let renderEncoder:MTLRenderCommandEncoder = commandBuffer.makeRenderCommandEncoder(
             descriptor:passDescriptor)
@@ -158,6 +185,7 @@ class VFightMetal:MTKView
         renderEncoder.setRenderPipelineState(pipelineState)
         renderEncoder.setVertexBuffer(turingBuffer, offset:0, at:0)
         renderEncoder.setFragmentTexture(texture, at:0)
+        renderEncoder.setFragmentSamplerState(samplerState, at:0)
         renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:vertexLength)
         renderEncoder.endEncoding()
         
