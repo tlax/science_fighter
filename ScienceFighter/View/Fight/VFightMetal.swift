@@ -115,6 +115,8 @@ class VFightMetal:MTKView
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.clear
+        contentMode = UIViewContentMode.center
+        autoResizeDrawable = false
         
         let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
             positionX:-1,
@@ -122,8 +124,8 @@ class VFightMetal:MTKView
             horizontal:0,
             vertical:0)
         let vertexTopRight:MetalVertexTextured = MetalVertexTextured(
-            positionX:-1,
-            positionY:1,
+            positionX:1,
+            positionY:-1,
             horizontal:1,
             vertical:0)
         let vertexBottomLeft:MetalVertexTextured = MetalVertexTextured(
@@ -173,11 +175,9 @@ class VFightMetal:MTKView
             return
         }
         
-        
         passDescriptor.colorAttachments[0].texture = drawable.texture
         passDescriptor.colorAttachments[0].loadAction = MTLLoadAction.clear
         passDescriptor.colorAttachments[0].storeAction = MTLStoreAction.store
-
         
         let commandBuffer:MTLCommandBuffer = commandQueue.makeCommandBuffer()
         let renderEncoder:MTLRenderCommandEncoder = commandBuffer.makeRenderCommandEncoder(

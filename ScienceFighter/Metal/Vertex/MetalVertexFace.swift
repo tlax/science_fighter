@@ -28,8 +28,8 @@ class MetalVertexFace
         buffer.append(contentsOf:topLeft.asBuffer())
         buffer.append(contentsOf:bottomLeft.asBuffer())
         buffer.append(contentsOf:topRight.asBuffer())
-        buffer.append(contentsOf:topLeft.asBuffer())
         buffer.append(contentsOf:topRight.asBuffer())
+        buffer.append(contentsOf:bottomLeft.asBuffer())
         buffer.append(contentsOf:bottomRight.asBuffer())
         
         return buffer
