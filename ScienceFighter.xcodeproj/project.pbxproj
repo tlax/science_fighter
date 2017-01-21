@@ -359,9 +359,9 @@
 		DA2798241E32B413008B98C1 /* Shader */ = {
 			isa = PBXGroup;
 			children = (
+				DA2798291E32D694008B98C1 /* MetalShaderStructs.h */,
 				DA2798251E32B430008B98C1 /* MetalShaderVertexTextured.metal */,
 				DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */,
-				DA2798291E32D694008B98C1 /* MetalShaderStructs.h */,
 			);
 			path = Shader;
 			sourceTree = "<group>";

@@ -177,11 +177,12 @@ class VFightMetal:MTKView
         passDescriptor.colorAttachments[0].texture = drawable.texture
         passDescriptor.colorAttachments[0].loadAction = MTLLoadAction.clear
         passDescriptor.colorAttachments[0].storeAction = MTLStoreAction.store
+
         
         let commandBuffer:MTLCommandBuffer = commandQueue.makeCommandBuffer()
         let renderEncoder:MTLRenderCommandEncoder = commandBuffer.makeRenderCommandEncoder(
             descriptor:passDescriptor)
-        renderEncoder.setCullMode(MTLCullMode.front)
+        renderEncoder.setCullMode(MTLCullMode.none)
         renderEncoder.setRenderPipelineState(pipelineState)
         renderEncoder.setVertexBuffer(turingBuffer, offset:0, at:0)
         renderEncoder.setFragmentTexture(texture, at:0)
