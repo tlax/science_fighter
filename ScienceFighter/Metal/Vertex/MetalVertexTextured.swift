@@ -19,12 +19,12 @@ class MetalVertexTextured:MetalVertex
             positionY:positionY)
     }
     
-    override func asBuffer() -> [Float]
+    override func buffer() -> [Float]
     {
-        var buffer:[Float] = super.asBuffer()
-        buffer.append(horizontal)
-        buffer.append(vertical)
+        var bufferArray:[Float] = super.buffer()
+        bufferArray.append(horizontal)
+        bufferArray.append(vertical)
         
-        return buffer
+        return bufferArray
     }
 }

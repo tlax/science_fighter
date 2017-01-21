@@ -145,10 +145,11 @@ class VFightMetal:MTKView
             bottomLeft:vertexBottomLeft,
             bottomRight:vertexBottomRight)
         turing = MetalSpatialCharTuring(vertexFace:turingFace)
-        let turingData:[Float] = turing!.vertexFace.asBuffer()
+        let turingData:[Float] = turing!.vertexFace.buffer()
         let turingDataLength:Int = turingData.count
         vertexLength = turingDataLength
-        let turingDataSize:Int = turingDataLength * turing!.vertexFace.sizeOfItem()
+        let turingDataSize:Int = turingDataLength * MSession.sharedInstance.kBufferItemSize
+
         
         turingBuffer = device.makeBuffer(
             bytes:turingData,

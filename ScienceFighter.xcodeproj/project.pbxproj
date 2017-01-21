@@ -374,8 +374,8 @@
 		DAE8166F1E3302DF002574B6 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				DAE816701E3302F5002574B6 /* MetalProjection.swift */,
 				DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */,
+				DAE816701E3302F5002574B6 /* MetalProjection.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";

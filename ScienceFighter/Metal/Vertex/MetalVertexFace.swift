@@ -1,6 +1,6 @@
 import Foundation
 
-class MetalVertexFace
+class MetalVertexFace:MetalBufferableProtocol
 {
     private let topLeft:MetalVertex
     private let topRight:MetalVertex
@@ -19,19 +19,18 @@ class MetalVertexFace
         self.bottomRight = bottomRight
     }
     
-    //MARK: public
+    //MARK: bufferableProtocol
     
-    func asBuffer() -> [Float]
+    func buffer() -> [Float]
     {
-        var buffer:[Float] = []
+        var bufferArray:[Float] = []
+        bufferArray.append(contentsOf:topLeft.buffer())
+        bufferArray.append(contentsOf:bottomLeft.buffer())
+        bufferArray.append(contentsOf:topRight.buffer())
+        bufferArray.append(contentsOf:topRight.buffer())
+        bufferArray.append(contentsOf:bottomLeft.buffer())
+        bufferArray.append(contentsOf:bottomRight.buffer())
         
-        buffer.append(contentsOf:topLeft.asBuffer())
-        buffer.append(contentsOf:bottomLeft.asBuffer())
-        buffer.append(contentsOf:topRight.asBuffer())
-        buffer.append(contentsOf:topRight.asBuffer())
-        buffer.append(contentsOf:bottomLeft.asBuffer())
-        buffer.append(contentsOf:bottomRight.asBuffer())
-        
-        return buffer
+        return bufferArray
     }
 }

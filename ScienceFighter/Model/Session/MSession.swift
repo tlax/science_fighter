@@ -2,6 +2,7 @@ import Foundation
 
 class MSession
 {
+    let kBufferItemSize:Int = 4
     static let sharedInstance:MSession = MSession()
     static let kFroobMaxRecords:Int = 3
     //private(set) var settings:DSettings?

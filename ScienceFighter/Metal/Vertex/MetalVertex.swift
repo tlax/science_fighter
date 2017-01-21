@@ -1,6 +1,6 @@
 import Foundation
 
-class MetalVertex
+class MetalVertex:MetalBufferableProtocol
 {
     private let positionX:Float
     private let positionY:Float
@@ -14,16 +14,16 @@ class MetalVertex
         self.positionY = positionY
     }
     
-    //MARK: public
+    //MARK: bufferableProtocol
     
-    func asBuffer() -> [Float]
+    func buffer() -> [Float]
     {
-        let buffer:[Float] = [
+        let bufferArray:[Float] = [
             positionX,
             positionY,
             kPositionZ
         ]
         
-        return buffer
+        return bufferArray
     }
 }
