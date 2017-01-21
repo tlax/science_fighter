@@ -4,7 +4,9 @@ class VFightMetal:MTKView
 {
     private weak var controller:CFight!
     var turing:MetalSpatialCharTuring?
-    var turingBuffer:MTLBuffer?
+    var turingBuffer:MetalBufferableData?
+    var projection:MetalProjection?
+    var projectionBuffer:MetalBufferableData?
     var texture:MTLTexture
     let samplerState:MTLSamplerState
     private let commandQueue:MTLCommandQueue
@@ -20,8 +22,6 @@ class VFightMetal:MTKView
     private let kFragmentFunction:String = "fragment_simple"
     private let kBlendingEnabled:Bool = true
     private let kColorAttachmentIndex:Int = 0
-    
-    var vertexLength:Int = 0
     
     init?(controller:CFight)
     {
@@ -145,21 +145,21 @@ class VFightMetal:MTKView
             bottomLeft:vertexBottomLeft,
             bottomRight:vertexBottomRight)
         turing = MetalSpatialCharTuring(vertexFace:turingFace)
-        let turingData:[Float] = turing!.vertexFace.buffer()
-        let turingDataLength:Int = turingData.count
-        vertexLength = turingDataLength
-        let turingDataSize:Int = turingDataLength * MSession.sharedInstance.kBufferItemSize
-
-        
-        turingBuffer = device.makeBuffer(
-            bytes:turingData,
-            length:turingDataSize,
-            options:MTLResourceOptions())
+        turingBuffer = device.generateBuffer(bufferable:turing!.vertexFace)
     }
     
     required init(coder:NSCoder)
     {
         fatalError()
+    }
+    
+    override func layoutSubviews()
+    {
+        projection = MetalProjection(size:bounds.size)
+        projectionBuffer = device?.generateBuffer(
+            bufferable:projection!)
+        
+        super.layoutSubviews()
     }
     
     override func draw()
@@ -181,10 +181,11 @@ class VFightMetal:MTKView
             descriptor:passDescriptor)
         renderEncoder.setCullMode(MTLCullMode.none)
         renderEncoder.setRenderPipelineState(pipelineState)
-        renderEncoder.setVertexBuffer(turingBuffer, offset:0, at:0)
+        renderEncoder.setVertexBuffer(turingBuffer!.buffer, offset:0, at:0)
+        renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
         renderEncoder.setFragmentTexture(texture, at:0)
         renderEncoder.setFragmentSamplerState(samplerState, at:0)
-        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:vertexLength)
+        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:turingBuffer!.size)
         renderEncoder.endEncoding()
         
         commandBuffer.present(drawable)

@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MetalProjection:MetalBufferableProtocol
 {
@@ -6,12 +6,12 @@ class MetalProjection:MetalBufferableProtocol
     private let ratioY:Float
     private let kRatioZ:Float = 0
     
-    init(
-        screenWidth:Float,
-        screenHeight:Float)
+    init(size:CGSize)
     {
-        ratioY = 1
-        ratioX = 1
+        let floatWidth:Float = Float(size.width)
+        let floatHeight:Float = Float(size.height)
+        ratioX = floatWidth / floatHeight
+        ratioY = floatHeight / floatWidth
     }
     
     //MARK: bufferableProtocol
