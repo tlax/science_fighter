@@ -6,6 +6,7 @@ class VFightMetal:MTKView
     private let samplerState:MTLSamplerState
     private let commandQueue:MTLCommandQueue
     private let pipelineState:MTLRenderPipelineState
+    private let kFragmentSamplerIndex:Int = 0
     
     init?(controller:CFight)
     {
@@ -99,18 +100,7 @@ class VFightMetal:MTKView
             descriptor:passDescriptor)
         renderEncoder.setCullMode(MTLCullMode.none)
         renderEncoder.setRenderPipelineState(pipelineState)
-        renderEncoder.setVertexBuffer(turingBuffer!.buffer, offset:0, at:0)
-        renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
-        renderEncoder.setFragmentTexture(texture, at:0)
-        renderEncoder.setFragmentSamplerState(samplerState, at:0)
-        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:turingBuffer!.length)
-        
-        renderEncoder.setVertexBuffer(gaussBuffer!.buffer, offset:0, at:0)
-        //        renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
-        renderEncoder.setFragmentTexture(texture, at:0)
-        //        renderEncoder.setFragmentSamplerState(samplerState, at:0)
-        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:gaussBuffer!.length)
-        
+        renderEncoder.setFragmentSamplerState(samplerState, at:kFragmentSamplerIndex)
         controller.model.round?.render(renderEncoder:renderEncoder)
         
         renderEncoder.endEncoding()

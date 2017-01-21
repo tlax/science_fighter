@@ -6,14 +6,15 @@ class MFightRound:MetalRenderableProtocol
     let fighterUser:MFightFighter
     let fighterNPC:MFightFighter
     let projection:MetalProjection
-    private let projectionBuffer:MetalBufferableData
+    private let kProjectionIndex:Int = 1
     
     init(
         device:MTLDevice,
         size:CGSize)
     {
-        projection = MetalProjection(size:size)
-        projectionBuffer = device.generateBuffer(bufferable:projection)
+        projection = MetalProjection(
+            device:device,
+            size:size)
         
         let facingPositive:MFightFacingPositive = MFightFacingPositive()
         let facingNegative:MFightFacingNegative = MFightFacingNegative()
@@ -30,6 +31,11 @@ class MFightRound:MetalRenderableProtocol
     
     func render(renderEncoder:MTLRenderCommandEncoder)
     {
+        renderEncoder.setVertexBuffer(
+            projection.projectionBuffer.buffer,
+            offset:0,
+            at:kProjectionIndex)
+        
         fighterNPC.render(renderEncoder:renderEncoder)
         fighterUser.render(renderEncoder:renderEncoder)
     }
