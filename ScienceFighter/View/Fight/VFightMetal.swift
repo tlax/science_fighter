@@ -175,10 +175,6 @@ class VFightMetal:MTKView
             return
         }
         
-        passDescriptor.colorAttachments[0].texture = drawable.texture
-        passDescriptor.colorAttachments[0].loadAction = MTLLoadAction.clear
-        passDescriptor.colorAttachments[0].storeAction = MTLStoreAction.store
-        
         let commandBuffer:MTLCommandBuffer = commandQueue.makeCommandBuffer()
         let renderEncoder:MTLRenderCommandEncoder = commandBuffer.makeRenderCommandEncoder(
             descriptor:passDescriptor)

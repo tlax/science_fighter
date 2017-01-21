@@ -48,6 +48,8 @@
 		DA2798221E32A0C5008B98C1 /* MetalVertexFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2798211E32A0C5008B98C1 /* MetalVertexFace.swift */; };
 		DA2798261E32B431008B98C1 /* MetalShaderVertexTextured.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA2798251E32B430008B98C1 /* MetalShaderVertexTextured.metal */; };
 		DA2798281E32D349008B98C1 /* MetalShaderFragmentSimple.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */; };
+		DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816701E3302F5002574B6 /* MetalProjection.swift */; };
+		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,8 @@
 		DA2798251E32B430008B98C1 /* MetalShaderVertexTextured.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalShaderVertexTextured.metal; sourceTree = "<group>"; };
 		DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalShaderFragmentSimple.metal; sourceTree = "<group>"; };
 		DA2798291E32D694008B98C1 /* MetalShaderStructs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalShaderStructs.h; sourceTree = "<group>"; };
+		DAE816701E3302F5002574B6 /* MetalProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjection.swift; sourceTree = "<group>"; };
+		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 		DA2797D01E3263C6008B98C1 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				DAE8166F1E3302DF002574B6 /* General */,
 				DA2798241E32B413008B98C1 /* Shader */,
 				DA27981C1E329511008B98C1 /* Vertex */,
 				DA2798101E3290FE008B98C1 /* Spatial */,
@@ -366,6 +371,15 @@
 			path = Shader;
 			sourceTree = "<group>";
 		};
+		DAE8166F1E3302DF002574B6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DAE816701E3302F5002574B6 /* MetalProjection.swift */,
+				DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -447,7 +461,9 @@
 				DA2797FD1E3263C6008B98C1 /* VHelp.swift in Sources */,
 				DA2797F21E3263C6008B98C1 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA2798081E326AF0008B98C1 /* CFight.swift in Sources */,
+				DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */,
 				DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */,
+				DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */,
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
 				DA2798261E32B431008B98C1 /* MetalShaderVertexTextured.metal in Sources */,
 				DA2797F31E3263C6008B98C1 /* ExtensionNSManagedObject.swift in Sources */,

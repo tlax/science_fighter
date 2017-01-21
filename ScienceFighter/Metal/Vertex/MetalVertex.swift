@@ -26,11 +26,4 @@ class MetalVertex
         
         return buffer
     }
-    
-    func sizeOfItem() -> Int
-    {
-        let size:Int = MemoryLayout.size(ofValue:positionX)
-        
-        return size
-    }
 }

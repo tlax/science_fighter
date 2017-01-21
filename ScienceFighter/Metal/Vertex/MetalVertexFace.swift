@@ -34,11 +34,4 @@ class MetalVertexFace
         
         return buffer
     }
-    
-    func sizeOfItem() -> Int
-    {
-        let size:Int = topLeft.sizeOfItem()
-        
-        return size
-    }
 }
