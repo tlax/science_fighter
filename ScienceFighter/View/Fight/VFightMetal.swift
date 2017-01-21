@@ -5,6 +5,8 @@ class VFightMetal:MTKView
     private weak var controller:CFight!
     var turing:MetalSpatialCharTuring?
     var turingBuffer:MetalBufferableData?
+    var gauss:MetalSpatialCharTuring?
+    var gaussBuffer:MetalBufferableData?
     var projection:MetalProjection?
     var projectionBuffer:MetalBufferableData?
     var texture:MTLTexture
@@ -39,6 +41,7 @@ class VFightMetal:MTKView
         
         commandQueue = device.makeCommandQueue()
         
+        MTLSamplerDescriptor()
         let pSamplerDescriptor:MTLSamplerDescriptor? = MTLSamplerDescriptor();
         
         if let sampler = pSamplerDescriptor {
@@ -118,34 +121,11 @@ class VFightMetal:MTKView
         contentMode = UIViewContentMode.center
         autoResizeDrawable = false
         
-        let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
-            positionX:-50,
-            positionY:-50,
-            horizontal:0,
-            vertical:0)
-        let vertexTopRight:MetalVertexTextured = MetalVertexTextured(
-            positionX:50,
-            positionY:-50,
-            horizontal:1,
-            vertical:0)
-        let vertexBottomLeft:MetalVertexTextured = MetalVertexTextured(
-            positionX:-50,
-            positionY:50,
-            horizontal:0,
-            vertical:1)
-        let vertexBottomRight:MetalVertexTextured = MetalVertexTextured(
-            positionX:50,
-            positionY:50,
-            horizontal:1,
-            vertical:1)
-        
-        let turingFace:MetalVertexFace = MetalVertexFace(
-            topLeft:vertexTopLeft,
-            topRight:vertexTopRight,
-            bottomLeft:vertexBottomLeft,
-            bottomRight:vertexBottomRight)
-        turing = MetalSpatialCharTuring(vertexFace:turingFace)
+        turing = MetalSpatialCharTuring(positionX:-55, positionY:0)
         turingBuffer = device.generateBuffer(bufferable:turing!.vertexFace)
+        
+        gauss = MetalSpatialCharTuring(positionX:55, positionY:0)
+        gaussBuffer = device.generateBuffer(bufferable:gauss!.vertexFace)
     }
     
     required init(coder:NSCoder)
@@ -186,8 +166,14 @@ class VFightMetal:MTKView
         renderEncoder.setFragmentTexture(texture, at:0)
         renderEncoder.setFragmentSamplerState(samplerState, at:0)
         renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:turingBuffer!.length)
-        renderEncoder.endEncoding()
         
+        renderEncoder.setVertexBuffer(gaussBuffer!.buffer, offset:0, at:0)
+//        renderEncoder.setVertexBuffer(projectionBuffer!.buffer, offset:0, at:1)
+        renderEncoder.setFragmentTexture(texture, at:0)
+//        renderEncoder.setFragmentSamplerState(samplerState, at:0)
+        renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:gaussBuffer!.length)
+        
+        renderEncoder.endEncoding()
         commandBuffer.present(drawable)
         commandBuffer.commit()
     }
