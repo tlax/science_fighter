@@ -6,8 +6,8 @@ class MetalSpatialCharTextures
     let frontTextures:[MTLTexture]
     
     init(
-        frontImages:[UIImage],
-        device:MTLDevice)
+        device:MTLDevice,
+        frontImages:[UIImage])
     {
         var frontTextures:[MTLTexture] = []
         
