@@ -10,20 +10,9 @@ class VFightMetal:MTKView
     var projection:MetalProjection?
     var projectionBuffer:MetalBufferableData?
     var texture:MTLTexture
-    let samplerState:MTLSamplerState
+    private let samplerState:MTLSamplerState
     private let commandQueue:MTLCommandQueue
     private let pipelineState:MTLRenderPipelineState
-    private let kPixelFormat:MTLPixelFormat = MTLPixelFormat.bgra8Unorm
-    private let kRgbBlendOperation:MTLBlendOperation = MTLBlendOperation.add
-    private let kAlphaBlendOperation:MTLBlendOperation = MTLBlendOperation.add
-    private let kSourceRgbBlendFactor:MTLBlendFactor = MTLBlendFactor.one
-    private let kSourceAlphaBlendFactor:MTLBlendFactor = MTLBlendFactor.one
-    private let kDestinationRgbBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
-    private let kDestinationAlphaBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
-    private let kVertexFunction:String = "vertex_textured"
-    private let kFragmentFunction:String = "fragment_simple"
-    private let kBlendingEnabled:Bool = true
-    private let kColorAttachmentIndex:Int = 0
     
     init?(controller:CFight)
     {
@@ -31,8 +20,10 @@ class VFightMetal:MTKView
             
             let device:MTLDevice = MTLCreateSystemDefaultDevice(),
             let library:MTLLibrary = device.newDefaultLibrary(),
-            let vertexFunction:MTLFunction = library.makeFunction(name:kVertexFunction),
-            let fragmentFunction:MTLFunction = library.makeFunction(name:kFragmentFunction)
+            let vertexFunction:MTLFunction = library.makeFunction(
+                name:MetalConstants.kVertexFunction),
+            let fragmentFunction:MTLFunction = library.makeFunction(
+                name:MetalConstants.kFragmentFunction)
         
         else
         {
@@ -41,6 +32,8 @@ class VFightMetal:MTKView
         
         commandQueue = device.makeCommandQueue()
         
+        let sampleDescriptor = MTLSamplerDescriptor()
+        sampleDescriptor.minFilter
         let pSamplerDescriptor:MTLSamplerDescriptor? = MTLSamplerDescriptor();
         
         if let sampler = pSamplerDescriptor {
@@ -134,15 +127,6 @@ class VFightMetal:MTKView
         fatalError()
     }
     
-    override func layoutSubviews()
-    {
-        projection = MetalProjection(size:bounds.size)
-        projectionBuffer = device?.generateBuffer(
-            bufferable:projection!)
-        
-        super.layoutSubviews()
-    }
-    
     override func draw()
     {
         super.draw()
@@ -173,6 +157,8 @@ class VFightMetal:MTKView
         renderEncoder.setFragmentTexture(texture, at:0)
 //        renderEncoder.setFragmentSamplerState(samplerState, at:0)
         renderEncoder.drawPrimitives(type:MTLPrimitiveType.triangle, vertexStart:0, vertexCount:gaussBuffer!.length)
+        
+        controller.model.render(renderEncoder:renderEncoder)
         
         renderEncoder.endEncoding()
         commandBuffer.present(drawable)

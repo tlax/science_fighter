@@ -34,4 +34,9 @@ class MFight
                 facing:facingNegative)
         }
     }
+    
+    func render(renderEncoder:MTLRenderCommandEncoder)
+    {
+        
+    }
 }
