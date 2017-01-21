@@ -7,7 +7,12 @@ class MFight
     
     init()
     {
-        fighterUser = MFightFighterTuring()
-        fighterNPC = MFightFighterGauss()
+        let facingPositive:MFightFacingPositive = MFightFacingPositive()
+        let facingNegative:MFightFacingNegative = MFightFacingNegative()
+        
+        fighterUser = MFightFighterTuring(
+            facing:facingPositive)
+        fighterNPC = MFightFighterGauss(
+            facing:facingNegative)
     }
 }

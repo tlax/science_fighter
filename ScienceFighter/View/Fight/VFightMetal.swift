@@ -121,10 +121,10 @@ class VFightMetal:MTKView
         contentMode = UIViewContentMode.center
         autoResizeDrawable = false
         
-        turing = MetalSpatialCharTuring(positionX:-55, positionY:0)
+        turing = MetalSpatialCharTuring()
         turingBuffer = device.generateBuffer(bufferable:turing!.vertexFace)
         
-        gauss = MetalSpatialCharTuring(positionX:55, positionY:0)
+        gauss = MetalSpatialCharTuring()
         gaussBuffer = device.generateBuffer(bufferable:gauss!.vertexFace)
     }
     

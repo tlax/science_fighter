@@ -10,17 +10,15 @@ class MetalSpatialBase
     private let kTextureRight:Float = 1
     
     init(
-        positionX:Float,
-        positionY:Float,
         width:Float,
         height:Float)
     {
         let width_2:Float = width / kHalf
         let height_2:Float = height / kHalf
-        let top:Float = positionY - height_2
-        let bottom:Float = positionY + height_2
-        let left:Float = positionX - width_2
-        let right:Float = positionX + width_2
+        let top:Float = -height_2
+        let bottom:Float = +height_2
+        let left:Float = -width_2
+        let right:Float = +width_2
         
         let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
             positionX:left,
