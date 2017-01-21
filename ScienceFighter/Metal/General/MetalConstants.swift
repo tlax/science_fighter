@@ -11,7 +11,7 @@ class MetalConstants
     static let kDestinationAlphaBlendFactor:MTLBlendFactor = MTLBlendFactor.oneMinusSourceAlpha
     static let kSamplerMinFilter:MTLSamplerMinMagFilter = MTLSamplerMinMagFilter.linear
     static let kSamplerMagFilter:MTLSamplerMinMagFilter = MTLSamplerMinMagFilter.linear
-    static let kSamplerMipFilter:MTLSamplerMinMagFilter = MTLSamplerMinMagFilter.linear
+    static let kSamplerMipFilter:MTLSamplerMipFilter = MTLSamplerMipFilter.linear
     static let kSamplerSAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kSamplerTAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kSamplerRAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
@@ -19,7 +19,7 @@ class MetalConstants
     static let kFragmentFunction:String = "fragment_simple"
     static let kSamplerLodMaxClamp:Float = FLT_MAX
     static let kSamplerLodMinClamp:Float = 0
-    static let kSamplerMaxanisotropy:Int = 1
+    static let kSamplerMaxAnisotropy:Int = 1
     static let kBufferElementSize:Int = 4
     static let kColorAttachmentIndex:Int = 0
     static let kBlendingEnabled:Bool = true

@@ -33,37 +33,32 @@ class VFightMetal:MTKView
         commandQueue = device.makeCommandQueue()
         
         let sampleDescriptor = MTLSamplerDescriptor()
-        sampleDescriptor.minFilter
-        let pSamplerDescriptor:MTLSamplerDescriptor? = MTLSamplerDescriptor();
-        
-        if let sampler = pSamplerDescriptor {
-            sampler.minFilter             = MTLSamplerMinMagFilter.linear
-            sampler.magFilter             = MTLSamplerMinMagFilter.linear
-            sampler.mipFilter             = MTLSamplerMipFilter.linear
-            sampler.maxAnisotropy         = 1
-            sampler.sAddressMode          = MTLSamplerAddressMode.clampToEdge
-            sampler.tAddressMode          = MTLSamplerAddressMode.clampToEdge
-            sampler.rAddressMode          = MTLSamplerAddressMode.clampToEdge
-            sampler.normalizedCoordinates = true
-            sampler.lodMinClamp           = 0
-            sampler.lodMaxClamp           = FLT_MAX
-        }
-        
-        samplerState = device.makeSamplerState(descriptor: pSamplerDescriptor!)
+        sampleDescriptor.minFilter = MetalConstants.kSamplerMinFilter
+        sampleDescriptor.magFilter = MetalConstants.kSamplerMagFilter
+        sampleDescriptor.mipFilter = MetalConstants.kSamplerMipFilter
+        sampleDescriptor.sAddressMode = MetalConstants.kSamplerSAddressMode
+        sampleDescriptor.tAddressMode = MetalConstants.kSamplerTAddressMode
+        sampleDescriptor.rAddressMode = MetalConstants.kSamplerRAddressMode
+        sampleDescriptor.lodMinClamp = MetalConstants.kSamplerLodMinClamp
+        sampleDescriptor.lodMaxClamp = MetalConstants.kSamplerLodMaxClamp
+        sampleDescriptor.maxAnisotropy = MetalConstants.kSamplerMaxAnisotropy
+        sampleDescriptor.normalizedCoordinates = MetalConstants.kSamplerNormalizedCoordinates
+        samplerState = device.makeSamplerState(descriptor:sampleDescriptor)
         
         let pipelineDescriptor:MTLRenderPipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunction
         pipelineDescriptor.fragmentFunction = fragmentFunction
         
-        let colorAttachment:MTLRenderPipelineColorAttachmentDescriptor = pipelineDescriptor.colorAttachments[kColorAttachmentIndex]
-        colorAttachment.pixelFormat = kPixelFormat
-        colorAttachment.isBlendingEnabled = kBlendingEnabled
-        colorAttachment.rgbBlendOperation = kRgbBlendOperation
-        colorAttachment.alphaBlendOperation = kAlphaBlendOperation
-        colorAttachment.sourceRGBBlendFactor = kSourceRgbBlendFactor
-        colorAttachment.sourceAlphaBlendFactor = kSourceAlphaBlendFactor
-        colorAttachment.destinationRGBBlendFactor = kDestinationRgbBlendFactor
-        colorAttachment.destinationAlphaBlendFactor = kDestinationAlphaBlendFactor
+        let colorAttachment:MTLRenderPipelineColorAttachmentDescriptor = pipelineDescriptor.colorAttachments[
+            MetalConstants.kColorAttachmentIndex]
+        colorAttachment.pixelFormat = MetalConstants.kPixelFormat
+        colorAttachment.isBlendingEnabled = MetalConstants.kBlendingEnabled
+        colorAttachment.rgbBlendOperation = MetalConstants.kRgbBlendOperation
+        colorAttachment.alphaBlendOperation = MetalConstants.kAlphaBlendOperation
+        colorAttachment.sourceRGBBlendFactor = MetalConstants.kSourceRgbBlendFactor
+        colorAttachment.sourceAlphaBlendFactor = MetalConstants.kSourceAlphaBlendFactor
+        colorAttachment.destinationRGBBlendFactor = MetalConstants.kDestinationRgbBlendFactor
+        colorAttachment.destinationAlphaBlendFactor = MetalConstants.kDestinationAlphaBlendFactor
         
         do
         {
