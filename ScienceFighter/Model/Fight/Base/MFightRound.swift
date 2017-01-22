@@ -3,6 +3,7 @@ import MetalKit
 
 class MFightRound:MetalRenderableProtocol
 {
+    let scene:MFightScene
     let fighterUser:MFightFighter
     let fighterNPC:MFightFighter
     let projection:MetalProjection
@@ -11,13 +12,14 @@ class MFightRound:MetalRenderableProtocol
     {
         let facingPositive:MFightFacingPositive = MFightFacingPositive()
         let facingNegative:MFightFacingNegative = MFightFacingNegative()
-        
+
         fighterUser = MFightFighterTuring(
             device:device,
             facing:facingPositive)
         fighterNPC = MFightFighterGauss(
             device:device,
             facing:facingNegative)
+        scene = MFightSceneLondon(device:device)
         projection = MetalProjection(device:device)
     }
     
@@ -30,6 +32,7 @@ class MFightRound:MetalRenderableProtocol
             offset:0,
             at:MetalConstants.kProjectionIndex)
         
+        scene.render(renderEncoder:renderEncoder)
         fighterNPC.render(renderEncoder:renderEncoder)
         fighterUser.render(renderEncoder:renderEncoder)
     }
