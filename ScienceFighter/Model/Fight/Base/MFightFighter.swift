@@ -7,6 +7,7 @@ class MFightFighter:MetalRenderableProtocol
     let position:MFightPosition
     let facing:MFightFacing
     private let kVertexIndex:Int = 0
+    private let kPositionIndex:Int = 2
     private let kTextureIndex:Int = 0
     
     init(
@@ -38,10 +39,17 @@ class MFightFighter:MetalRenderableProtocol
             return
         }
         
+        let dataPosition:MetalBufferableData = renderEncoder.device.generateBuffer(
+            bufferable:position)
+        
         renderEncoder.setVertexBuffer(
             spatialChar.vertexBuffer.buffer,
             offset:0,
             at:kVertexIndex)
+        renderEncoder.setVertexBuffer(
+            dataPosition.buffer,
+            offset:0,
+            at:kPositionIndex)
         renderEncoder.setFragmentTexture(
             texture,
             at:kTextureIndex)
