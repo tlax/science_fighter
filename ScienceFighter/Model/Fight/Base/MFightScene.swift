@@ -15,6 +15,8 @@ class MFightScene:MetalRenderableProtocol
         device:MTLDevice,
         spatialScene:MetalSpatialScene)
     {
+        let position:MFightPosition = MFightPosition.zero()
+        dataPosition = device.generateBuffer(bufferable:position)
         self.spatialScene = spatialScene
     }
     
@@ -35,6 +37,10 @@ class MFightScene:MetalRenderableProtocol
             spatialScene.vertexBuffer.buffer,
             offset:0,
             at:MetalConstants.kVertexIndex)
+        renderEncoder.setVertexBuffer(
+            dataPosition.buffer,
+            offset:0,
+            at:MetalConstants.kPositionIndex)
         renderEncoder.setFragmentTexture(
             texture,
             at:MetalConstants.kTextureIndex)

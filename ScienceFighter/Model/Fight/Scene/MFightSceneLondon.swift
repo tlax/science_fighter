@@ -17,6 +17,8 @@ class MFightSceneLondon:MFightScene
             device:device,
             textures:sceneTextures)
         
-        super.init(spatialScene:spatialScene)
+        super.init(
+            device:device,
+            spatialScene:spatialScene)
     }
 }
