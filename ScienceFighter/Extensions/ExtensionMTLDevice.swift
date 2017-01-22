@@ -2,7 +2,7 @@ import MetalKit
 
 extension MTLDevice
 {
-    func generateBuffer(bufferable:MetalBufferableProtocol) -> MetalBufferableData
+    func generateBuffer(bufferable:MetalBufferableProtocol) -> MTLBuffer
     {
         let data:[Float] = bufferable.buffer()
         let dataLength:Int = data.count
@@ -11,10 +11,7 @@ extension MTLDevice
             bytes:data,
             length:dataSize,
             options:MTLResourceOptions())
-        let bufferableData:MetalBufferableData = MetalBufferableData(
-            buffer:buffer,
-            length:dataLength)
         
-        return bufferableData
+        return buffer
     }
 }

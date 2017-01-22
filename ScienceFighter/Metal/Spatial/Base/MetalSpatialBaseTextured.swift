@@ -46,7 +46,7 @@ class MetalSpatialBaseTextured:MetalSpatialBase
             bottomLeft:bottomLeft,
             bottomRight:bottomRight)
         
-        let vertexBuffer:MetalBufferableData = device.generateBuffer(bufferable:vertexFace)
+        let vertexBuffer:MTLBuffer = device.generateBuffer(bufferable:vertexFace)
         super.init(vertexBuffer:vertexBuffer)
     }
 }

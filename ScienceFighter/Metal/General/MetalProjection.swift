@@ -6,7 +6,7 @@ class MetalProjection
     let maxY:Float
     let minX:Float
     let maxX:Float
-    let projectionBuffer:MetalBufferableData
+    let projectionBuffer:MTLBuffer
     
     init(device:MTLDevice)
     {

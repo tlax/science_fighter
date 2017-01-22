@@ -4,7 +4,7 @@ import MetalKit
 class MFightScene:MetalRenderableProtocol
 {
     let spatialScene:MetalSpatialScene
-    let dataPosition:MetalBufferableData
+    let dataPosition:MTLBuffer
     
     init(device:MTLDevice)
     {

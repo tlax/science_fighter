@@ -3,10 +3,10 @@ import MetalKit
 
 class MetalSpatialBase
 {
-    let vertexBuffer:MetalBufferableData
+    let vertexBuffer:MTLBuffer
     private let kHalf:Float = 2.0
     
-    init(vertexBuffer:MetalBufferableData)
+    init(vertexBuffer:MTLBuffer)
     {
         self.vertexBuffer = vertexBuffer
     }
