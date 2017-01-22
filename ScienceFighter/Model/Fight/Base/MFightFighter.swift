@@ -36,23 +36,12 @@ class MFightFighter:MetalRenderableProtocol
             return
         }
         
-        let dataPosition:MetalBufferableData = renderEncoder.device.generateBuffer(
+        let positionBuffer:MTLBuffer = renderEncoder.device.generateBuffer(
             bufferable:position)
         
-        renderEncoder.setVertexBuffer(
-            spatialChar.vertexBuffer.buffer,
-            offset:0,
-            at:MetalConstants.kVertexIndex)
-        renderEncoder.setVertexBuffer(
-            dataPosition.buffer,
-            offset:0,
-            at:MetalConstants.kPositionIndex)
-        renderEncoder.setFragmentTexture(
-            texture,
-            at:MetalConstants.kTextureIndex)
-        renderEncoder.drawPrimitives(
-            type:MetalConstants.kPrimitiveType,
-            vertexStart:0,
-            vertexCount:MetalConstants.kPrimitiveCount)
+        renderEncoder.render(
+            vertex:spatialChar.vertexBuffer,
+            position:positionBuffer,
+            texture:texture)
     }
 }

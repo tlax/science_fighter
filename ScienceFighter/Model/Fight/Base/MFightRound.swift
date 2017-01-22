@@ -27,10 +27,8 @@ class MFightRound:MetalRenderableProtocol
     
     func render(renderEncoder:MTLRenderCommandEncoder)
     {
-        renderEncoder.setVertexBuffer(
-            projection.projectionBuffer.buffer,
-            offset:0,
-            at:MetalConstants.kProjectionIndex)
+        renderEncoder.projectionMatrix(
+            projection:projection.projectionBuffer)
         
         scene.render(renderEncoder:renderEncoder)
         fighterNPC.render(renderEncoder:renderEncoder)

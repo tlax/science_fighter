@@ -24,4 +24,12 @@ extension MTLRenderCommandEncoder
             vertexStart:0,
             vertexCount:MetalConstants.kPrimitiveCount)
     }
+    
+    func projectionMatrix(projection:MTLBuffer)
+    {
+        setVertexBuffer(
+            projection,
+            offset:0,
+            at:MetalConstants.kProjectionIndex)
+    }
 }

@@ -4,7 +4,7 @@ import MetalKit
 class MFightScene:MetalRenderableProtocol
 {
     let spatialScene:MetalSpatialScene
-    let dataPosition:MTLBuffer
+    let positionBuffer:MTLBuffer
     
     init(device:MTLDevice)
     {
@@ -16,7 +16,7 @@ class MFightScene:MetalRenderableProtocol
         spatialScene:MetalSpatialScene)
     {
         let position:MFightPosition = MFightPosition.zero()
-        dataPosition = device.generateBuffer(bufferable:position)
+        positionBuffer = device.generateBuffer(bufferable:position)
         self.spatialScene = spatialScene
     }
     
@@ -33,20 +33,9 @@ class MFightScene:MetalRenderableProtocol
             return
         }
         
-        renderEncoder.setVertexBuffer(
-            spatialScene.vertexBuffer.buffer,
-            offset:0,
-            at:MetalConstants.kVertexIndex)
-        renderEncoder.setVertexBuffer(
-            dataPosition.buffer,
-            offset:0,
-            at:MetalConstants.kPositionIndex)
-        renderEncoder.setFragmentTexture(
-            texture,
-            at:MetalConstants.kTextureIndex)
-        renderEncoder.drawPrimitives(
-            type:MetalConstants.kPrimitiveType,
-            vertexStart:0,
-            vertexCount:spatialScene.vertexBuffer.length)
+        renderEncoder.render(
+            vertex:spatialScene.vertexBuffer,
+            position:positionBuffer,
+            texture:texture)
     }
 }
