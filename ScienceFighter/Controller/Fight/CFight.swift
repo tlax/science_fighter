@@ -29,7 +29,6 @@ class CFight:CController
         
         if model.round == nil
         {
-            let size:CGSize = viewFight.bounds.size
             viewFight.loadMetal()
             
             DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
@@ -46,9 +45,7 @@ class CFight:CController
                     return
                 }
                 
-                self?.model.load(
-                    device:device,
-                    size:size)
+                self?.model.load(device:device)
                 
                 DispatchQueue.main.async
                 { [weak self] in

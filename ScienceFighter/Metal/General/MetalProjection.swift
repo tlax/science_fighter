@@ -8,12 +8,9 @@ class MetalProjection
     let maxX:Float
     let projectionBuffer:MetalBufferableData
     
-    init(
-        device:MTLDevice,
-        size:CGSize)
+    init(device:MTLDevice)
     {
-        let projectionMatrix:MetalProjectionMatrix = MetalProjectionMatrix(
-            size:size)
+        let projectionMatrix:MetalProjectionMatrix = MetalProjectionMatrix()
         
         projectionBuffer = device.generateBuffer(
             bufferable:projectionMatrix)

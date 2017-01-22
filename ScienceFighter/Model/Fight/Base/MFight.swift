@@ -11,10 +11,8 @@ class MFight
     
     //MARK: public
     
-    func load(
-        device:MTLDevice,
-        size:CGSize)
+    func load(device:MTLDevice)
     {
-        round = MFightRound(device:device, size:size)
+        round = MFightRound(device:device)
     }
 }

@@ -8,14 +8,8 @@ class MFightRound:MetalRenderableProtocol
     let projection:MetalProjection
     private let kProjectionIndex:Int = 1
     
-    init(
-        device:MTLDevice,
-        size:CGSize)
+    init(device:MTLDevice)
     {
-        projection = MetalProjection(
-            device:device,
-            size:size)
-        
         let facingPositive:MFightFacingPositive = MFightFacingPositive()
         let facingNegative:MFightFacingNegative = MFightFacingNegative()
         
@@ -25,6 +19,7 @@ class MFightRound:MetalRenderableProtocol
         fighterNPC = MFightFighterGauss(
             device:device,
             facing:facingNegative)
+        projection = MetalProjection(device:device)
     }
     
     //MARK: renderableProtocol
