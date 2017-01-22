@@ -1,6 +1,6 @@
 import Foundation
 
-class MFightPosition
+class MFightPosition:MetalBufferableProtocol
 {
     var positionX:Float
     var positionY:Float
@@ -9,5 +9,17 @@ class MFightPosition
     {
         self.positionX = positionX
         self.positionY = positionY
+    }
+    
+    //MARK: bufferableProtocol
+    
+    func buffer() -> [Float]
+    {
+        let bufferArray:[Float] = [
+            positionX,
+            positionY
+        ]
+        
+        return bufferArray
     }
 }
