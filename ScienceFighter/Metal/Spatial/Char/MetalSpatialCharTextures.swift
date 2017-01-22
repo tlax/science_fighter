@@ -17,24 +17,9 @@ class MetalSpatialCharTextures
         {
             guard
                 
-                let cgImage:CGImage = image.cgImage
+                let texture:MTLTexture = textureLoader.loadImage(image:image)
                 
             else
-            {
-                continue
-            }
-            
-            let texture:MTLTexture
-            
-            do
-            {
-                texture = try textureLoader.newTexture(
-                    with:cgImage,
-                    options:[
-                        MTKTextureLoaderOptionTextureUsage:MetalConstants.kTextureUsage,
-                        MTKTextureLoaderOptionSRGB:MetalConstants.kTextureSrgb])
-            }
-            catch
             {
                 continue
             }

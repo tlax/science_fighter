@@ -1,9 +1,32 @@
-//
-//  MetalSpatialSceneTextures.swift
-//  ScienceFighter
-//
-//  Created by zero on 1/21/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
+import MetalKit
 
-import Foundation
+class MetalSpatialSceneTextures
+{
+    let textures:[MTLTexture]
+    
+    init(
+        device:MTLDevice,
+        images:[UIImage])
+    {
+        var textures:[MTLTexture] = []
+        
+        let textureLoader:MTKTextureLoader = MTKTextureLoader(device:device)
+        
+        for image:UIImage in images
+        {
+            guard
+                
+                let texture:MTLTexture = textureLoader.loadImage(image:image)
+                
+            else
+            {
+                continue
+            }
+            
+            textures.append(texture)
+        }
+        
+        self.textures = textures
+    }
+}
