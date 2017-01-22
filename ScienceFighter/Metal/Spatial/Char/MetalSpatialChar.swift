@@ -4,6 +4,7 @@ import MetalKit
 class MetalSpatialChar:MetalSpatialBaseTextured
 {
     let textures:MetalSpatialCharTextures
+    var state:MetalSpatialCharState
     private let kWidth:Float = 180
     private let kHeight:Float = 180
     
