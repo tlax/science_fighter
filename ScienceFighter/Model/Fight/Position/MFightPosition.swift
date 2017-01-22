@@ -2,6 +2,13 @@ import Foundation
 
 class MFightPosition:MetalBufferableProtocol
 {
+    class func zero() -> MFightPosition
+    {
+        let position:MFightPosition = MFightPosition(positionX:0, positionY:0)
+        
+        return position
+    }
+    
     var positionX:Float
     var positionY:Float
     

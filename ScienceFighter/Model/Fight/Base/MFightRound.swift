@@ -32,7 +32,7 @@ class MFightRound:MetalRenderableProtocol
             offset:0,
             at:MetalConstants.kProjectionIndex)
         
-        scene.render(renderEncoder:renderEncoder)
+//        scene.render(renderEncoder:renderEncoder)
         fighterNPC.render(renderEncoder:renderEncoder)
         fighterUser.render(renderEncoder:renderEncoder)
     }

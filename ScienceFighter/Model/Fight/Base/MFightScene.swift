@@ -4,13 +4,16 @@ import MetalKit
 class MFightScene:MetalRenderableProtocol
 {
     let spatialScene:MetalSpatialScene
+    let dataPosition:MetalBufferableData
     
     init(device:MTLDevice)
     {
         fatalError()
     }
     
-    init(spatialScene:MetalSpatialScene)
+    init(
+        device:MTLDevice,
+        spatialScene:MetalSpatialScene)
     {
         self.spatialScene = spatialScene
     }
