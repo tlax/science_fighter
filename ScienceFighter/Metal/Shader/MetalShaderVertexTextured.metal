@@ -20,11 +20,11 @@ vertex_textured(const device vertex_source* vertex_array [[buffer(0)]],
     float projected_x = coord_x * projection.project_width;
     float projected_y = coord_y * projection.project_height;
     
-    float move_projected_x = position.move_x ;
-    float move_projected_y = position.move_y;
+    float move_projected_x = position.move_x * projection.project_width;
+    float move_projected_y = position.move_y * projection.project_height;
     
-    float final_x = projected_x;
-    float final_y = projected_y;
+    float final_x = projected_x + move_projected_x;
+    float final_y = projected_y + move_projected_y;
     float4 coords = float4(final_x, final_y, coord_z, destination_position);
     
     destination.coords = coords;
