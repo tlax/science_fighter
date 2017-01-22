@@ -92,7 +92,6 @@ class CParent:UIViewController
     func mainController(controller:CController)
     {
         addChildViewController(controller)
-//        controller.beginAppearanceTransition(true, animated:false)
         
         guard
             
@@ -104,7 +103,6 @@ class CParent:UIViewController
         }
             
         viewParent.mainView(view:newView)
-//        controller.endAppearanceTransition()
     }
     
     func push(

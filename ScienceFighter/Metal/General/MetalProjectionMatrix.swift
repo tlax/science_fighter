@@ -13,9 +13,6 @@ class MetalProjectionMatrix:MetalBufferableProtocol
     init()
     {
         let size:CGSize = UIScreen.main.bounds.size
-        
-        print("width: \(size.width), height: \(size.height)")
-        
         let floatWidth:Float = Float(size.width)
         let floatHeight:Float = Float(size.height)
         let floatWidth_2:Float = floatWidth / kHalf
