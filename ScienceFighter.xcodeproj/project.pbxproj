@@ -49,6 +49,8 @@
 		DA2798281E32D349008B98C1 /* MetalShaderFragmentSimple.metal in Sources */ = {isa = PBXBuildFile; fileRef = DA2798271E32D349008B98C1 /* MetalShaderFragmentSimple.metal */; };
 		DA2DAC541E34427B003594C1 /* scene.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2DAC531E34427B003594C1 /* scene.xcassets */; };
 		DA2DAC571E344353003594C1 /* MetalSpatialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC561E344353003594C1 /* MetalSpatialScene.swift */; };
+		DA2DAC591E344373003594C1 /* MetalSpatialSceneTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC581E344373003594C1 /* MetalSpatialSceneTextures.swift */; };
+		DA2DAC5B1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC5A1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift */; };
 		DA4BB0341E33C97800997DE0 /* ExtensionMTLDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0331E33C97800997DE0 /* ExtensionMTLDevice.swift */; };
 		DA4BB0361E33CC3E00997DE0 /* MetalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0351E33CC3E00997DE0 /* MetalConstants.swift */; };
 		DA4BB0381E33CEEC00997DE0 /* MetalBufferableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0371E33CEEC00997DE0 /* MetalBufferableData.swift */; };
@@ -115,6 +117,8 @@
 		DA2798291E32D694008B98C1 /* MetalShaderStructs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalShaderStructs.h; sourceTree = "<group>"; };
 		DA2DAC531E34427B003594C1 /* scene.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = scene.xcassets; sourceTree = "<group>"; };
 		DA2DAC561E344353003594C1 /* MetalSpatialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialScene.swift; sourceTree = "<group>"; };
+		DA2DAC581E344373003594C1 /* MetalSpatialSceneTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialSceneTextures.swift; sourceTree = "<group>"; };
+		DA2DAC5A1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMTKTextureLoader.swift; sourceTree = "<group>"; };
 		DA4BB0331E33C97800997DE0 /* ExtensionMTLDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMTLDevice.swift; sourceTree = "<group>"; };
 		DA4BB0351E33CC3E00997DE0 /* MetalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalConstants.swift; sourceTree = "<group>"; };
 		DA4BB0371E33CEEC00997DE0 /* MetalBufferableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableData.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				DA2797C61E3263C6008B98C1 /* ExtensionFileManager.swift */,
 				DA2797C71E3263C6008B98C1 /* ExtensionMTLTexture.swift */,
 				DA4BB0331E33C97800997DE0 /* ExtensionMTLDevice.swift */,
+				DA2DAC5A1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift */,
 				DA2797C81E3263C6008B98C1 /* ExtensionNotification.swift */,
 				DA2797C91E3263C6008B98C1 /* ExtensionNSLayoutConstraint.swift */,
 				DA2797CA1E3263C6008B98C1 /* ExtensionNSManagedObject.swift */,
@@ -414,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2DAC561E344353003594C1 /* MetalSpatialScene.swift */,
+				DA2DAC581E344373003594C1 /* MetalSpatialSceneTextures.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2798161E32912F008B98C1 /* MetalSpatialBaseTextured.swift in Sources */,
+				DA2DAC5B1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift in Sources */,
 				DA2797FF1E3263C6008B98C1 /* VParent.swift in Sources */,
 				DA2797EE1E3263C6008B98C1 /* DManager.swift in Sources */,
 				DA2797FE1E3263C6008B98C1 /* VHelpCell.swift in Sources */,
@@ -590,6 +597,7 @@
 				DA4BB0341E33C97800997DE0 /* ExtensionMTLDevice.swift in Sources */,
 				DA4BB0431E33F55B00997DE0 /* MFightFighter.swift in Sources */,
 				DA2798051E3263C6008B98C1 /* VView.swift in Sources */,
+				DA2DAC591E344373003594C1 /* MetalSpatialSceneTextures.swift in Sources */,
 				DA2798031E3263C6008B98C1 /* VCollection.swift in Sources */,
 				DA2797F51E3263C6008B98C1 /* ExtensionUIColor.swift in Sources */,
 				DA2797F41E3263C6008B98C1 /* ExtensionUICollectionReusableView.swift in Sources */,
