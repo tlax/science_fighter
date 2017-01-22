@@ -5,10 +5,6 @@ class MetalSpatialBaseTextured:MetalSpatialBase
 {
     weak var currentTexture:MTLTexture?
     private let kHalf:Float = 2.0
-    private let kTextureTop:Float = 0
-    private let kTextureBottom:Float = 1
-    private let kTextureLeft:Float = 0
-    private let kTextureRight:Float = 1
     
     init(
         device:MTLDevice,
