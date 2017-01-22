@@ -8,7 +8,8 @@ class MFightFighterGauss:MFightFighter
         facing:MFightFacing)
     {
         let frontImages:[UIImage] = [
-            #imageLiteral(resourceName: "assetCharTuringStand1")
+            #imageLiteral(resourceName: "assetCharTuringStand1"),
+            #imageLiteral(resourceName: "assetCharTuringStand2")
         ]
         
         let direction:MetalSpatialBaseTexturedDirection = facing.direction()

@@ -5,7 +5,7 @@ class MetalSpatialScene:MetalSpatialBaseTexturedPositive
 {
     let textures:MetalSpatialSceneTextures
     private let kWidth:Float = 914
-    private let kHeight:Float = 432
+    private let kHeight:Float = 434
     
     init(
         device:MTLDevice,
