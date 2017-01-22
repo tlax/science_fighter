@@ -1,7 +1,7 @@
 import Foundation
 import MetalKit
 
-class MetalSpatialScene:MetalSpatialBaseTextured
+class MetalSpatialScene:MetalSpatialBaseTexturedPositive
 {
     let textures:MetalSpatialSceneTextures
     private let kWidth:Float = 914

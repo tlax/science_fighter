@@ -10,7 +10,7 @@ class MetalSpatialBaseTextured:MetalSpatialBase
         device:MTLDevice,
         width:Float,
         height:Float,
-        textureDirections:Float)
+        direction:MetalSpatialBaseTexturedDirection)
     {
         let width_2:Float = width / kHalf
         let height_2:Float = height / kHalf
@@ -22,23 +22,23 @@ class MetalSpatialBaseTextured:MetalSpatialBase
         let vertexTopLeft:MetalVertexTextured = MetalVertexTextured(
             positionX:left,
             positionY:top,
-            horizontal:kTextureLeft,
-            vertical:kTextureTop)
+            horizontal:direction.left,
+            vertical:direction.top)
         let vertexTopRight:MetalVertexTextured = MetalVertexTextured(
             positionX:right,
             positionY:top,
-            horizontal:kTextureRight,
-            vertical:kTextureTop)
+            horizontal:direction.right,
+            vertical:direction.top)
         let vertexBottomLeft:MetalVertexTextured = MetalVertexTextured(
             positionX:left,
             positionY:bottom,
-            horizontal:kTextureLeft,
-            vertical:kTextureBottom)
+            horizontal:direction.left,
+            vertical:direction.bottom)
         let vertexBottomRight:MetalVertexTextured = MetalVertexTextured(
             positionX:right,
             positionY:bottom,
-            horizontal:kTextureRight,
-            vertical:kTextureBottom)
+            horizontal:direction.right,
+            vertical:direction.bottom)
         
         let vertexFace:MetalVertexFace = MetalVertexFace(
             topLeft:vertexTopLeft,

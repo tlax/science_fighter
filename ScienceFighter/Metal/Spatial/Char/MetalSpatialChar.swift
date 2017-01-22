@@ -9,14 +9,16 @@ class MetalSpatialChar:MetalSpatialBaseTextured
     
     init(
         device:MTLDevice,
-        textures:MetalSpatialCharTextures)
+        textures:MetalSpatialCharTextures,
+        direction:MetalSpatialBaseTexturedDirection)
     {
         self.textures = textures
         
         super.init(
             device:device,
             width:kWidth,
-            height:kHeight)
+            height:kHeight,
+            direction:direction)
         currentTexture = textures.frontTextures.first
     }
 }

@@ -2,13 +2,20 @@ import Foundation
 
 class MetalSpatialBaseTexturedDirection
 {
-    private let kTextureTop:Float = 0
-    private let kTextureBottom:Float = 1
-    private let kTextureLeft:Float = 0
-    private let kTextureRight:Float = 1
+    let top:Float
+    let bottom:Float
+    let left:Float
+    let right:Float
     
-    init()
+    init(
+        top:Float,
+        bottom:Float,
+        left:Float,
+        right:Float)
     {
-        
+        self.top = top
+        self.bottom = bottom
+        self.left = left
+        self.right = right
     }
 }

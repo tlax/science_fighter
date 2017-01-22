@@ -11,13 +11,16 @@ class MFightFighterTuring:MFightFighter
             #imageLiteral(resourceName: "assetCharTuringStand1")
         ]
         
+        let direction:MetalSpatialBaseTexturedDirection = facing.direction()
+        
         let charTextures:MetalSpatialCharTextures = MetalSpatialCharTextures(
             device:device,
             frontImages:frontImages)
         
         let spatialChar:MetalSpatialChar = MetalSpatialChar(
             device:device,
-            textures:charTextures)
+            textures:charTextures,
+            direction:direction)
         
         super.init(
             spatialChar:spatialChar,

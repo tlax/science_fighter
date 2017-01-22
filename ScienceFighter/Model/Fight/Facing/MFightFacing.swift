@@ -11,4 +11,9 @@ class MFightFacing
     {
         fatalError()
     }
+    
+    func direction() -> MetalSpatialBaseTexturedDirection
+    {
+        fatalError()
+    }
 }

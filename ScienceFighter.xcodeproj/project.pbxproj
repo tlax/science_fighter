@@ -72,6 +72,7 @@
 		DACC37571E35366C0030DF99 /* MetalSpatialBaseTexturedDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC37561E35366C0030DF99 /* MetalSpatialBaseTexturedDirection.swift */; };
 		DACC37591E3536BF0030DF99 /* MetalSpatialBaseTexturedDirectionPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC37581E3536BF0030DF99 /* MetalSpatialBaseTexturedDirectionPositive.swift */; };
 		DACC375B1E3536CB0030DF99 /* MetalSpatialBaseTexturedDirectionNegative.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC375A1E3536CB0030DF99 /* MetalSpatialBaseTexturedDirectionNegative.swift */; };
+		DACC375D1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC375C1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift */; };
 		DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816701E3302F5002574B6 /* MetalProjection.swift */; };
 		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		DACC37561E35366C0030DF99 /* MetalSpatialBaseTexturedDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTexturedDirection.swift; sourceTree = "<group>"; };
 		DACC37581E3536BF0030DF99 /* MetalSpatialBaseTexturedDirectionPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTexturedDirectionPositive.swift; sourceTree = "<group>"; };
 		DACC375A1E3536CB0030DF99 /* MetalSpatialBaseTexturedDirectionNegative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTexturedDirectionNegative.swift; sourceTree = "<group>"; };
+		DACC375C1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTexturedPositive.swift; sourceTree = "<group>"; };
 		DAE816701E3302F5002574B6 /* MetalProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjection.swift; sourceTree = "<group>"; };
 		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +394,7 @@
 			children = (
 				DA2798131E329116008B98C1 /* MetalSpatialBase.swift */,
 				DA2798151E32912F008B98C1 /* MetalSpatialBaseTextured.swift */,
+				DACC375C1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift */,
 				DACC37561E35366C0030DF99 /* MetalSpatialBaseTexturedDirection.swift */,
 				DACC37581E3536BF0030DF99 /* MetalSpatialBaseTexturedDirectionPositive.swift */,
 				DACC375A1E3536CB0030DF99 /* MetalSpatialBaseTexturedDirectionNegative.swift */,
@@ -603,6 +606,7 @@
 				DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */,
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
 				DA2798261E32B431008B98C1 /* MetalShaderVertexTextured.metal in Sources */,
+				DACC375D1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift in Sources */,
 				DA2797F31E3263C6008B98C1 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2797F11E3263C6008B98C1 /* ExtensionNotification.swift in Sources */,
 				DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */,
