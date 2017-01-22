@@ -1,5 +1,5 @@
-import MetalKit
 import Foundation
+import MetalKit
 
 class MFightFighterGauss:MFightFighter
 {

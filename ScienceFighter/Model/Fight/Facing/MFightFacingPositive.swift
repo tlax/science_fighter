@@ -13,7 +13,7 @@ class MFightFacingPositive:MFightFacing
     
     override func direction() -> MetalSpatialBaseTexturedDirection
     {
-        let direction:MetalSpatialBaseTexturedDirectionNegative = MetalSpatialBaseTexturedDirectionNegative()
+        let direction:MetalSpatialBaseTexturedDirectionPositive = MetalSpatialBaseTexturedDirectionPositive()
         
         return direction
     }
