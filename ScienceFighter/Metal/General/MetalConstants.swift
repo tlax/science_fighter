@@ -22,6 +22,7 @@ class MetalConstants
     static let kTextureSrgb:NSObject = false as NSObject
     static let kSamplerLodMaxClamp:Float = FLT_MAX
     static let kSamplerLodMinClamp:Float = 0
+    static let kPrimitiveCount:Int = 6
     static let kSamplerMaxAnisotropy:Int = 1
     static let kBufferElementSize:Int = 4
     static let kColorAttachmentIndex:Int = 0
