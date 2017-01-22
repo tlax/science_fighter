@@ -51,6 +51,7 @@
 		DA2DAC571E344353003594C1 /* MetalSpatialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC561E344353003594C1 /* MetalSpatialScene.swift */; };
 		DA2DAC591E344373003594C1 /* MetalSpatialSceneTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC581E344373003594C1 /* MetalSpatialSceneTextures.swift */; };
 		DA2DAC5B1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC5A1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift */; };
+		DA2DAC5D1E344516003594C1 /* MFightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DAC5C1E344516003594C1 /* MFightScene.swift */; };
 		DA4BB0341E33C97800997DE0 /* ExtensionMTLDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0331E33C97800997DE0 /* ExtensionMTLDevice.swift */; };
 		DA4BB0361E33CC3E00997DE0 /* MetalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0351E33CC3E00997DE0 /* MetalConstants.swift */; };
 		DA4BB0381E33CEEC00997DE0 /* MetalBufferableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0371E33CEEC00997DE0 /* MetalBufferableData.swift */; };
@@ -119,6 +120,7 @@
 		DA2DAC561E344353003594C1 /* MetalSpatialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialScene.swift; sourceTree = "<group>"; };
 		DA2DAC581E344373003594C1 /* MetalSpatialSceneTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialSceneTextures.swift; sourceTree = "<group>"; };
 		DA2DAC5A1E3443CA003594C1 /* ExtensionMTKTextureLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMTKTextureLoader.swift; sourceTree = "<group>"; };
+		DA2DAC5C1E344516003594C1 /* MFightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightScene.swift; sourceTree = "<group>"; };
 		DA4BB0331E33C97800997DE0 /* ExtensionMTLDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMTLDevice.swift; sourceTree = "<group>"; };
 		DA4BB0351E33CC3E00997DE0 /* MetalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalConstants.swift; sourceTree = "<group>"; };
 		DA4BB0371E33CEEC00997DE0 /* MetalBufferableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableData.swift; sourceTree = "<group>"; };
@@ -427,9 +429,9 @@
 		DA4BB0391E33F45900997DE0 /* Fight */ = {
 			isa = PBXGroup;
 			children = (
+				DA4BB03E1E33F55B00997DE0 /* Base */,
 				DA4BB0481E33F91D00997DE0 /* Facing */,
 				DA4BB0491E33F91D00997DE0 /* Position */,
-				DA4BB03E1E33F55B00997DE0 /* Base */,
 				DA4BB0411E33F55B00997DE0 /* Fighter */,
 			);
 			path = Fight;
@@ -441,6 +443,7 @@
 				DA4BB03F1E33F55B00997DE0 /* MFight.swift */,
 				DA4BB0561E341C5E00997DE0 /* MFightRound.swift */,
 				DA4BB0401E33F55B00997DE0 /* MFightFighter.swift */,
+				DA2DAC5C1E344516003594C1 /* MFightScene.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */,
 				DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */,
 				DA4BB0361E33CC3E00997DE0 /* MetalConstants.swift in Sources */,
+				DA2DAC5D1E344516003594C1 /* MFightScene.swift in Sources */,
 				DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */,
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
 				DA2798261E32B431008B98C1 /* MetalShaderVertexTextured.metal in Sources */,

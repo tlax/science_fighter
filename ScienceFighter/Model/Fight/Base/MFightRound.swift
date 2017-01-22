@@ -6,7 +6,6 @@ class MFightRound:MetalRenderableProtocol
     let fighterUser:MFightFighter
     let fighterNPC:MFightFighter
     let projection:MetalProjection
-    private let kProjectionIndex:Int = 1
     
     init(device:MTLDevice)
     {
@@ -29,7 +28,7 @@ class MFightRound:MetalRenderableProtocol
         renderEncoder.setVertexBuffer(
             projection.projectionBuffer.buffer,
             offset:0,
-            at:kProjectionIndex)
+            at:MetalConstants.kProjectionIndex)
         
         fighterNPC.render(renderEncoder:renderEncoder)
         fighterUser.render(renderEncoder:renderEncoder)

@@ -3,13 +3,13 @@ import MetalKit
 
 class MetalSpatialScene:MetalSpatialBaseTextured
 {
-    let textures:MetalSpatialCharTextures
+    let textures:MetalSpatialSceneTextures
     private let kWidth:Float = 100
     private let kHeight:Float = 100
     
     init(
         device:MTLDevice,
-        textures:MetalSpatialCharTextures)
+        textures:MetalSpatialSceneTextures)
     {
         self.textures = textures
         
@@ -17,6 +17,6 @@ class MetalSpatialScene:MetalSpatialBaseTextured
             device:device,
             width:kWidth,
             height:kHeight)
-        currentTexture = textures.frontTextures.first
+        currentTexture = textures.textures.first
     }
 }

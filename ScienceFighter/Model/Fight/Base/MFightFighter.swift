@@ -6,9 +6,6 @@ class MFightFighter:MetalRenderableProtocol
     let spatialChar:MetalSpatialChar
     let position:MFightPosition
     let facing:MFightFacing
-    private let kVertexIndex:Int = 0
-    private let kPositionIndex:Int = 2
-    private let kTextureIndex:Int = 0
     
     init(
         device:MTLDevice,
@@ -45,14 +42,14 @@ class MFightFighter:MetalRenderableProtocol
         renderEncoder.setVertexBuffer(
             spatialChar.vertexBuffer.buffer,
             offset:0,
-            at:kVertexIndex)
+            at:MetalConstants.kVertexIndex)
         renderEncoder.setVertexBuffer(
             dataPosition.buffer,
             offset:0,
-            at:kPositionIndex)
+            at:MetalConstants.kPositionIndex)
         renderEncoder.setFragmentTexture(
             texture,
-            at:kTextureIndex)
+            at:MetalConstants.kTextureIndex)
         renderEncoder.drawPrimitives(
             type:MetalConstants.kPrimitiveType,
             vertexStart:0,
