@@ -2,8 +2,8 @@ import Foundation
 
 class MFightFacing
 {
-    let kInitialX:Float = 200
-    let kInitialY:Float = -100
+    let kInitialX:Float = 150
+    let kInitialY:Float = -50
     
     //MARK: public
     

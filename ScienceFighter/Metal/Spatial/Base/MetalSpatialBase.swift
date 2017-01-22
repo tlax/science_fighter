@@ -5,10 +5,6 @@ class MetalSpatialBase
 {
     let vertexBuffer:MetalBufferableData
     private let kHalf:Float = 2.0
-    private let kTextureTop:Float = 0
-    private let kTextureBottom:Float = 1
-    private let kTextureLeft:Float = 0
-    private let kTextureRight:Float = 1
     
     init(vertexBuffer:MetalBufferableData)
     {
@@ -27,24 +23,24 @@ class MetalSpatialBase
         let left:Float = -width_2
         let right:Float = width_2
         
-        let vertexTopLeft:MetalVertex = MetalVertex(
+        let topLeft:MetalVertex = MetalVertex(
             positionX:left,
             positionY:top)
-        let vertexTopRight:MetalVertex = MetalVertex(
+        let topRight:MetalVertex = MetalVertex(
             positionX:right,
             positionY:top)
-        let vertexBottomLeft:MetalVertex = MetalVertex(
+        let bottomLeft:MetalVertex = MetalVertex(
             positionX:left,
             positionY:bottom)
-        let vertexBottomRight:MetalVertex = MetalVertex(
+        let bottomRight:MetalVertex = MetalVertex(
             positionX:right,
             positionY:bottom)
         
         let vertexFace:MetalVertexFace = MetalVertexFace(
-            topLeft:vertexTopLeft,
-            topRight:vertexTopRight,
-            bottomLeft:vertexBottomLeft,
-            bottomRight:vertexBottomRight)
+            topLeft:topLeft,
+            topRight:topRight,
+            bottomLeft:bottomLeft,
+            bottomRight:bottomRight)
         
         vertexBuffer = device.generateBuffer(bufferable:vertexFace)
     }

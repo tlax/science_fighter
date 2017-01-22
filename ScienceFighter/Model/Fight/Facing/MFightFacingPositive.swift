@@ -5,7 +5,7 @@ class MFightFacingPositive:MFightFacing
     override func initialPosition() -> MFightPosition
     {
         let position:MFightPosition = MFightPosition(
-            positionX:-300,
+            positionX:-kInitialX,
             positionY:kInitialY)
         
         return position
@@ -13,7 +13,7 @@ class MFightFacingPositive:MFightFacing
     
     override func direction() -> MetalSpatialBaseTexturedDirection
     {
-        let direction:MetalSpatialBaseTexturedDirectionPositive = MetalSpatialBaseTexturedDirectionPositive()
+        let direction:MetalSpatialBaseTexturedDirectionNegative = MetalSpatialBaseTexturedDirectionNegative()
         
         return direction
     }
