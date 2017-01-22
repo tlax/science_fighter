@@ -53,6 +53,6 @@ class MFightFighter:MetalRenderableProtocol
         renderEncoder.drawPrimitives(
             type:MetalConstants.kPrimitiveType,
             vertexStart:0,
-            vertexCount:spatialChar.vertexBuffer.length)
+            vertexCount:6)
     }
 }
