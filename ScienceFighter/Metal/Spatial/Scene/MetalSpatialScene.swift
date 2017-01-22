@@ -4,8 +4,8 @@ import MetalKit
 class MetalSpatialScene:MetalSpatialBaseTextured
 {
     let textures:MetalSpatialSceneTextures
-    private let kWidth:Float = 100
-    private let kHeight:Float = 100
+    private let kWidth:Float = 914
+    private let kHeight:Float = 432
     
     init(
         device:MTLDevice,
