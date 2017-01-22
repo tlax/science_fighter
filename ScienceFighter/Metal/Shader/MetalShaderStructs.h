@@ -3,7 +3,7 @@
 
 struct vertex_source
 {
-    packed_float2 coords;
+    packed_float3 coords;
     packed_float2 texture;
 };
 

@@ -4,6 +4,7 @@ class MetalVertex:MetalBufferableProtocol
 {
     private let positionX:Float
     private let positionY:Float
+    private let kPositionZ:Float = 0
     
     init(
         positionX:Float,
@@ -19,7 +20,8 @@ class MetalVertex:MetalBufferableProtocol
     {
         let bufferArray:[Float] = [
             positionX,
-            positionY
+            positionY,
+            kPositionZ
         ]
         
         return bufferArray
