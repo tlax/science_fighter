@@ -19,7 +19,7 @@ class MetalConstants
     static let kSamplerRAddressMode:MTLSamplerAddressMode = MTLSamplerAddressMode.clampToEdge
     static let kPrimitiveType:MTLPrimitiveType = MTLPrimitiveType.triangle
     static let kTextureUsage:NSObject = MTLTextureUsage.shaderRead.rawValue as NSObject
-    static let kTextureSrgb:NSObject = true as NSObject
+    static let kTextureSrgb:NSObject = false as NSObject
     static let kSamplerLodMaxClamp:Float = FLT_MAX
     static let kSamplerLodMinClamp:Float = 0
     static let kSamplerMaxAnisotropy:Int = 1
