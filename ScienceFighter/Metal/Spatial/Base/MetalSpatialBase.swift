@@ -17,8 +17,8 @@ class MetalSpatialBase
     {
         let width_2:Float = width / kHalf
         let height_2:Float = height / kHalf
-        let top:Float = -height_2
-        let bottom:Float = height_2
+        let top:Float = height_2
+        let bottom:Float = -height_2
         let left:Float = -width_2
         let right:Float = width_2
         

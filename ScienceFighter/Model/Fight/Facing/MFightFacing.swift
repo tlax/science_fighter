@@ -3,7 +3,7 @@ import Foundation
 class MFightFacing
 {
     let kInitialX:Float = 200
-    let kInitialY:Float = 100
+    let kInitialY:Float = -100
     
     //MARK: public
     
