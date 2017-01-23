@@ -8,4 +8,11 @@ class MetalSpatialCharState
     {
         self.character = character
     }
+    
+    //MARK: public
+    
+    func updateTexture()
+    {
+        character.currentTexture = character.textures.standTextures.random()
+    }
 }

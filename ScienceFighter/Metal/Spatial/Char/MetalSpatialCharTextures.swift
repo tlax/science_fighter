@@ -3,7 +3,7 @@ import MetalKit
 
 class MetalSpatialCharTextures
 {
-    let standTextures:[MTLTexture]
+    let standTextures:MetalSpatialCharTexturesList
     
     init(
         device:MTLDevice,
@@ -26,6 +26,6 @@ class MetalSpatialCharTextures
             standTextures.append(texture)
         }
         
-        self.standTextures = standTextures
+        self.standTextures = MetalSpatialCharTexturesList(textures:standTextures)
     }
 }
