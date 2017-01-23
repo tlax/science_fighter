@@ -76,6 +76,7 @@
 		DACC375D1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC375C1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift */; };
 		DAE816711E3302F5002574B6 /* MetalProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816701E3302F5002574B6 /* MetalProjection.swift */; };
 		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
+		DAEC19E11E364E97006AA00E /* MetalSpatialCharStateStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 		DACC375C1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialBaseTexturedPositive.swift; sourceTree = "<group>"; };
 		DAE816701E3302F5002574B6 /* MetalProjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjection.swift; sourceTree = "<group>"; };
 		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
+		DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharStateStand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAD8E4B1E3556B100B18698 /* MetalSpatialCharState.swift */,
+				DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */,
 			);
 			path = CharState;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				DACC375D1E3539460030DF99 /* MetalSpatialBaseTexturedPositive.swift in Sources */,
 				DA2797F31E3263C6008B98C1 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2797F11E3263C6008B98C1 /* ExtensionNotification.swift in Sources */,
+				DAEC19E11E364E97006AA00E /* MetalSpatialCharStateStand.swift in Sources */,
 				DA27980B1E326B3A008B98C1 /* VFight.swift in Sources */,
 				DA2797F61E3263C6008B98C1 /* ExtensionUIFont.swift in Sources */,
 				DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */,
