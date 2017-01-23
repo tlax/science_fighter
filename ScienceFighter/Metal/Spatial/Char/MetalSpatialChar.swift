@@ -4,7 +4,7 @@ import MetalKit
 class MetalSpatialChar:MetalSpatialBaseTextured
 {
     let textures:MetalSpatialCharTextures
-    var state:MetalSpatialCharState
+    var state:MetalSpatialCharState?
     private let kWidth:Float = 180
     private let kHeight:Float = 180
     
@@ -21,5 +21,6 @@ class MetalSpatialChar:MetalSpatialBaseTextured
             height:kHeight,
             direction:direction)
         currentTexture = textures.frontTextures.first
+        state = MetalSpatialCharStateStand(character:self)
     }
 }
