@@ -6,6 +6,7 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     let spatialChar:MetalSpatialChar
     let position:MFightPosition
     let facing:MFightFacing
+    private(set) var currentState:MFighterState?
     
     init(
         device:MTLDevice,
@@ -21,6 +22,9 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
         position = facing.initialPosition()
         self.spatialChar = spatialChar
         self.facing = facing
+        
+        stateStand()
+        currentState?.updateTexture()
     }
     
     //MARK: renderableProtocol
@@ -49,6 +53,14 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     
     func tick(timestamp:TimeInterval)
     {
-        spatialChar.state?.updateTexture()
+        currentState?.tick(timestamp:timestamp)
+    }
+    
+    //MARK: public
+    //MARK: -states
+    
+    func stateStand()
+    {
+        currentState = MFighterStateStand(fighter:self)
     }
 }
