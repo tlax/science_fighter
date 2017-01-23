@@ -20,7 +20,7 @@ class MetalSpatialChar:MetalSpatialBaseTextured
             width:kWidth,
             height:kHeight,
             direction:direction)
-        currentTexture = textures.frontTextures.first
+        currentTexture = textures.standTextures.first
         state = MetalSpatialCharStateStand(character:self)
     }
 }

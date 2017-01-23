@@ -7,7 +7,7 @@ class MFightFighterGauss:MFightFighter
         device:MTLDevice,
         facing:MFightFacing)
     {
-        let frontImages:[UIImage] = [
+        let standImages:[UIImage] = [
             #imageLiteral(resourceName: "assetCharTuringStand1"),
             #imageLiteral(resourceName: "assetCharTuringStand2")
         ]
@@ -16,7 +16,7 @@ class MFightFighterGauss:MFightFighter
         
         let charTextures:MetalSpatialCharTextures = MetalSpatialCharTextures(
             device:device,
-            frontImages:frontImages)
+            standImages:standImages)
         
         let spatialChar:MetalSpatialChar = MetalSpatialChar(
             device:device,

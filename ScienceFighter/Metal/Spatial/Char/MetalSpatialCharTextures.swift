@@ -3,17 +3,16 @@ import MetalKit
 
 class MetalSpatialCharTextures
 {
-    let frontTextures:[MTLTexture]
+    let standTextures:[MTLTexture]
     
     init(
         device:MTLDevice,
-        frontImages:[UIImage])
+        standImages:[UIImage])
     {
-        var frontTextures:[MTLTexture] = []
-        
+        var standTextures:[MTLTexture] = []
         let textureLoader:MTKTextureLoader = MTKTextureLoader(device:device)
         
-        for image:UIImage in frontImages
+        for image:UIImage in standImages
         {
             guard
                 
@@ -24,9 +23,9 @@ class MetalSpatialCharTextures
                 continue
             }
             
-            frontTextures.append(texture)
+            standTextures.append(texture)
         }
         
-        self.frontTextures = frontTextures
+        self.standTextures = standTextures
     }
 }
