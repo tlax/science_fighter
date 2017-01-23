@@ -1,6 +1,6 @@
 import Foundation
 
-class MetalSpatialCharState
+class MetalSpatialCharState:MFightTickerProtocol
 {   
     private weak var character:MetalSpatialChar!
     
@@ -14,5 +14,11 @@ class MetalSpatialCharState
     func updateTexture()
     {
         character.currentTexture = character.textures.standTextures.random()
+    }
+    
+    //MARK: tickerProtocol
+    
+    func tick(timestamp:TimeInterval)
+    {
     }
 }
