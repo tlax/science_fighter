@@ -76,8 +76,7 @@ class CFight:CController
         if deltaTimestamp >= kUpdateThreshold
         {
             previousTimestamp = currentTimestamp
+            model.tick(timestamp:currentTimestamp)
         }
-        
-        
     }
 }

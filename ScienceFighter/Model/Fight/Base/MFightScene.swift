@@ -1,7 +1,7 @@
 import Foundation
 import MetalKit
 
-class MFightScene:MetalRenderableProtocol
+class MFightScene:MetalRenderableProtocol, MFightTickerProtocol
 {
     let spatialScene:MetalSpatialScene
     let positionBuffer:MTLBuffer
@@ -37,5 +37,11 @@ class MFightScene:MetalRenderableProtocol
             vertex:spatialScene.vertexBuffer,
             position:positionBuffer,
             texture:texture)
+    }
+    
+    //MARK: tickerProtocol
+    
+    func tick(timestamp:TimeInterval)
+    {
     }
 }

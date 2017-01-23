@@ -1,7 +1,7 @@
 import UIKit
 import MetalKit
 
-class MFight
+class MFight:MFightTickerProtocol
 {
     private(set) var round:MFightRound?
     
@@ -16,8 +16,10 @@ class MFight
         round = MFightRound(device:device)
     }
     
-    func tick()
+    //MARK: tickerProtocol
+    
+    func tick(timestamp:TimeInterval)
     {
-        
+        round?.tick(timestamp:timestamp)
     }
 }

@@ -1,7 +1,7 @@
 import UIKit
 import MetalKit
 
-class MFightRound:MetalRenderableProtocol
+class MFightRound:MetalRenderableProtocol, MFightTickerProtocol
 {
     let scene:MFightScene
     let fighterUser:MFightFighter
@@ -33,5 +33,14 @@ class MFightRound:MetalRenderableProtocol
         scene.render(renderEncoder:renderEncoder)
         fighterNPC.render(renderEncoder:renderEncoder)
         fighterUser.render(renderEncoder:renderEncoder)
+    }
+    
+    //MARK: tickerProtocol
+    
+    func tick(timestamp:TimeInterval)
+    {
+        fighterUser.tick(timestamp:timestamp)
+        fighterNPC.tick(timestamp:timestamp)
+        scene.tick(timestamp:timestamp)
     }
 }
