@@ -4,10 +4,13 @@ class CFight:CController
 {
     let model:MFight
     private weak var viewFight:VFight!
+    private var previousTimestamp:TimeInterval
+    private let kUpdateThreshold:TimeInterval = 0.2
     
     override init()
     {
         model = MFight()
+        previousTimestamp = 0
         super.init()
     }
     
@@ -60,6 +63,21 @@ class CFight:CController
     
     private func errorLoading()
     {
+        
+    }
+    
+    //MARK: public
+    
+    func tick()
+    {
+        let currentTimestamp:TimeInterval = Date().timeIntervalSince1970
+        let deltaTimestamp:TimeInterval = currentTimestamp - previousTimestamp
+        
+        if deltaTimestamp >= kUpdateThreshold
+        {
+            previousTimestamp = currentTimestamp
+        }
+        
         
     }
 }

@@ -79,6 +79,7 @@
 		DAEC19E11E364E97006AA00E /* MetalSpatialCharStateStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */; };
 		DAEC19E31E36532B006AA00E /* MetalSpatialCharStateAdvance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E21E36532B006AA00E /* MetalSpatialCharStateAdvance.swift */; };
 		DAEC19E51E3656B8006AA00E /* MetalSpatialCharTexturesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E41E3656B8006AA00E /* MetalSpatialCharTexturesList.swift */; };
+		DAEC19E71E365C0E006AA00E /* MFightTickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E61E365C0E006AA00E /* MFightTickerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharStateStand.swift; sourceTree = "<group>"; };
 		DAEC19E21E36532B006AA00E /* MetalSpatialCharStateAdvance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharStateAdvance.swift; sourceTree = "<group>"; };
 		DAEC19E41E3656B8006AA00E /* MetalSpatialCharTexturesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTexturesList.swift; sourceTree = "<group>"; };
+		DAEC19E61E365C0E006AA00E /* MFightTickerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightTickerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4BB03F1E33F55B00997DE0 /* MFight.swift */,
+				DAEC19E61E365C0E006AA00E /* MFightTickerProtocol.swift */,
 				DA4BB0561E341C5E00997DE0 /* MFightRound.swift */,
 				DA4BB0401E33F55B00997DE0 /* MFightFighter.swift */,
 				DA2DAC5C1E344516003594C1 /* MFightScene.swift */,
@@ -661,6 +664,7 @@
 				DACC375B1E3536CB0030DF99 /* MetalSpatialBaseTexturedDirectionNegative.swift in Sources */,
 				DA2797F71E3263C6008B98C1 /* ExtensionURL.swift in Sources */,
 				DA27980F1E327224008B98C1 /* VFightMetal.swift in Sources */,
+				DAEC19E71E365C0E006AA00E /* MFightTickerProtocol.swift in Sources */,
 				DAEC19E51E3656B8006AA00E /* MetalSpatialCharTexturesList.swift in Sources */,
 				DAAD8E4C1E3556B100B18698 /* MetalSpatialCharState.swift in Sources */,
 				DA2797FA1E3263C6008B98C1 /* MHelpItem.swift in Sources */,

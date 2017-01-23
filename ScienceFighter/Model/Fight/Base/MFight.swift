@@ -15,4 +15,9 @@ class MFight
     {
         round = MFightRound(device:device)
     }
+    
+    func tick()
+    {
+        
+    }
 }

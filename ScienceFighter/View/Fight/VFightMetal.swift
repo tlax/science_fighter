@@ -84,6 +84,8 @@ class VFightMetal:MTKView
     
     override func draw()
     {
+        controller.tick()
+        
         super.draw()
         
         guard
