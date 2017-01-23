@@ -78,6 +78,7 @@
 		DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */; };
 		DAEC19E11E364E97006AA00E /* MetalSpatialCharStateStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */; };
 		DAEC19E31E36532B006AA00E /* MetalSpatialCharStateAdvance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E21E36532B006AA00E /* MetalSpatialCharStateAdvance.swift */; };
+		DAEC19E51E3656B8006AA00E /* MetalSpatialCharTexturesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC19E41E3656B8006AA00E /* MetalSpatialCharTexturesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		DAE816721E33071E002574B6 /* MetalBufferableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalBufferableProtocol.swift; sourceTree = "<group>"; };
 		DAEC19E01E364E97006AA00E /* MetalSpatialCharStateStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharStateStand.swift; sourceTree = "<group>"; };
 		DAEC19E21E36532B006AA00E /* MetalSpatialCharStateAdvance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharStateAdvance.swift; sourceTree = "<group>"; };
+		DAEC19E41E3656B8006AA00E /* MetalSpatialCharTexturesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalSpatialCharTexturesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +417,7 @@
 			children = (
 				DA2798181E3292D8008B98C1 /* MetalSpatialChar.swift */,
 				DA4BB0541E34138500997DE0 /* MetalSpatialCharTextures.swift */,
+				DAEC19E41E3656B8006AA00E /* MetalSpatialCharTexturesList.swift */,
 			);
 			path = Char;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				DACC375B1E3536CB0030DF99 /* MetalSpatialBaseTexturedDirectionNegative.swift in Sources */,
 				DA2797F71E3263C6008B98C1 /* ExtensionURL.swift in Sources */,
 				DA27980F1E327224008B98C1 /* VFightMetal.swift in Sources */,
+				DAEC19E51E3656B8006AA00E /* MetalSpatialCharTexturesList.swift in Sources */,
 				DAAD8E4C1E3556B100B18698 /* MetalSpatialCharState.swift in Sources */,
 				DA2797FA1E3263C6008B98C1 /* MHelpItem.swift in Sources */,
 				DACC37591E3536BF0030DF99 /* MetalSpatialBaseTexturedDirectionPositive.swift in Sources */,

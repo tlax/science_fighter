@@ -20,7 +20,18 @@ class MetalSpatialChar:MetalSpatialBaseTextured
             width:kWidth,
             height:kHeight,
             direction:direction)
+    }
+    
+    //MARK: public
+    func changeTexture()
+    {
         currentTexture = textures.standTextures.first
+    }
+    
+    //MARK: -states
+    
+    func stateStand()
+    {
         state = MetalSpatialCharStateStand(character:self)
     }
 }
