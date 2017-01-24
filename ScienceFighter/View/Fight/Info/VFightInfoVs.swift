@@ -27,6 +27,7 @@ class VFightInfoVs:UIView
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.bold(size:30)
         label.textColor = UIColor.white
+        label.text = "67"
         
         addSubview(backgroundView)
         addSubview(label)
