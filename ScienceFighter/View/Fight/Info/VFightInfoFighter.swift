@@ -2,10 +2,10 @@ import UIKit
 
 class VFightInfoFighter:UIView
 {
-    
-    
     private weak var fighter:MFightFighter?
-    privare weak var viewHP:VFightInfoFighterHP!
+    private weak var viewHP:VFightInfoFighterHP!
+    private weak var viewName:VFightInfoFighterName!
+    private let kMarginHorizontal:CGFloat = 2
     
     init()
     {
@@ -18,10 +18,20 @@ class VFightInfoFighter:UIView
         let viewHP:VFightInfoFighterHP = VFightInfoFighterHP()
         self.viewHP = viewHP
         
+        let viewName:VFightInfoFighterName = VFightInfoFighterName()
+        self.viewName = viewName
+        
+        addSubview(viewName)
         addSubview(viewHP)
         
         NSLayoutConstraint.equalsHorizontal(
-            view: <#T##UIView#>, toView: <#T##UIView#>)
+            view:viewHP,
+            toView:self,
+            margin:kMarginHorizontal)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewName,
+            toView:self,
+            margin:kMarginHorizontal)
     }
     
     required init?(coder:NSCoder)
