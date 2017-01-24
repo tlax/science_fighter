@@ -13,12 +13,12 @@ class VFightControlsMenu:UIView
         clipsToBounds = true
         self.controller = controller
         
-        let blur:VBlur = VBlur.light()
+        let border:VBorder = VBorder(color:UIColor(white:1, alpha:0.5))
         
-        addSubview(blur)
+        addSubview(border)
         
         NSLayoutConstraint.equals(
-            view:blur,
+            view:border,
             toView:self)
         
         

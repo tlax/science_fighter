@@ -4,7 +4,7 @@ class VFightControls:UIView
 {
     weak var viewMenu:VFightControlsMenu!
     private weak var controller:CFight!
-    private let kMenuHeight:CGFloat = 70
+    private let kMenuHeight:CGFloat = 80
     
     init(controller:CFight)
     {
