@@ -68,6 +68,7 @@
 		DA4BB0591E341F4800997DE0 /* MetalRenderableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB0581E341F4800997DE0 /* MetalRenderableProtocol.swift */; };
 		DA4BB05B1E34200C00997DE0 /* MetalProjectionMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BB05A1E34200C00997DE0 /* MetalProjectionMatrix.swift */; };
 		DA5987A11E37BBE9001891A6 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5987A01E37BBE9001891A6 /* generic.xcassets */; };
+		DA5987A31E37BC8D001891A6 /* VFightInfoVs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987A21E37BC8D001891A6 /* VFightInfoVs.swift */; };
 		DA9790331E36D8050090CB49 /* VFightControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902B1E36D8050090CB49 /* VFightControls.swift */; };
 		DA9790341E36D8050090CB49 /* VFightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902D1E36D8050090CB49 /* VFightInfo.swift */; };
 		DA9790351E36D8050090CB49 /* VFightInfoFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */; };
@@ -155,6 +156,7 @@
 		DA4BB0581E341F4800997DE0 /* MetalRenderableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalRenderableProtocol.swift; sourceTree = "<group>"; };
 		DA4BB05A1E34200C00997DE0 /* MetalProjectionMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalProjectionMatrix.swift; sourceTree = "<group>"; };
 		DA5987A01E37BBE9001891A6 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
+		DA5987A21E37BC8D001891A6 /* VFightInfoVs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfoVs.swift; sourceTree = "<group>"; };
 		DA97902B1E36D8050090CB49 /* VFightControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControls.swift; sourceTree = "<group>"; };
 		DA97902D1E36D8050090CB49 /* VFightInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfo.swift; sourceTree = "<group>"; };
 		DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfoFighter.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				DA97902D1E36D8050090CB49 /* VFightInfo.swift */,
+				DA5987A21E37BC8D001891A6 /* VFightInfoVs.swift */,
 				DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */,
 				DA97903B1E36DE8B0090CB49 /* VFightInfoFighterPositive.swift */,
 				DA97903D1E36DEA60090CB49 /* VFightInfoFighterNegative.swift */,
@@ -695,6 +698,7 @@
 				DAEC19EA1E36637E006AA00E /* MFighterState.swift in Sources */,
 				DA97903E1E36DEA60090CB49 /* VFightInfoFighterNegative.swift in Sources */,
 				DA2797EB1E3263C6008B98C1 /* CAppDelegate.swift in Sources */,
+				DA5987A31E37BC8D001891A6 /* VFightInfoVs.swift in Sources */,
 				DA4BB05B1E34200C00997DE0 /* MetalProjectionMatrix.swift in Sources */,
 				DA2798281E32D349008B98C1 /* MetalShaderFragmentSimple.metal in Sources */,
 				DA97903A1E36D8710090CB49 /* VFightInfoFighterName.swift in Sources */,
