@@ -13,7 +13,8 @@ class MFightFighterTuring:MFightFighter
         ]
         
         let advanceImages:[UIImage] = [
-            #imageLiteral(resourceName: "assetCharTuringStand1")
+            #imageLiteral(resourceName: "assetCharTuringAdvance1"),
+            #imageLiteral(resourceName: "assetCharTuringAdvance2")
         ]
         
         let direction:MetalSpatialBaseTexturedDirection = facing.direction()
