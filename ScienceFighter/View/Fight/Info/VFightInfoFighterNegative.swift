@@ -6,12 +6,12 @@ class VFightInfoFighterNegative:VFightInfoFighter
     {
         super.init()
         
-        viewName.label.textAlignment = NSTextAlignment.left
+        viewName.label.textAlignment = NSTextAlignment.right
         
         NSLayoutConstraint.rightToRight(
             view:viewHP.viewBar,
             toView:viewHP,
-            constant:-viewHP.kBarMargin)
+            constant:-viewHP.kMargin)
     }
     
     required init?(coder:NSCoder)

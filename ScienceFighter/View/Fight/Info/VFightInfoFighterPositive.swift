@@ -11,7 +11,7 @@ class VFightInfoFighterPositive:VFightInfoFighter
         NSLayoutConstraint.leftToLeft(
             view:viewHP.viewBar,
             toView:viewHP,
-            constant:viewHP.kBarMargin)
+            constant:viewHP.kMargin)
     }
     
     required init?(coder:NSCoder)

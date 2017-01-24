@@ -5,8 +5,8 @@ class VFightInfoFighter:UIView
     private weak var fighter:MFightFighter?
     private(set) weak var viewHP:VFightInfoFighterHP!
     private(set) weak var viewName:VFightInfoFighterName!
-    private let kMarginHorizontal:CGFloat = 2
     private let kNameHeight:CGFloat = 20
+    private let kNameMargin:CGFloat = 5
     
     init()
     {
@@ -27,14 +27,14 @@ class VFightInfoFighter:UIView
         
         NSLayoutConstraint.topToTop(
             view:viewHP,
-            toView:self)
+            toView:self,
+            constant:kNameHeight)
         NSLayoutConstraint.bottomToTop(
             view:viewHP,
             toView:viewName)
         NSLayoutConstraint.equalsHorizontal(
             view:viewHP,
-            toView:self,
-            margin:kMarginHorizontal)
+            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewName,
@@ -45,7 +45,7 @@ class VFightInfoFighter:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:viewName,
             toView:self,
-            margin:kMarginHorizontal)
+            margin:kNameMargin)
     }
     
     required init?(coder:NSCoder)

@@ -8,9 +8,9 @@ class VFightInfo:UIView
     private weak var viewVs:VFightInfoVs!
     private weak var layoutVsLeft:NSLayoutConstraint!
     private let kVsWidth:CGFloat = 60
-    private let kContentTop:CGFloat = 20
+    private let kContentTop:CGFloat = 5
     private let kContentHeight:CGFloat = 60
-    private let kMarginHorizontal:CGFloat = 20
+    private let kMarginHorizontal:CGFloat = 10
     private let kInitialVsLeft:CGFloat = 150
     
     init(controller:CFight)

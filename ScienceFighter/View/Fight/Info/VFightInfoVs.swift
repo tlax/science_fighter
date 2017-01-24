@@ -25,7 +25,7 @@ class VFightInfoVs:UIView
         label.backgroundColor = UIColor.clear
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
-        label.font = UIFont.bold(size:30)
+        label.font = UIFont.bold(size:16)
         label.textColor = UIColor.white
         label.text = "67"
         

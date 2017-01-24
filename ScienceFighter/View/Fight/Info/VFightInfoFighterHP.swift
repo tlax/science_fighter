@@ -4,8 +4,8 @@ class VFightInfoFighterHP:UIView
 {
     private weak var layoutBarWidth:NSLayoutConstraint!
     private(set) weak var viewBar:UIView!
-    let kBarMargin:CGFloat = 3
-    private let kCornerRadius:CGFloat = 10
+    private let kCornerRadius:CGFloat = 7
+    let kMargin:CGFloat = 2
     
     init()
     {
@@ -13,7 +13,7 @@ class VFightInfoFighterHP:UIView
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
-        backgroundColor = UIColor(white:0, alpha:0.2)
+        backgroundColor = UIColor(white:0, alpha:0.8)
         layer.cornerRadius = kCornerRadius
         
         let viewBar:UIView = UIView()
@@ -21,6 +21,7 @@ class VFightInfoFighterHP:UIView
         viewBar.translatesAutoresizingMaskIntoConstraints = false
         viewBar.clipsToBounds = true
         viewBar.backgroundColor = UIColor.red
+        viewBar.layer.cornerRadius = kCornerRadius - kMargin
         self.viewBar = viewBar
         
         addSubview(viewBar)
@@ -28,7 +29,7 @@ class VFightInfoFighterHP:UIView
         NSLayoutConstraint.equalsVertical(
             view:viewBar,
             toView:self,
-            margin:kBarMargin)
+            margin:kMargin)
         layoutBarWidth = NSLayoutConstraint.width(
             view:viewBar,
             constant:100)
