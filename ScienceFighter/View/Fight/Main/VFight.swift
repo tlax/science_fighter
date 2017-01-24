@@ -69,5 +69,6 @@ class VFight:VView
         spinner.stopAnimating()
         viewMetal?.isHidden = false
         viewMetal?.isPaused = false
+        viewInfo.startCountDown()
     }
 }
