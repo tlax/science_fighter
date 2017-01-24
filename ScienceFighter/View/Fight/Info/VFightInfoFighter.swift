@@ -55,6 +55,13 @@ class VFightInfoFighter:UIView
     
     //MARK: public
     
+    func loadFighter(fighter:MFightFighter)
+    {
+        self.fighter = fighter
+        viewName.label.text = fighter.name
+        update()
+    }
+    
     func update()
     {
         

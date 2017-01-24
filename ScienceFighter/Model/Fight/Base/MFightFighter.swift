@@ -3,6 +3,7 @@ import MetalKit
 
 class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
 {
+    let name:String
     let spatialChar:MetalSpatialChar
     let position:MFightPosition
     let facing:MFightFacing
@@ -18,11 +19,13 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     
     init(
         spatialChar:MetalSpatialChar,
-        facing:MFightFacing)
+        facing:MFightFacing,
+        name:String)
     {
         position = facing.initialPosition()
         self.spatialChar = spatialChar
         self.facing = facing
+        self.name = name
         
         stateStand()
         currentState?.updateTexture()

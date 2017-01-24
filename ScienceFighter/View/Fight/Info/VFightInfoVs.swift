@@ -12,6 +12,7 @@ class VFightInfoVs:UIView
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
+        self.controller = controller
         
         let backgroundView:UIImageView = UIImageView()
         backgroundView.isUserInteractionEnabled = false
@@ -27,7 +28,6 @@ class VFightInfoVs:UIView
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.bold(size:16)
         label.textColor = UIColor.white
-        label.text = "67"
         
         addSubview(backgroundView)
         addSubview(label)
@@ -43,5 +43,12 @@ class VFightInfoVs:UIView
     required init?(coder:NSCoder)
     {
         fatalError()
+    }
+    
+    //MARK: public
+    
+    func update()
+    {
+        
     }
 }

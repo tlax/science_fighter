@@ -31,12 +31,46 @@ class VFightInfoFighterHP:UIView
             toView:self,
             margin:kMargin)
         layoutBarWidth = NSLayoutConstraint.width(
-            view:viewBar,
-            constant:100)
+            view:viewBar)
     }
     
     required init?(coder:NSCoder)
     {
         fatalError()
+    }
+    
+    //MARK: private
+    
+    private func percentColor(percent:CGFloat) -> UIColor
+    {
+        if percent > 0.9
+        {
+            return UIColor.green
+        }
+        else if percent > 0.7
+        {
+            return UIColor.yellow
+        }
+        else if percent > 0.4
+        {
+            return UIColor.orange
+        }
+        else
+        {
+            return UIColor.red
+        }
+    }
+    
+    //MARK: public
+    
+    func update(percent:CGFloat)
+    {
+        let color:UIColor = percentColor(percent:percent)
+        let width:CGFloat = bounds.maxX
+        let remain:CGFloat = width - (kMargin + kMargin)
+        let barWidth:CGFloat = percent * remain
+        layoutBarWidth.constant = barWidth
+        
+        viewBar.backgroundColor = color
     }
 }
