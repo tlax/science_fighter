@@ -71,4 +71,10 @@ class VFight:VView
         viewMetal?.isPaused = false
         viewInfo.startCountDown()
     }
+    
+    func startFight()
+    {
+        viewInfo.removeCountDown()
+        viewControls.isHidden = false
+    }
 }

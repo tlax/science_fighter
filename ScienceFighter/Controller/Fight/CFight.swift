@@ -79,4 +79,9 @@ class CFight:CController
             model.tick(timestamp:currentTimestamp)
         }
     }
+    
+    func countDownFinish()
+    {
+        viewFight.startFight()
+    }
 }

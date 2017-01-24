@@ -6,6 +6,7 @@ class VFightInfoCountDown:UIView
     private weak var label:UILabel!
     private weak var layoutLabelTop:NSLayoutConstraint!
     private let kLabelHeight:CGFloat = 50
+    private let kDelay:TimeInterval = 1
     
     init(controller:CFight)
     {
@@ -19,11 +20,11 @@ class VFightInfoCountDown:UIView
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor(white:0, alpha:0.5)
+        label.backgroundColor = UIColor(white:0, alpha:0.4)
         label.font = UIFont.bold(size:18)
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.center
-        label.text = "Ready"
+        label.isHidden = true
         self.label = label
         
         addSubview(label)
@@ -37,6 +38,13 @@ class VFightInfoCountDown:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDelay)
+        { [weak self] in
+
+            self?.showReady()
+        }
     }
     
     required init?(coder:NSCoder)
@@ -52,5 +60,37 @@ class VFightInfoCountDown:UIView
         layoutLabelTop.constant = margin
         
         super.layoutSubviews()
+    }
+    
+    //MARK: private
+    
+    private func showReady()
+    {
+        label.isHidden = false
+        label.text = NSLocalizedString("VFightInfoCountDown_ready", comment:"")
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDelay)
+        { [weak self] in
+            
+            self?.showFight()
+        }
+    }
+    
+    private func showFight()
+    {
+        label.text = NSLocalizedString("VFightInfoCountDown_fight", comment:"")
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDelay)
+        { [weak self] in
+            
+            self?.finish()
+        }
+    }
+    
+    private func finish()
+    {
+        controller.countDownFinish()
     }
 }

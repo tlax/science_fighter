@@ -6,6 +6,7 @@ class VFightInfo:UIView
     private weak var viewUser:VFightInfoFighter!
     private weak var viewNPC:VFightInfoFighter!
     private weak var viewVs:VFightInfoVs!
+    private weak var viewCountDown:VFightInfoCountDown?
     private weak var layoutVsLeft:NSLayoutConstraint!
     private let kVsWidth:CGFloat = 60
     private let kContentTop:CGFloat = 5
@@ -106,10 +107,16 @@ class VFightInfo:UIView
     func startCountDown()
     {
         let viewCountDown:VFightInfoCountDown = VFightInfoCountDown(controller:controller)
+        self.viewCountDown = viewCountDown
         addSubview(viewCountDown)
         
         NSLayoutConstraint.equals(
             view:viewCountDown,
             toView:self)
+    }
+    
+    func removeCountDown()
+    {
+        viewCountDown?.removeFromSuperview()
     }
 }
