@@ -42,6 +42,8 @@ class MFight:MFightTickerProtocol
         lastTimestamp = Date().timeIntervalSince1970
         created = lastTimestamp
         state = State.fight
+        round?.fighterUser.stateAdvance()
+        round?.fighterNPC.stateAdvance()
     }
     
     //MARK: tickerProtocol

@@ -70,6 +70,6 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     
     func stateAdvance()
     {
-        currentState = 
+        currentState = MFightFighterStateAdvance(fighter:self)
     }
 }
