@@ -57,7 +57,7 @@ class VFight:VView
         }
         
         self.viewMetal = viewMetal
-        addSubview(viewMetal)
+        insertSubview(viewMetal, belowSubview:viewInfo)
         
         NSLayoutConstraint.equals(
             view:viewMetal,

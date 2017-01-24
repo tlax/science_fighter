@@ -20,6 +20,7 @@ class VFightInfoFighterHP:UIView
         viewBar.isUserInteractionEnabled = false
         viewBar.translatesAutoresizingMaskIntoConstraints = false
         viewBar.clipsToBounds = true
+        viewBar.backgroundColor = UIColor.red
         self.viewBar = viewBar
         
         addSubview(viewBar)
@@ -29,7 +30,8 @@ class VFightInfoFighterHP:UIView
             toView:self,
             margin:kBarMargin)
         layoutBarWidth = NSLayoutConstraint.width(
-            view:viewBar)
+            view:viewBar,
+            constant:100)
     }
     
     required init?(coder:NSCoder)

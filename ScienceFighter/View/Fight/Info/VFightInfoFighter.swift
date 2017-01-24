@@ -30,7 +30,7 @@ class VFightInfoFighter:UIView
             toView:self)
         NSLayoutConstraint.bottomToTop(
             view:viewHP,
-            toView:self)
+            toView:viewName)
         NSLayoutConstraint.equalsHorizontal(
             view:viewHP,
             toView:self,

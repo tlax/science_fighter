@@ -11,6 +11,7 @@ class VFightInfo:UIView
     private let kContentTop:CGFloat = 20
     private let kContentHeight:CGFloat = 60
     private let kMarginHorizontal:CGFloat = 20
+    private let kInitialVsLeft:CGFloat = 150
     
     init(controller:CFight)
     {
@@ -43,7 +44,11 @@ class VFightInfo:UIView
             constant:kContentHeight)
         layoutVsLeft = NSLayoutConstraint.leftToLeft(
             view:viewVs,
-            toView:self)
+            toView:self,
+            constant:kInitialVsLeft)
+        NSLayoutConstraint.width(
+            view:viewVs,
+            constant:kVsWidth)
         
         NSLayoutConstraint.topToTop(
             view:viewUser,
@@ -54,11 +59,12 @@ class VFightInfo:UIView
             constant:kContentHeight)
         NSLayoutConstraint.leftToLeft(
             view:viewUser,
-            toView:self)
+            toView:self,
+            constant:kMarginHorizontal)
         NSLayoutConstraint.rightToLeft(
             view:viewUser,
             toView:viewVs)
-        
+
         NSLayoutConstraint.topToTop(
             view:viewNPC,
             toView:self,
@@ -71,7 +77,8 @@ class VFightInfo:UIView
             toView:viewVs)
         NSLayoutConstraint.rightToRight(
             view:viewNPC,
-            toView:self)
+            toView:self,
+            constant:-kMarginHorizontal)
     }
     
     required init?(coder:NSCoder)
