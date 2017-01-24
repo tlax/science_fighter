@@ -17,6 +17,7 @@ class VFight:VView
         self.viewInfo = viewInfo
         
         let viewControls:VFightControls = VFightControls(controller:self.controller)
+        viewControls.isHidden = true
         self.viewControls = viewControls
         
         let spinner:VSpinner = VSpinner()

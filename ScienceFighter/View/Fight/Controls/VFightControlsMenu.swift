@@ -3,6 +3,7 @@ import UIKit
 class VFightControlsMenu:UIView
 {
     private weak var controller:CFight!
+    private weak var buttonPause:VFightControlsMenupau
     
     init(controller:CFight)
     {
