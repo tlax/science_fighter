@@ -73,6 +73,7 @@
 		DA5987A71E380172001891A6 /* MFightFighterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987A61E380172001891A6 /* MFightFighterState.swift */; };
 		DA5987A91E380183001891A6 /* MFightFighterStateStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987A81E380183001891A6 /* MFightFighterStateStand.swift */; };
 		DA5987AB1E380196001891A6 /* MFightFighterStateAdvance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987AA1E380196001891A6 /* MFightFighterStateAdvance.swift */; };
+		DA5987AD1E3811DB001891A6 /* VFightControlsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987AC1E3811DB001891A6 /* VFightControlsMenu.swift */; };
 		DA9790331E36D8050090CB49 /* VFightControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902B1E36D8050090CB49 /* VFightControls.swift */; };
 		DA9790341E36D8050090CB49 /* VFightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902D1E36D8050090CB49 /* VFightInfo.swift */; };
 		DA9790351E36D8050090CB49 /* VFightInfoFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */; };
@@ -162,6 +163,7 @@
 		DA5987A61E380172001891A6 /* MFightFighterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFighterState.swift; sourceTree = "<group>"; };
 		DA5987A81E380183001891A6 /* MFightFighterStateStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFighterStateStand.swift; sourceTree = "<group>"; };
 		DA5987AA1E380196001891A6 /* MFightFighterStateAdvance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFighterStateAdvance.swift; sourceTree = "<group>"; };
+		DA5987AC1E3811DB001891A6 /* VFightControlsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControlsMenu.swift; sourceTree = "<group>"; };
 		DA97902B1E36D8050090CB49 /* VFightControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControls.swift; sourceTree = "<group>"; };
 		DA97902D1E36D8050090CB49 /* VFightInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfo.swift; sourceTree = "<group>"; };
 		DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfoFighter.swift; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				DA97902B1E36D8050090CB49 /* VFightControls.swift */,
+				DA5987AC1E3811DB001891A6 /* VFightControlsMenu.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				DA97903C1E36DE8B0090CB49 /* VFightInfoFighterPositive.swift in Sources */,
 				DA27981E1E32951D008B98C1 /* MetalVertex.swift in Sources */,
 				DA4BB0361E33CC3E00997DE0 /* MetalConstants.swift in Sources */,
+				DA5987AD1E3811DB001891A6 /* VFightControlsMenu.swift in Sources */,
 				DA2DAC5D1E344516003594C1 /* MFightScene.swift in Sources */,
 				DAE816731E33071E002574B6 /* MetalBufferableProtocol.swift in Sources */,
 				DA2798001E3263C6008B98C1 /* VAlert.swift in Sources */,
