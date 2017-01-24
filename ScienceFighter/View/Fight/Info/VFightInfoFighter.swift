@@ -64,6 +64,16 @@ class VFightInfoFighter:UIView
     
     func update()
     {
+        guard
         
+            let fighter:MFightFighter = self.fighter
+        
+        else
+        {
+            return
+        }
+        
+        let hpPercent:CGFloat = fighter.currentHP / fighter.kMaxHP
+        viewHP.update(percent:hpPercent)
     }
 }

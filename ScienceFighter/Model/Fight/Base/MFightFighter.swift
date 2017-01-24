@@ -7,9 +7,11 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     let spatialChar:MetalSpatialChar
     let position:MFightPosition
     let facing:MFightFacing
+    let kMaxHP:CGFloat = 100
     let kMovingSpeed:TimeInterval = 0.6
     weak var enemy:MFightFighter?
     private(set) var currentState:MFightFighterState?
+    private(set) var currentHP:CGFloat
     private let kMovingDistance:Float = 20
     
     init(
@@ -24,6 +26,7 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
         facing:MFightFacing,
         name:String)
     {
+        currentHP = kMaxHP
         position = facing.initialPosition()
         self.spatialChar = spatialChar
         self.facing = facing
