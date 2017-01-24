@@ -8,7 +8,7 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     let position:MFightPosition
     let facing:MFightFacing
     let kMovingSpeed:TimeInterval = 0.6
-    private(set) var currentState:MFighterState?
+    private(set) var currentState:MFightFighterState?
     
     init(
         device:MTLDevice,
@@ -65,6 +65,11 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     
     func stateStand()
     {
-        currentState = MFighterStateStand(fighter:self)
+        currentState = MFightFighterStateStand(fighter:self)
+    }
+    
+    func stateAdvance()
+    {
+        currentState = 
     }
 }

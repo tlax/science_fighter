@@ -1,6 +1,6 @@
 import Foundation
 
-class MFighterState:MFightTickerProtocol
+class MFightFighterState:MFightTickerProtocol
 {
     private(set) weak var fighter:MFightFighter!
     

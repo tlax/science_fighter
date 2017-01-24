@@ -1,6 +1,6 @@
 import Foundation
 
-class MFighterStateAdvance:MFighterState
+class MFightFighterStateAdvance:MFightFighterState
 {
     private var lastStep:TimeInterval
     

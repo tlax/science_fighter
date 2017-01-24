@@ -1,6 +1,6 @@
 import Foundation
 
-class MFighterStateStand:MFighterState
+class MFightFighterStateStand:MFightFighterState
 {
     private let kUpdateTextureRate:UInt32 = 10
     
