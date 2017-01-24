@@ -37,6 +37,7 @@ class MetalSpatialCharTexturesList
     func random() -> MTLTexture
     {
         let randomIndex:Int = Int(arc4random_uniform(count))
+        previousIndex = randomIndex
         let randomTexture:MTLTexture = textures[randomIndex]
         
         return randomTexture
