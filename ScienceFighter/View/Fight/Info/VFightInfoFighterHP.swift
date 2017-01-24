@@ -2,10 +2,10 @@ import UIKit
 
 class VFightInfoFighterHP:UIView
 {
-    private weak var viewBar:UIView!
     private weak var layoutBarWidth:NSLayoutConstraint!
+    private(set) weak var viewBar:UIView!
+    let kBarMargin:CGFloat = 3
     private let kCornerRadius:CGFloat = 10
-    private let kBarMargin:CGFloat = 3
     
     init()
     {
@@ -28,10 +28,6 @@ class VFightInfoFighterHP:UIView
             view:viewBar,
             toView:self,
             margin:kBarMargin)
-        NSLayoutConstraint.leftToLeft(
-            view:viewBar,
-            toView:self,
-            constant:kBarMargin)
         layoutBarWidth = NSLayoutConstraint.width(
             view:viewBar)
     }

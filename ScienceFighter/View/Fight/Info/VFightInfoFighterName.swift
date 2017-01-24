@@ -2,7 +2,7 @@ import UIKit
 
 class VFightInfoFighterName:UIView
 {
-    private weak var label:UILabel!
+    private(set) weak var label:UILabel!
     
     init()
     {

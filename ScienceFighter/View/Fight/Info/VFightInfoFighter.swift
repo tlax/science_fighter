@@ -3,8 +3,8 @@ import UIKit
 class VFightInfoFighter:UIView
 {
     private weak var fighter:MFightFighter?
-    private weak var viewHP:VFightInfoFighterHP!
-    private weak var viewName:VFightInfoFighterName!
+    private(set) weak var viewHP:VFightInfoFighterHP!
+    private(set) weak var viewName:VFightInfoFighterName!
     private let kMarginHorizontal:CGFloat = 2
     
     init()
