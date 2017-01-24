@@ -3,7 +3,7 @@ import UIKit
 class CFight:CController
 {
     let model:MFight
-    private weak var viewFight:VFight!
+    weak var viewFight:VFight!
     private var previousTimestamp:TimeInterval
     private let kUpdateThreshold:TimeInterval = 0.2
     
