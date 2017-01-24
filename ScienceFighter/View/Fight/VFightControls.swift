@@ -1,6 +1,6 @@
 import UIKit
 
-class VFightInfo:UIView
+class VFightControls:UIView
 {
     private weak var controller:CFight!
     
@@ -9,7 +9,6 @@ class VFightInfo:UIView
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
-        isUserInteractionEnabled = false
         backgroundColor = UIColor.clear
         self.controller = controller
     }
