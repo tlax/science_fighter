@@ -95,4 +95,21 @@ class VFightInfo:UIView
         
         super.layoutSubviews()
     }
+    
+    //MARK: public
+    
+    func update()
+    {
+        
+    }
+    
+    func startCountDown()
+    {
+        let viewCountDown:VFightInfoCountDown = VFightInfoCountDown(controller:controller)
+        addSubview(viewCountDown)
+        
+        NSLayoutConstraint.equals(
+            view:viewCountDown,
+            toView:self)
+    }
 }

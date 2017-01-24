@@ -17,6 +17,9 @@ class MFightFighterGauss:MFightFighter
             #imageLiteral(resourceName: "assetCharTuringAdvance2")
         ]
         
+        let name:String = NSLocalizedString(
+            "MFightFighterGauss_name",
+            comment:"")
         let direction:MetalSpatialBaseTexturedDirection = facing.direction()
         
         let charTextures:MetalSpatialCharTextures = MetalSpatialCharTextures(
@@ -31,6 +34,7 @@ class MFightFighterGauss:MFightFighter
         
         super.init(
             spatialChar:spatialChar,
-            facing:facing)
+            facing:facing,
+            name:name)
     }
 }
