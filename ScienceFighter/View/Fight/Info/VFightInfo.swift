@@ -23,6 +23,8 @@ class VFightInfo:UIView
         
         addSubview(viewUser)
         addSubview(viewNPC)
+        
+        
     }
     
     required init?(coder:NSCoder)
