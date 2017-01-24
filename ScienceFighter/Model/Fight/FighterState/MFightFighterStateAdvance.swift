@@ -35,6 +35,7 @@ class MFightFighterStateAdvance:MFightFighterState
             if enemy.positionOverlap(position:nextPosition)
             {
                 fighter.stateStand()
+                fighter.currentState?.updateTexture()
             }
             else
             {

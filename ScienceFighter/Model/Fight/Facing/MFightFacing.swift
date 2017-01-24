@@ -4,7 +4,7 @@ class MFightFacing
 {
     let kInitialX:Float = 200
     let kInitialY:Float = -50
-    let kReachDelta:Float = 30
+    let kReachDelta:Float = 60
     
     //MARK: public
     
