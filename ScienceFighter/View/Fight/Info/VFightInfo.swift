@@ -52,6 +52,9 @@ class VFightInfo:UIView
         NSLayoutConstraint.height(
             view:viewUser,
             constant:kContentHeight)
+        NSLayoutConstraint.leftToLeft(
+            view:viewUser,
+            toView:self)
         NSLayoutConstraint.rightToLeft(
             view:viewUser,
             toView:viewVs)
@@ -66,6 +69,9 @@ class VFightInfo:UIView
         NSLayoutConstraint.leftToRight(
             view:viewNPC,
             toView:viewVs)
+        NSLayoutConstraint.rightToRight(
+            view:viewNPC,
+            toView:self)
     }
     
     required init?(coder:NSCoder)

@@ -7,6 +7,10 @@ class VFightInfoFighterName:UIView
     init()
     {
         super.init(frame:CGRect.zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        clipsToBounds = true
+        isUserInteractionEnabled = false
+        backgroundColor = UIColor.clear
         
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false

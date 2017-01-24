@@ -6,6 +6,7 @@ class VFightInfoFighter:UIView
     private(set) weak var viewHP:VFightInfoFighterHP!
     private(set) weak var viewName:VFightInfoFighterName!
     private let kMarginHorizontal:CGFloat = 2
+    private let kNameHeight:CGFloat = 20
     
     init()
     {
@@ -24,10 +25,23 @@ class VFightInfoFighter:UIView
         addSubview(viewName)
         addSubview(viewHP)
         
+        NSLayoutConstraint.topToTop(
+            view:viewHP,
+            toView:self)
+        NSLayoutConstraint.bottomToTop(
+            view:viewHP,
+            toView:self)
         NSLayoutConstraint.equalsHorizontal(
             view:viewHP,
             toView:self,
             margin:kMarginHorizontal)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewName,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewName,
+            constant:kNameHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewName,
             toView:self,
