@@ -18,7 +18,6 @@ class VFightInfoFighterName:UIView
         label.backgroundColor = UIColor.clear
         label.font = UIFont.bold(size:12)
         label.textColor = UIColor.white
-        label.text = "Shisus"
         self.label = label
         
         addSubview(label)

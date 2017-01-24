@@ -54,6 +54,7 @@ class CFight:CController
                 { [weak self] in
                     
                     self?.viewFight.loadFinished()
+                    self?.model.startCoundDown()
                 }
             }
         }
@@ -77,11 +78,13 @@ class CFight:CController
         {
             previousTimestamp = currentTimestamp
             model.tick(timestamp:currentTimestamp)
+            viewFight.viewInfo.update()
         }
     }
     
     func countDownFinish()
     {
+        model.startFight()
         viewFight.startFight()
     }
 }

@@ -101,11 +101,28 @@ class VFightInfo:UIView
     
     func update()
     {
-        
+        viewVs.update()
+        viewUser.update()
+        viewNPC.update()
     }
     
     func startCountDown()
     {
+        guard
+            
+            let fighterUser:MFightFighter = controller.model.round?.fighterUser,
+            let fighterNPC:MFightFighter = controller.model.round?.fighterNPC
+        
+        else
+        {
+            return
+        }
+        
+        viewUser.loadFighter(
+            fighter:fighterUser)
+        viewNPC.loadFighter(
+            fighter:fighterNPC)
+        
         let viewCountDown:VFightInfoCountDown = VFightInfoCountDown(controller:controller)
         self.viewCountDown = viewCountDown
         addSubview(viewCountDown)

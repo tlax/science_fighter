@@ -28,6 +28,7 @@ class VFightInfoVs:UIView
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.bold(size:16)
         label.textColor = UIColor.white
+        self.label = label
         
         addSubview(backgroundView)
         addSubview(label)
@@ -49,6 +50,7 @@ class VFightInfoVs:UIView
     
     func update()
     {
-        
+        let remainSeconds:Int = Int(controller.model.remainingTime)
+        label.text = "\(remainSeconds)"
     }
 }
