@@ -2,7 +2,7 @@ import Foundation
 
 class MFightFacing
 {
-    let kInitialX:Float = 150
+    let kInitialX:Float = 200
     let kInitialY:Float = -50
     
     //MARK: public
@@ -15,5 +15,10 @@ class MFightFacing
     func direction() -> MetalSpatialBaseTexturedDirection
     {
         fatalError()
+    }
+    
+    func normalizeDistance(distance:Float) -> Float
+    {
+        return distance
     }
 }

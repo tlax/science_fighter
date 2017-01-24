@@ -8,6 +8,7 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     let position:MFightPosition
     let facing:MFightFacing
     let kMovingSpeed:TimeInterval = 0.6
+    let kMovingDistance:Float = 20
     private(set) var currentState:MFightFighterState?
     
     init(

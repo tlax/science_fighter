@@ -17,4 +17,9 @@ class MFightFacingNegative:MFightFacing
         
         return direction
     }
+    
+    override func normalizeDistance(distance:Float) -> Float
+    {
+        return -distance
+    }
 }

@@ -12,7 +12,7 @@ class MFightFighterStateAdvance:MFightFighterState
     
     override func updateTexture()
     {
-        fighter.spatialChar.currentTexture = fighter.spatialChar.textures.standTextures.next()
+        fighter.spatialChar.currentTexture = fighter.spatialChar.textures.advanceTextures.next()
     }
     
     override func tick(timestamp:TimeInterval)
@@ -21,6 +21,11 @@ class MFightFighterStateAdvance:MFightFighterState
         
         if timeTranscurred >= fighter.kMovingSpeed
         {
+            let moveDistance:Float = fighter.kMovingDistance
+            let normalizedDistance:Float = fighter.facing.normalizeDistance(
+                distance:moveDistance)
+            fighter.position.positionX += normalizedDistance
+            
             lastStep = timestamp
             updateTexture()
         }

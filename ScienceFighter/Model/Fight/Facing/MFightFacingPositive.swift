@@ -17,4 +17,6 @@ class MFightFacingPositive:MFightFacing
         
         return direction
     }
+    
+    
 }
