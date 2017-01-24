@@ -8,8 +8,9 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     let position:MFightPosition
     let facing:MFightFacing
     let kMovingSpeed:TimeInterval = 0.6
-    let kMovingDistance:Float = 20
+    weak var enemy:MFightFighter?
     private(set) var currentState:MFightFighterState?
+    private let kMovingDistance:Float = 20
     
     init(
         device:MTLDevice,
@@ -54,14 +55,36 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
             texture:texture)
     }
     
-    //MARK: tickerProtocol
+    //MARK: private
     
-    func tick(timestamp:TimeInterval)
+    private func reachPosition() -> Float
     {
-        currentState?.tick(timestamp:timestamp)
+        let normalizedReach:Float = facing.normalizeReach(
+            position:position.positionX)
+        
+        return normalizedReach
     }
     
     //MARK: public
+    
+    func nextPositionPoint() -> Float
+    {
+        let positionDelta:Float = facing.normalizeDistance(distance:kMovingDistance)
+        let nextPosition:Float = positionDelta + position.positionX
+        
+        return nextPosition
+    }
+    
+    func positionOverlap(position:Float) -> Bool
+    {
+        let reach:Float = reachPosition()
+        let isOverlaping:Bool = facing.overlaps(
+            outsider:position,
+            me:reach)
+        
+        return isOverlaping
+    }
+    
     //MARK: -states
     
     func stateStand()
@@ -72,5 +95,12 @@ class MFightFighter:MetalRenderableProtocol, MFightTickerProtocol
     func stateAdvance()
     {
         currentState = MFightFighterStateAdvance(fighter:self)
+    }
+    
+    //MARK: tickerProtocol
+    
+    func tick(timestamp:TimeInterval)
+    {
+        currentState?.tick(timestamp:timestamp)
     }
 }

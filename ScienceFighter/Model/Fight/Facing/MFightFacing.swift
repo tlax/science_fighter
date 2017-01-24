@@ -4,6 +4,7 @@ class MFightFacing
 {
     let kInitialX:Float = 200
     let kInitialY:Float = -50
+    let kReachDelta:Float = 30
     
     //MARK: public
     
@@ -19,6 +20,16 @@ class MFightFacing
     
     func normalizeDistance(distance:Float) -> Float
     {
-        return distance
+        fatalError()
+    }
+    
+    func normalizeReach(position:Float) -> Float
+    {
+        fatalError()
+    }
+    
+    func overlaps(outsider:Float, me:Float) -> Bool
+    {
+        fatalError()
     }
 }

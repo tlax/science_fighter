@@ -17,17 +17,31 @@ class MFightFighterStateAdvance:MFightFighterState
     
     override func tick(timestamp:TimeInterval)
     {
+        guard
+            
+            let enemy:MFightFighter = fighter.enemy
+        
+        else
+        {
+            return
+        }
+        
         let timeTranscurred:TimeInterval = timestamp - lastStep
         
         if timeTranscurred >= fighter.kMovingSpeed
         {
-            let moveDistance:Float = fighter.kMovingDistance
-            let normalizedDistance:Float = fighter.facing.normalizeDistance(
-                distance:moveDistance)
-            fighter.position.positionX += normalizedDistance
+            let nextPosition:Float = fighter.nextPositionPoint()
             
-            lastStep = timestamp
-            updateTexture()
+            if enemy.positionOverlap(position:nextPosition)
+            {
+                fighter.stateStand()
+            }
+            else
+            {
+                fighter.position.positionX = nextPosition
+                lastStep = timestamp
+                updateTexture()
+            }
         }
     }
 }

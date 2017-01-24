@@ -19,6 +19,8 @@ class MFightRound:MetalRenderableProtocol, MFightTickerProtocol
         fighterNPC = MFightFighterGauss(
             device:device,
             facing:facingNegative)
+        fighterUser.enemy = fighterNPC
+        fighterNPC.enemy = fighterUser
         scene = MFightSceneLondon(device:device)
         projection = MetalProjection(device:device)
     }
