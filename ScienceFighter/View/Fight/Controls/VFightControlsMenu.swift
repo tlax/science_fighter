@@ -7,7 +7,6 @@ class VFightControlsMenu:UIView
     private weak var actionGuard:VFightControlsMenuAction!
     private weak var actionAttack:VFightControlsMenuAction!
     private weak var layoutPauseLeft:NSLayoutConstraint!
-    private weak var currentAction:VFightControlsMenuAction?
     private let kPauseWidth:CGFloat = 70
     private let kActionWidth:CGFloat = 80
     private let kActionMargin:CGFloat = 10
@@ -97,8 +96,6 @@ class VFightControlsMenu:UIView
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        actionEnded()
-        
         guard
         
             let touch:UITouch = touches.first,
@@ -110,42 +107,39 @@ class VFightControlsMenu:UIView
         }
         
         viewAction.activate()
-        currentAction = viewAction
     }
     
     override func touchesMoved(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+    }
+    
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
         guard
             
             let touch:UITouch = touches.first,
-            let currentAction:VFightControlsMenuAction = self.currentAction
+            let viewAction:VFightControlsMenuAction = touch.view as? VFightControlsMenuAction
             
         else
         {
             return
         }
         
-        if currentAction !== touch.view
-        {
-            actionEnded()
-        }
-    }
-    
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
-    {
-        actionEnded()
+        viewAction.deActivate()
     }
     
     override func touchesCancelled(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        actionEnded()
-    }
-    
-    //MARK: private
-    
-    private func actionEnded()
-    {
-        currentAction?.deActivate()
-        currentAction = nil
+        guard
+            
+            let touch:UITouch = touches.first,
+            let viewAction:VFightControlsMenuAction = touch.view as? VFightControlsMenuAction
+            
+        else
+        {
+            return
+        }
+        
+        viewAction.deActivate()
     }
 }

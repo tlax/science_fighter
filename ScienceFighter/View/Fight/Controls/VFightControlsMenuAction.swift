@@ -4,8 +4,6 @@ class VFightControlsMenuAction:UIView
 {
     private(set) weak var imageView:UIImageView!
     private(set) weak var halo:VFightControlsMenuActionHalo!
-    private let kAlphaActive:CGFloat = 1
-    private let kAlphaDeActive:CGFloat = 0.3
     
     init(image:UIImage)
     {
@@ -18,7 +16,8 @@ class VFightControlsMenuAction:UIView
         imageView.clipsToBounds = true
         imageView.contentMode = UIViewContentMode.center
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = image
+        imageView.image = image.withRenderingMode(
+            UIImageRenderingMode.alwaysTemplate)
         imageView.isUserInteractionEnabled = false
         self.imageView = imageView
         
@@ -48,12 +47,12 @@ class VFightControlsMenuAction:UIView
     func activate()
     {
         halo.active()
-        imageView.alpha = kAlphaActive
+        imageView.tintColor = UIColor.mainColor
     }
     
     func deActivate()
     {
         halo.stand()
-        imageView.alpha = kAlphaDeActive
+        imageView.tintColor = UIColor(white:0.9, alpha:1)
     }
 }

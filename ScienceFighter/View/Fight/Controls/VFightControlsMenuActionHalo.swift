@@ -8,8 +8,8 @@ class VFightControlsMenuActionHalo:UIView
     private weak var layoutImageLeft:NSLayoutConstraint!
     private weak var layoutImageRight:NSLayoutConstraint!
     private let kAnimationDuration:TimeInterval = 0.3
-    private let kStandMaxMargin:CGFloat = 25
-    private let kStandMinMargin:CGFloat = 2
+    private let kStandMaxMargin:CGFloat = 32
+    private let kStandMinMargin:CGFloat = 4
     
     init()
     {
@@ -62,7 +62,7 @@ class VFightControlsMenuActionHalo:UIView
             withDuration:kAnimationDuration)
         { [weak self] in
             
-            self?.imageView.tintColor = UIColor(white:0.9, alpha:1)
+            self?.imageView.tintColor = UIColor(white:0, alpha:0.1)
             self?.layoutIfNeeded()
         }
     }
