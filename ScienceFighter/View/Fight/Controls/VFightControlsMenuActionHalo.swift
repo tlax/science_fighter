@@ -8,7 +8,8 @@ class VFightControlsMenuActionHalo:UIView
     private weak var layoutImageLeft:NSLayoutConstraint!
     private weak var layoutImageRight:NSLayoutConstraint!
     private let kAnimationDuration:TimeInterval = 0.3
-    private let kStandMargin:CGFloat = 25
+    private let kStandMaxMargin:CGFloat = 25
+    private let kStandMinMargin:CGFloat = 2
     
     init()
     {
@@ -52,10 +53,10 @@ class VFightControlsMenuActionHalo:UIView
     
     func stand()
     {
-        layoutImageTop.constant = kStandMargin
-        layoutImageBottom.constant = -kStandMargin
-        layoutImageLeft.constant = kStandMargin
-        layoutImageRight.constant = -kStandMargin
+        layoutImageTop.constant = kStandMaxMargin
+        layoutImageBottom.constant = -kStandMaxMargin
+        layoutImageLeft.constant = kStandMaxMargin
+        layoutImageRight.constant = -kStandMaxMargin
         
         UIView.animate(
             withDuration:kAnimationDuration)
@@ -68,10 +69,10 @@ class VFightControlsMenuActionHalo:UIView
     
     func active()
     {
-        layoutImageTop.constant = 0
-        layoutImageBottom.constant = 0
-        layoutImageLeft.constant = 0
-        layoutImageRight.constant = 0
+        layoutImageTop.constant = kStandMinMargin
+        layoutImageBottom.constant = -kStandMinMargin
+        layoutImageLeft.constant = kStandMinMargin
+        layoutImageRight.constant = -kStandMinMargin
         
         UIView.animate(
             withDuration:kAnimationDuration)

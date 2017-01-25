@@ -7,9 +7,10 @@ class VFightControlsMenu:UIView
     private weak var actionGuard:VFightControlsMenuAction!
     private weak var actionAttack:VFightControlsMenuAction!
     private weak var layoutPauseLeft:NSLayoutConstraint!
+    private weak var currentAction:VFightControlsMenuAction?
     private let kPauseWidth:CGFloat = 70
-    private let kActionWidth:CGFloat = 100
-    private let kActionMargin:CGFloat = 20
+    private let kActionWidth:CGFloat = 80
+    private let kActionMargin:CGFloat = 10
     
     init(controller:CFight)
     {
@@ -19,13 +20,14 @@ class VFightControlsMenu:UIView
         clipsToBounds = true
         self.controller = controller
         
-        let border:VBorder = VBorder(color:UIColor(white:1, alpha:0.3))
+        let border:VBorder = VBorder(color:UIColor(white:1, alpha:0.5))
         
         let pause:VFightControlsMenuPause = VFightControlsMenuPause(
             controller:controller)
         self.pause = pause
         
-        let actionGuard:VFightControlsMenuAction = VFightControlsMenuAction(image:#imageLiteral(resourceName: "assetGenericPause"))
+        let actionGuard:VFightControlsMenuAction = VFightControlsMenuAction(
+            image:#imageLiteral(resourceName: "assetGenericPause"))
         self.actionGuard = actionGuard
         
         let actionAttack:VFightControlsMenuAction = VFightControlsMenuAction(
@@ -95,17 +97,55 @@ class VFightControlsMenu:UIView
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+        actionEnded()
+        
+        guard
+        
+            let touch:UITouch = touches.first,
+            let viewAction:VFightControlsMenuAction = touch.view as? VFightControlsMenuAction
+        
+        else
+        {
+            return
+        }
+        
+        viewAction.activate()
+        currentAction = viewAction
     }
     
     override func touchesMoved(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+        guard
+            
+            let touch:UITouch = touches.first,
+            let currentAction:VFightControlsMenuAction = self.currentAction
+            
+        else
+        {
+            return
+        }
+        
+        if currentAction !== touch.view
+        {
+            actionEnded()
+        }
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+        actionEnded()
     }
     
     override func touchesCancelled(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+        actionEnded()
+    }
+    
+    //MARK: private
+    
+    private func actionEnded()
+    {
+        currentAction?.deActivate()
+        currentAction = nil
     }
 }
