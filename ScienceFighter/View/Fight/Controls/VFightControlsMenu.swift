@@ -4,8 +4,8 @@ class VFightControlsMenu:UIView
 {
     private weak var controller:CFight!
     private weak var pause:VFightControlsMenuPause!
-    private weak var actionGuard:VFightControlsMenuAction!
-    private weak var actionAttack:VFightControlsMenuAction!
+    private weak var actionGuard:VFightControlsMenuActionGuard!
+    private weak var actionAttack:VFightControlsMenuActionAttack!
     private weak var layoutPauseLeft:NSLayoutConstraint!
     private let kPauseWidth:CGFloat = 70
     private let kActionWidth:CGFloat = 80
@@ -25,12 +25,12 @@ class VFightControlsMenu:UIView
             controller:controller)
         self.pause = pause
         
-        let actionGuard:VFightControlsMenuAction = VFightControlsMenuAction(
-            image:#imageLiteral(resourceName: "assetGenericPause"))
+        let actionGuard:VFightControlsMenuActionGuard = VFightControlsMenuActionGuard(
+            controller:controller)
         self.actionGuard = actionGuard
         
-        let actionAttack:VFightControlsMenuAction = VFightControlsMenuAction(
-            image:#imageLiteral(resourceName: "assetGenericAttack"))
+        let actionAttack:VFightControlsMenuActionAttack = VFightControlsMenuActionAttack(
+            controller:controller)
         self.actionAttack = actionAttack
         
         addSubview(border)
