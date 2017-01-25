@@ -28,7 +28,8 @@ class VFightControlsMenu:UIView
         let actionGuard:VFightControlsMenuAction = VFightControlsMenuAction(image:#imageLiteral(resourceName: "assetGenericPause"))
         self.actionGuard = actionGuard
         
-        let actionAttack:VFightControlsMenuAction = VFightControlsMenuAction(image:#imageLiteral(resourceName: "assetGenericPause"))
+        let actionAttack:VFightControlsMenuAction = VFightControlsMenuAction(
+            image:#imageLiteral(resourceName: "assetGenericAttack"))
         self.actionAttack = actionAttack
         
         addSubview(border)
@@ -90,5 +91,21 @@ class VFightControlsMenu:UIView
         layoutPauseLeft.constant = marginPause
         
         super.layoutSubviews()
+    }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+    }
+    
+    override func touchesMoved(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+    }
+    
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+    }
+    
+    override func touchesCancelled(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
     }
 }

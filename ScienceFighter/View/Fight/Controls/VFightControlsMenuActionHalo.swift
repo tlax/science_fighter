@@ -8,7 +8,7 @@ class VFightControlsMenuActionHalo:UIView
     private weak var layoutImageLeft:NSLayoutConstraint!
     private weak var layoutImageRight:NSLayoutConstraint!
     private let kAnimationDuration:TimeInterval = 0.3
-    private let kStandMargin:CGFloat = 20
+    private let kStandMargin:CGFloat = 25
     
     init()
     {
