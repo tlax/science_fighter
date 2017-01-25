@@ -1,5 +1,5 @@
 //
-//  VFightControlsMenuActionFight.swift
+//  VFightControlsMenuActionAttack.swift
 //  ScienceFighter
 //
 //  Created by zero on 1/25/17.

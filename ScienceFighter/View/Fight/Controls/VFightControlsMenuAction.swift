@@ -5,12 +5,15 @@ class VFightControlsMenuAction:UIView
     private(set) weak var controller:CFight!
     private(set) weak var imageView:UIImageView!
     private(set) weak var halo:VFightControlsMenuActionHalo!
+    private let color:UIColor
     
     init(
         controller:CFight,
         image:UIImage,
         color:UIColor)
     {
+        self.color = color
+        
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
