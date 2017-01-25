@@ -22,7 +22,7 @@ class VFightControlsMenuActionHalo:UIView
         imageView.isUserInteractionEnabled = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-        imageView.contentMode = UIViewContentMode.center
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
         imageView.image = #imageLiteral(resourceName: "assetGenericHalo").withRenderingMode(
             UIImageRenderingMode.alwaysTemplate)
         self.imageView = imageView

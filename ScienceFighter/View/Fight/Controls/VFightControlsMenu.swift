@@ -4,8 +4,12 @@ class VFightControlsMenu:UIView
 {
     private weak var controller:CFight!
     private weak var pause:VFightControlsMenuPause!
+    private weak var actionGuard:VFightControlsMenuAction!
+    private weak var actionAttack:VFightControlsMenuAction!
     private weak var layoutPauseLeft:NSLayoutConstraint!
-    private let kPauseWidth:CGFloat = 100
+    private let kPauseWidth:CGFloat = 70
+    private let kActionWidth:CGFloat = 100
+    private let kActionMargin:CGFloat = 20
     
     init(controller:CFight)
     {
@@ -21,8 +25,16 @@ class VFightControlsMenu:UIView
             controller:controller)
         self.pause = pause
         
+        let actionGuard:VFightControlsMenuAction = VFightControlsMenuAction(image:#imageLiteral(resourceName: "assetGenericPause"))
+        self.actionGuard = actionGuard
+        
+        let actionAttack:VFightControlsMenuAction = VFightControlsMenuAction(image:#imageLiteral(resourceName: "assetGenericPause"))
+        self.actionAttack = actionAttack
+        
         addSubview(border)
         addSubview(pause)
+        addSubview(actionGuard)
+        addSubview(actionAttack)
         
         NSLayoutConstraint.equals(
             view:border,
@@ -37,6 +49,32 @@ class VFightControlsMenu:UIView
         NSLayoutConstraint.width(
             view:pause,
             constant:kPauseWidth)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:actionGuard,
+            toView:self)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:actionAttack,
+            toView:self)
+        NSLayoutConstraint.rightToRight(
+            view:actionAttack,
+            toView:self,
+            constant:-kActionMargin)
+        NSLayoutConstraint.width(
+            view:actionAttack,
+            constant:kActionWidth)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:actionGuard,
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
+            view:actionGuard,
+            toView:self,
+            constant:kActionMargin)
+        NSLayoutConstraint.width(
+            view:actionGuard,
+            constant:kActionWidth)
     }
     
     required init?(coder:NSCoder)
