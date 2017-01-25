@@ -1,9 +1,20 @@
-//
-//  VFightControlsMenuActionAttack.swift
-//  ScienceFighter
-//
-//  Created by zero on 1/25/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class VFightControlsMenuActionAttack:VFightControlsMenuAction
+{
+    init(controller:CFight)
+    {
+        let image:UIImage = #imageLiteral(resourceName: "assetGenericAttack")
+        let color:UIColor = UIColor.mainColor
+        
+        super.init(
+            controller:controller,
+            image:image,
+            color:color)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        fatalError()
+    }
+}

@@ -12,4 +12,9 @@ class VFightControlsMenuActionGuard:VFightControlsMenuAction
             image:image,
             color:color)
     }
+    
+    required init?(coder:NSCoder)
+    {
+        fatalError()
+    }
 }
