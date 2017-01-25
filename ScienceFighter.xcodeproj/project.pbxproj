@@ -75,6 +75,8 @@
 		DA5987AB1E380196001891A6 /* MFightFighterStateAdvance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987AA1E380196001891A6 /* MFightFighterStateAdvance.swift */; };
 		DA5987AD1E3811DB001891A6 /* VFightControlsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987AC1E3811DB001891A6 /* VFightControlsMenu.swift */; };
 		DA5987AF1E3813B8001891A6 /* VFightControlsMenuPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987AE1E3813B8001891A6 /* VFightControlsMenuPause.swift */; };
+		DA5987B31E381DBA001891A6 /* VFightControlsMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987B21E381DBA001891A6 /* VFightControlsMenuAction.swift */; };
+		DA5987B51E381EF0001891A6 /* VFightControlsMenuActionHalo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5987B41E381EF0001891A6 /* VFightControlsMenuActionHalo.swift */; };
 		DA9790331E36D8050090CB49 /* VFightControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902B1E36D8050090CB49 /* VFightControls.swift */; };
 		DA9790341E36D8050090CB49 /* VFightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902D1E36D8050090CB49 /* VFightInfo.swift */; };
 		DA9790351E36D8050090CB49 /* VFightInfoFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */; };
@@ -166,6 +168,8 @@
 		DA5987AA1E380196001891A6 /* MFightFighterStateAdvance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFightFighterStateAdvance.swift; sourceTree = "<group>"; };
 		DA5987AC1E3811DB001891A6 /* VFightControlsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControlsMenu.swift; sourceTree = "<group>"; };
 		DA5987AE1E3813B8001891A6 /* VFightControlsMenuPause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControlsMenuPause.swift; sourceTree = "<group>"; };
+		DA5987B21E381DBA001891A6 /* VFightControlsMenuAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControlsMenuAction.swift; sourceTree = "<group>"; };
+		DA5987B41E381EF0001891A6 /* VFightControlsMenuActionHalo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControlsMenuActionHalo.swift; sourceTree = "<group>"; };
 		DA97902B1E36D8050090CB49 /* VFightControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightControls.swift; sourceTree = "<group>"; };
 		DA97902D1E36D8050090CB49 /* VFightInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfo.swift; sourceTree = "<group>"; };
 		DA97902E1E36D8050090CB49 /* VFightInfoFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFightInfoFighter.swift; sourceTree = "<group>"; };
@@ -544,6 +548,8 @@
 				DA97902B1E36D8050090CB49 /* VFightControls.swift */,
 				DA5987AC1E3811DB001891A6 /* VFightControlsMenu.swift */,
 				DA5987AE1E3813B8001891A6 /* VFightControlsMenuPause.swift */,
+				DA5987B21E381DBA001891A6 /* VFightControlsMenuAction.swift */,
+				DA5987B41E381EF0001891A6 /* VFightControlsMenuActionHalo.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -701,10 +707,12 @@
 				DA2797F61E3263C6008B98C1 /* ExtensionUIFont.swift in Sources */,
 				DA5987A91E380183001891A6 /* MFightFighterStateStand.swift in Sources */,
 				DA2798041E3263C6008B98C1 /* VSpinner.swift in Sources */,
+				DA5987B31E381DBA001891A6 /* VFightControlsMenuAction.swift in Sources */,
 				DA4BB04F1E33FA7F00997DE0 /* MFightFacingPositive.swift in Sources */,
 				DA9790331E36D8050090CB49 /* VFightControls.swift in Sources */,
 				DA9790381E36D8050090CB49 /* VFightMetal.swift in Sources */,
 				DA2797F01E3263C6008B98C1 /* ExtensionMTLTexture.swift in Sources */,
+				DA5987B51E381EF0001891A6 /* VFightControlsMenuActionHalo.swift in Sources */,
 				DA2798191E3292D8008B98C1 /* MetalSpatialChar.swift in Sources */,
 				DA5987AB1E380196001891A6 /* MFightFighterStateAdvance.swift in Sources */,
 				DA97903E1E36DEA60090CB49 /* VFightInfoFighterNegative.swift in Sources */,
